@@ -25,8 +25,7 @@ export default async function HomePage({
     name: siteName,
     description: dict.meta.description,
     url: `${siteUrl}/${lang}`,
-    telephone: "+995555123456",
-    email: "info@gbvaluation.ge",
+    telephone: "+995595912296",
     image: `${siteUrl}/${lang}/opengraph-image`,
     address: {
       "@type": "PostalAddress",
@@ -34,10 +33,7 @@ export default async function HomePage({
       addressCountry: "GE",
     },
     areaServed: { "@type": "Country", name: "Georgia" },
-    sameAs: [
-      "https://facebook.com/gbvaluation",
-      "https://t.me/gbvaluation",
-    ],
+    sameAs: ["https://www.facebook.com/gogita.baramidze"],
     availableLanguage: [...locales],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

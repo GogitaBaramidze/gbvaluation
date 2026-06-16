@@ -59,6 +59,16 @@ const localeFont: Record<Locale, { variable: string }> = {
   ar: notoArabic,
 };
 
+// Facebook/Open Graph expects `language_TERRITORY`, not a bare locale code.
+const ogLocale: Record<Locale, string> = {
+  en: "en_US",
+  ka: "ka_GE",
+  ru: "ru_RU",
+  ja: "ja_JP",
+  tr: "tr_TR",
+  ar: "ar_AR",
+};
+
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
@@ -95,7 +105,8 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       url: `/${lang}`,
-      locale: lang,
+      locale: ogLocale[lang],
+      alternateLocale: locales.filter((l) => l !== lang).map((l) => ogLocale[l]),
       siteName,
       title: dict.meta.title,
       description: dict.meta.description,

@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "GB Valuation — Certified Property & Asset Valuations",
+    "description": "Professional, legally recognised valuation certificates for property, estates, insurance and business assets. Certified valuers working to ECO, RICS and IVS standards."
+  },
+  "nav": {
+    "tagline": "Building Value",
+    "links": {
+      "services": "Services",
+      "needs": "When You Need It",
+      "expert": "Expert",
+      "contact": "Contact"
+    },
+    "cta": "Order a Valuation"
+  },
+  "hero": {
+    "badge": "Certified Valuation Services",
+    "titleLine1": "Property Valuation",
+    "titleLine2": "in Georgia",
+    "subtitle": "We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
+    "ctaPrimary": "Order a Valuation",
+    "ctaSecondary": "Our Services",
+    "imageAlt": "GB Valuation — property valuation"
+  },
+  "services": {
+    "label": "Our Services",
+    "headingPre": "Types of",
+    "headingHighlight": "Valuation",
+    "subtitle": "From apartments to business assets — every report is prepared to international standards and recognised by banks, courts and state institutions.",
+    "items": {
+      "residential": {
+        "title": "Residential Property",
+        "desc": "Professional valuation of apartments, houses, cottages and other residential properties."
+      },
+      "commercial": {
+        "title": "Commercial Property",
+        "desc": "Comprehensive determination of the value of office, retail and service properties."
+      },
+      "industrial": {
+        "title": "Industrial Property",
+        "desc": "Objective valuation of warehouses, production spaces and industrial complexes."
+      },
+      "land": {
+        "title": "Land Plots",
+        "desc": "Determining the market value of agricultural, industrial and commercial land plots."
+      },
+      "business": {
+        "title": "Business Assets",
+        "desc": "Valuation of company assets, machinery, equipment and intangible assets."
+      },
+      "legal": {
+        "title": "Legal Valuation",
+        "desc": "Valuation for court cases, inheritance and divorce to international standards."
+      }
+    }
+  },
+  "needs": {
+    "label": "When You Need It",
+    "headingPre": "When do you need",
+    "headingHighlight": "professional",
+    "headingPost": "valuation?",
+    "subtitle": "Knowing the precise value of a property is essential in many situations — from financial to legal decisions. Here are the most common cases when you need our report.",
+    "items": {
+      "buySell": {
+        "title": "Buying & Selling Property",
+        "desc": "Knowing the real market value helps you close the deal at a fair price and avoid financial risk."
+      },
+      "loan": {
+        "title": "Bank Loans & Mortgages",
+        "desc": "Banks require an independent valuation to issue a loan or mortgage — our report is recognised by every bank."
+      },
+      "insurance": {
+        "title": "Property Insurance",
+        "desc": "An accurate value determines the insurance premium and the payout amount in the event of damage."
+      },
+      "court": {
+        "title": "Court Disputes",
+        "desc": "Objective and independent valuation for property disputes and court proceedings, to international standards."
+      },
+      "inheritance": {
+        "title": "Inheritance & Division",
+        "desc": "Fair distribution of property among heirs or parties — with transparent, well-grounded value."
+      },
+      "investment": {
+        "title": "Investment & Taxation",
+        "desc": "For sound investment and tax decisions — know the true value of your asset."
+      }
+    },
+    "ctaText": "Can't find your case? Get in touch — we'll help.",
+    "ctaButton": "Get a Free Consultation"
+  },
+  "expert": {
+    "label": "Our Team",
+    "headingLine1": "Professional Valuers",
+    "headingLine2": "At Your Service",
+    "description": "GB Valuation is a valuation company certified by the National Bank of Georgia. We perform every type of valuation in accordance with the ECO, RICS and IVS international standards.",
+    "stats": {
+      "experience": { "value": "15+", "label": "Years\nExperience" },
+      "completed": { "value": "500+", "label": "Valuations\nCompleted" },
+      "satisfaction": { "value": "99%", "label": "Client\nSatisfaction" }
+    },
+    "credentials": [
+      "Certified by the National Bank of Georgia",
+      "RICS & IVS international standards",
+      "More than 500 satisfied clients"
+    ],
+    "cta": "Contact Us",
+    "name": "Giorgi Beridze",
+    "role": "Lead Valuer · RICS",
+    "statusLabel": "Status",
+    "statusValue": "NBG Certified",
+    "imageAlt": "GB Valuation — certified valuer"
+  },
+  "footer": {
+    "ctaHeading": "Need a valuation?",
+    "ctaSubtext": "Get in touch — response within 1 business day",
+    "ctaButton": "Order a Valuation",
+    "tagline": "Building Value",
+    "description": "A valuation company certified by the National Bank of Georgia. ECO, RICS and IVS standards.",
+    "city": "Tbilisi, Georgia",
+    "navHeading": "Navigation",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "needs": "When You Need It",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "servicesHeading": "Services",
+    "services": [
+      "Residential Property",
+      "Commercial Property",
+      "Industrial Property",
+      "Land Plots",
+      "Business Assets",
+      "Legal Valuation"
+    ],
+    "certHeading": "Certifications",
+    "certNote": "Our valuations are recognised by all banks, courts and government bodies.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms & Conditions"
+  }
+}

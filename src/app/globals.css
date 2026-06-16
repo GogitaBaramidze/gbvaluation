@@ -2,12 +2,28 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================================================
+   DESIGN TOKENS  — single source of truth for the whole site.
+   Change a value here and it updates everywhere: utilities
+   (bg-brand-900, text-brand-600 …) AND gradients via var().
+   ============================================================ */
 @theme inline {
   --font-sans: var(--font-geist-sans);
-  /* Orange accent (SFAI-inspired warm palette, replaces amber/gold) */
-  --color-amber-300: oklch(0.795 0.175 63.5);
-  --color-amber-400: oklch(0.702 0.191 47.604);
-  --color-amber-500: oklch(0.651 0.181 40.016);
+
+  /* ── Brand scale: light sky → deep navy ──
+     600 = primary action (buttons, links, highlights)
+     900 = primary heading text on light backgrounds        */
+  --color-brand-50: #f0f7ff;
+  --color-brand-100: #e8f3fc;
+  --color-brand-300: #60c8f0;
+  --color-brand-400: #0ea5d4;
+  --color-brand-500: #0c7eb5;
+  --color-brand-600: #1a6fa8;
+  --color-brand-700: #0d4a7a;
+  --color-brand-800: #0a2e55;
+  --color-brand-850: #0a2744;
+  --color-brand-900: #071e3d;
+  --color-brand-950: #040f1e;
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -55,6 +71,45 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+
+  /* ── Section gradients (reference the brand scale above) ── */
+  /* Dark navy — keeps white hero text high-contrast everywhere.
+     Vibrancy comes from a contained cyan glow in the component, not
+     from a bright gradient corner that would wash out text. */
+  --gradient-hero: linear-gradient(
+    160deg,
+    var(--color-brand-950) 0%,
+    var(--color-brand-900) 45%,
+    var(--color-brand-800) 100%
+  );
+  --gradient-deep: linear-gradient(
+    150deg,
+    var(--color-brand-950) 0%,
+    var(--color-brand-900) 35%,
+    var(--color-brand-800) 65%,
+    var(--color-brand-700) 100%
+  );
+  --gradient-footer: linear-gradient(
+    160deg,
+    var(--color-brand-950) 0%,
+    var(--color-brand-900) 50%,
+    var(--color-brand-850) 100%
+  );
+  --gradient-card-dark: linear-gradient(
+    135deg,
+    var(--color-brand-900) 0%,
+    var(--color-brand-850) 100%
+  );
+  --gradient-accent-line: linear-gradient(
+    90deg,
+    var(--color-brand-600),
+    var(--color-brand-400)
+  );
+  --gradient-ice: linear-gradient(
+    135deg,
+    var(--color-brand-50) 0%,
+    var(--color-brand-100) 100%
+  );
 }
 
 @layer base {
@@ -68,11 +123,23 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Smooth anchor scrolling — only for users who haven't asked for reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Visible, brand-consistent keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-brand-400);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 body {
+  /* Guard against horizontal overflow from any full-bleed decoration */
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -82,24 +149,52 @@ body {
 }
 
 ::selection {
-  background: oklch(0.145 0 0);
-  color: oklch(1 0 0);
-}
-
-.hero-grid {
-  background-image: radial-gradient(circle at 1px 1px, oklch(0.28 0 0) 1px, transparent 0);
-  background-size: 28px 28px;
+  background: var(--color-brand-900);
+  color: #fff;
 }
 
 [id] {
-  scroll-margin-top: 5rem;
+  scroll-margin-top: 7rem;
 }
 
-.nav-cta-pill {
-  border-color: #1a6fa8;
-  color: #1a6fa8;
-}
-.nav-cta-pill:hover {
-  background-color: #1a6fa8;
-  color: white;
+/* ============================================================
+   COMPONENT PRIMITIVES — reusable, so buttons stay identical
+   everywhere. Size/spacing stays on utilities at the call site.
+   ============================================================ */
+
+@layer components {
+  /* Filled brand pill — primary call-to-action */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    background-color: var(--color-brand-600);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 8px 20px -8px rgba(12, 126, 181, 0.55);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-brand-500);
+    box-shadow: 0 10px 24px -8px rgba(12, 126, 181, 0.7);
+  }
+
+  /* Outlined navy pill — secondary action on light backgrounds */
+  .btn-outline-navy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 2px solid var(--color-brand-850);
+    color: var(--color-brand-850);
+    font-weight: 600;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-outline-navy:hover {
+    background-color: var(--color-brand-850);
+    color: #fff;
+  }
 }

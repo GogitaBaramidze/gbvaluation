@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "GB Valuation — Sertifikalı Gayrimenkul ve Varlık Değerlemesi",
+    "description": "Gayrimenkul, miras, sigorta ve işletme varlıkları için profesyonel, yasal olarak tanınan değerleme sertifikaları. ECO, RICS ve IVS standartlarına göre çalışan sertifikalı değerleme uzmanları."
+  },
+  "nav": {
+    "tagline": "Building Value",
+    "links": {
+      "services": "Hizmetler",
+      "needs": "Ne Zaman Gerekir",
+      "expert": "Uzman",
+      "contact": "İletişim"
+    },
+    "cta": "Değerleme Talep Et"
+  },
+  "hero": {
+    "badge": "Sertifikalı Değerleme Hizmetleri",
+    "titleLine1": "Gayrimenkul Değerlemesi",
+    "titleLine2": "Gürcistan'da",
+    "subtitle": "Ulusal ve uluslararası standartlara — ECO, RICS ve IVS — uygun olarak, her amaç için her türlü değerlemeyi gerçekleştiriyoruz.",
+    "ctaPrimary": "Değerleme Talep Et",
+    "ctaSecondary": "Hizmetlerimiz",
+    "imageAlt": "GB Valuation — gayrimenkul değerlemesi"
+  },
+  "services": {
+    "label": "Hizmetlerimiz",
+    "headingPre": "Değerleme",
+    "headingHighlight": "Türleri",
+    "subtitle": "Dairelerden ticari varlıklara kadar — her rapor uluslararası standartlara göre hazırlanır; bankalar, mahkemeler ve devlet kurumları tarafından tanınır.",
+    "items": {
+      "residential": {
+        "title": "Konut Gayrimenkulü",
+        "desc": "Daire, ev, villa ve diğer konut mülklerinin profesyonel değerlemesi."
+      },
+      "commercial": {
+        "title": "Ticari Gayrimenkul",
+        "desc": "Ofis, perakende ve hizmet mülklerinin değerinin kapsamlı belirlenmesi."
+      },
+      "industrial": {
+        "title": "Endüstriyel Gayrimenkul",
+        "desc": "Depoların, üretim alanlarının ve sanayi komplekslerinin objektif değerlemesi."
+      },
+      "land": {
+        "title": "Arsa",
+        "desc": "Tarımsal, endüstriyel ve ticari arsaların piyasa değerinin belirlenmesi."
+      },
+      "business": {
+        "title": "İşletme Varlıkları",
+        "desc": "Şirket varlıklarının, makinelerin, ekipmanların ve maddi olmayan varlıkların değerlemesi."
+      },
+      "legal": {
+        "title": "Hukuki Değerleme",
+        "desc": "Mahkeme davaları, miras ve boşanma için uluslararası standartlara uygun değerleme."
+      }
+    }
+  },
+  "needs": {
+    "label": "Ne Zaman Gerekir",
+    "headingPre": "Ne zaman",
+    "headingHighlight": "profesyonel",
+    "headingPost": "değerleme gerekir?",
+    "subtitle": "Bir mülkün kesin değerini bilmek, finansaldan hukukiye birçok durumda gereklidir. İşte raporumuza ihtiyaç duyduğunuz en yaygın durumlar.",
+    "items": {
+      "buySell": {
+        "title": "Gayrimenkul Alım-Satımı",
+        "desc": "Gerçek piyasa değerini bilmek, işlemi adil bir fiyatla yapmanıza ve finansal riskten kaçınmanıza yardımcı olur."
+      },
+      "loan": {
+        "title": "Banka Kredisi ve İpotek",
+        "desc": "Bankalar kredi veya ipotek için bağımsız bir değerleme talep eder — raporumuz tüm bankalar tarafından tanınır."
+      },
+      "insurance": {
+        "title": "Gayrimenkul Sigortası",
+        "desc": "Doğru bir değer, sigorta primini ve hasar durumunda ödenecek tutarı belirler."
+      },
+      "court": {
+        "title": "Mahkeme Anlaşmazlıkları",
+        "desc": "Mülkiyet anlaşmazlıkları ve mahkeme süreçleri için uluslararası standartlara uygun objektif ve bağımsız değerleme."
+      },
+      "inheritance": {
+        "title": "Miras ve Paylaşım",
+        "desc": "Mülkün mirasçılar veya taraflar arasında şeffaf ve gerekçeli bir değerle adil paylaşımı."
+      },
+      "investment": {
+        "title": "Yatırım ve Vergilendirme",
+        "desc": "Sağlam yatırım ve vergi kararları için — varlığınızın gerçek değerini bilin."
+      }
+    },
+    "ctaText": "Durumunuzu bulamadınız mı? Bize ulaşın — yardımcı olalım.",
+    "ctaButton": "Ücretsiz Danışmanlık Alın"
+  },
+  "expert": {
+    "label": "Ekibimiz",
+    "headingLine1": "Profesyonel Değerleme Uzmanları",
+    "headingLine2": "Hizmetinizde",
+    "description": "GB Valuation, Gürcistan Ulusal Bankası tarafından sertifikalandırılmış bir değerleme şirketidir. ECO, RICS ve IVS uluslararası standartlarına uygun olarak her türlü değerlemeyi gerçekleştiriyoruz.",
+    "stats": {
+      "experience": { "value": "15+", "label": "Yıllık\nDeneyim" },
+      "completed": { "value": "500+", "label": "Tamamlanan\nDeğerleme" },
+      "satisfaction": { "value": "99%", "label": "Müşteri\nMemnuniyeti" }
+    },
+    "credentials": [
+      "Gürcistan Ulusal Bankası tarafından sertifikalı",
+      "RICS ve IVS uluslararası standartları",
+      "500'den fazla memnun müşteri"
+    ],
+    "cta": "Bize Ulaşın",
+    "name": "Giorgi Beridze",
+    "role": "Baş Değerleme Uzmanı · RICS",
+    "statusLabel": "Durum",
+    "statusValue": "NBG Sertifikalı",
+    "imageAlt": "GB Valuation — sertifikalı değerleme uzmanı"
+  },
+  "footer": {
+    "ctaHeading": "Değerleme mi gerekiyor?",
+    "ctaSubtext": "Bize ulaşın — 1 iş günü içinde yanıt",
+    "ctaButton": "Değerleme Talep Et",
+    "tagline": "Building Value",
+    "description": "Gürcistan Ulusal Bankası tarafından sertifikalı bir değerleme şirketi. ECO, RICS ve IVS standartları.",
+    "city": "Tiflis, Gürcistan",
+    "navHeading": "Gezinme",
+    "links": {
+      "home": "Ana Sayfa",
+      "services": "Hizmetler",
+      "needs": "Ne Zaman Gerekir",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    },
+    "servicesHeading": "Hizmetler",
+    "services": [
+      "Konut Gayrimenkulü",
+      "Ticari Gayrimenkul",
+      "Endüstriyel Gayrimenkul",
+      "Arsa",
+      "İşletme Varlıkları",
+      "Hukuki Değerleme"
+    ],
+    "certHeading": "Sertifikalar",
+    "certNote": "Değerlemelerimiz tüm bankalar, mahkemeler ve devlet kurumları tarafından tanınmaktadır.",
+    "rights": "Tüm hakları saklıdır.",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar ve Koşullar"
+  }
+}

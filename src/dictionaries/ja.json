@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "title": "GB Valuation — 認定不動産・資産評価",
+    "description": "不動産、遺産、保険、事業資産のための専門的で法的に認められた評価証明書。ECO・RICS・IVS基準に準拠した認定評価士が対応します。"
+  },
+  "nav": {
+    "tagline": "Building Value",
+    "links": {
+      "services": "サービス",
+      "needs": "必要な場面",
+      "expert": "専門家",
+      "contact": "お問い合わせ"
+    },
+    "cta": "評価を依頼する"
+  },
+  "hero": {
+    "badge": "認定評価サービス",
+    "titleLine1": "不動産評価",
+    "titleLine2": "ジョージアにて",
+    "subtitle": "国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
+    "ctaPrimary": "評価を依頼する",
+    "ctaSecondary": "サービス一覧",
+    "imageAlt": "GB Valuation — 不動産評価"
+  },
+  "services": {
+    "label": "サービス",
+    "headingPre": "評価の",
+    "headingHighlight": "種類",
+    "subtitle": "住宅からビジネス資産まで、すべての評価書は国際基準に基づいて作成され、銀行・裁判所・行政機関に認められています。",
+    "items": {
+      "residential": {
+        "title": "住宅用不動産",
+        "desc": "マンション、戸建て、コテージなど住宅物件の専門的な評価。"
+      },
+      "commercial": {
+        "title": "商業用不動産",
+        "desc": "オフィス、店舗、サービス施設の価値を総合的に算定します。"
+      },
+      "industrial": {
+        "title": "工業用不動産",
+        "desc": "倉庫、生産スペース、工業団地の客観的な評価。"
+      },
+      "land": {
+        "title": "土地",
+        "desc": "農業用、工業用、商業用の土地の市場価値を算定します。"
+      },
+      "business": {
+        "title": "事業資産",
+        "desc": "企業資産、機械、設備、無形資産の評価。"
+      },
+      "legal": {
+        "title": "法的評価",
+        "desc": "訴訟、相続、離婚のための国際基準に基づく評価。"
+      }
+    }
+  },
+  "needs": {
+    "label": "必要な場面",
+    "headingPre": "いつ",
+    "headingHighlight": "専門的な",
+    "headingPost": "評価が必要ですか？",
+    "subtitle": "不動産の正確な価値を知ることは、財務から法的な判断まで多くの場面で不可欠です。当社の評価書が必要となる代表的なケースをご紹介します。",
+    "items": {
+      "buySell": {
+        "title": "不動産の売買",
+        "desc": "実際の市場価値を知ることで、適正な価格で取引でき、財務リスクを回避できます。"
+      },
+      "loan": {
+        "title": "銀行融資・住宅ローン",
+        "desc": "融資や住宅ローンには独立した評価が求められます。当社の評価書はすべての銀行で認められています。"
+      },
+      "insurance": {
+        "title": "不動産保険",
+        "desc": "正確な価値が保険料および損害発生時の支払額を決定します。"
+      },
+      "court": {
+        "title": "訴訟・紛争",
+        "desc": "財産紛争や訴訟手続きのための、国際基準に基づく客観的で独立した評価。"
+      },
+      "inheritance": {
+        "title": "相続・分割",
+        "desc": "相続人や当事者間での公正な財産分配を、透明で根拠のある価値で実現します。"
+      },
+      "investment": {
+        "title": "投資・課税",
+        "desc": "健全な投資・税務上の判断のために、資産の本当の価値を把握しましょう。"
+      }
+    },
+    "ctaText": "該当するケースが見つかりませんか？ お問い合わせください。お手伝いします。",
+    "ctaButton": "無料相談を受ける"
+  },
+  "expert": {
+    "label": "私たちのチーム",
+    "headingLine1": "プロの評価士が",
+    "headingLine2": "あなたのために",
+    "description": "GB Valuationは、ジョージア国立銀行に認定された評価会社です。ECO・RICS・IVSの国際基準に準拠し、あらゆる種類の評価を行います。",
+    "stats": {
+      "experience": { "value": "15+", "label": "年の\n経験" },
+      "completed": { "value": "500+", "label": "件の\n評価実績" },
+      "satisfaction": { "value": "99%", "label": "顧客\n満足度" }
+    },
+    "credentials": [
+      "ジョージア国立銀行による認定",
+      "RICS・IVS 国際基準",
+      "500名以上の満足された顧客"
+    ],
+    "cta": "お問い合わせ",
+    "name": "ギオルギ・ベリゼ",
+    "role": "主任評価士 · RICS",
+    "statusLabel": "ステータス",
+    "statusValue": "NBG認定",
+    "imageAlt": "GB Valuation — 認定評価士"
+  },
+  "footer": {
+    "ctaHeading": "評価が必要ですか？",
+    "ctaSubtext": "お問い合わせください — 1営業日以内に回答します",
+    "ctaButton": "評価を依頼する",
+    "tagline": "Building Value",
+    "description": "ジョージア国立銀行に認定された評価会社。ECO・RICS・IVS基準。",
+    "city": "トビリシ、ジョージア",
+    "navHeading": "ナビゲーション",
+    "links": {
+      "home": "ホーム",
+      "services": "サービス",
+      "needs": "必要な場面",
+      "about": "会社概要",
+      "contact": "お問い合わせ"
+    },
+    "servicesHeading": "サービス",
+    "services": [
+      "住宅用不動産",
+      "商業用不動産",
+      "工業用不動産",
+      "土地",
+      "事業資産",
+      "法的評価"
+    ],
+    "certHeading": "認定・資格",
+    "certNote": "当社の評価は、すべての銀行、裁判所、政府機関に認められています。",
+    "rights": "全著作権所有。",
+    "privacy": "プライバシー",
+    "terms": "利用規約"
+  }
+}

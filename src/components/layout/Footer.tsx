@@ -92,7 +92,7 @@ export default function Footer({ dict }: FooterProps) {
           </div>
 
           {/* Navigation */}
-          <div>
+          <nav aria-label={dict.navHeading}>
             <p className="text-xs font-bold uppercase tracking-widest text-white/30 mb-5">
               {dict.navHeading}
             </p>
@@ -117,7 +117,7 @@ export default function Footer({ dict }: FooterProps) {
                 )
               )}
             </ul>
-          </div>
+          </nav>
 
           {/* Services */}
           <div>

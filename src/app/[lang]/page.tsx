@@ -23,18 +23,38 @@ export default async function HomePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": `${siteUrl}/#business`,
     name: siteName,
     description: dict.meta.description,
     url: `${siteUrl}/${lang}`,
     telephone: phoneE164,
     email: contactEmail,
     image: `${siteUrl}/${lang}/opengraph-image`,
+    logo: `${siteUrl}/icon-512.png`,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Batumi",
+      addressRegion: "Adjara",
       addressCountry: "GE",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 41.6168,
+      longitude: 41.6367,
+    },
     areaServed: { "@type": "Country", name: "Georgia" },
+    founder: {
+      "@type": "Person",
+      name: "Gogita Baramidze",
+      jobTitle: "Lead Valuer",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: phoneE164,
+      email: contactEmail,
+      contactType: "customer service",
+      availableLanguage: [...locales],
+    },
     sameAs: [telegramUrl],
     availableLanguage: [...locales],
     hasOfferCatalog: {

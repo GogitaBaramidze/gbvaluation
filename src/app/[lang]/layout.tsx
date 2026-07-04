@@ -94,6 +94,7 @@ export async function generateMetadata({
       template: `%s | ${siteName}`,
     },
     description: dict.meta.description,
+    keywords: dict.meta.keywords,
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -101,8 +102,29 @@ export async function generateMetadata({
         "x-default": `/${locales[0]}`,
       },
     },
-    robots: { index: true, follow: true },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     applicationName: siteName,
+    authors: [{ name: "Gogita Baramidze" }],
+    creator: "Gogita Baramidze",
+    publisher: siteName,
+    category: "Real Estate",
+    // Local-SEO hints: Batumi, Adjara, Georgia.
+    other: {
+      "geo.region": "GE-AJ",
+      "geo.placename": "Batumi",
+      "geo.position": "41.6168;41.6367",
+      ICBM: "41.6168, 41.6367",
+    },
     openGraph: {
       type: "website",
       url: `/${lang}`,

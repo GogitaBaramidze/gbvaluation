@@ -95,21 +95,27 @@
     "headingLine2": "あなたのために",
     "description": "GB Valuationは、ジョージア国立銀行に認定された評価会社です。ECO・RICS・IVSの国際基準に準拠し、あらゆる種類の評価を行います。",
     "stats": {
-      "experience": { "value": "15+", "label": "年の\n経験" },
-      "completed": { "value": "500+", "label": "件の\n評価実績" },
-      "satisfaction": { "value": "99%", "label": "顧客\n満足度" }
+      "experience": { "value": "5+", "label": "年の\n経験" },
+      "completed": { "value": "100+", "label": "件の\n評価実績" },
+      "satisfaction": { "value": "100%", "label": "顧客\n満足度" }
     },
     "credentials": [
       "ジョージア国立銀行による認定",
       "RICS・IVS 国際基準",
-      "500名以上の満足された顧客"
+      "100名以上の満足された顧客"
     ],
     "cta": "お問い合わせ",
-    "name": "ギオルギ・ベリゼ",
+    "name": "ゴギタ・バラミゼ",
     "role": "主任評価士 · RICS",
     "statusLabel": "ステータス",
     "statusValue": "NBG認定",
     "imageAlt": "GB Valuation — 認定評価士"
+  },
+  "contactModal": {
+    "title": "お問い合わせ",
+    "subtitle": "ご都合のよい方法をお選びください。迅速に対応いたします。",
+    "email": "メール",
+    "close": "閉じる"
   },
   "footer": {
     "ctaHeading": "評価が必要ですか？",
@@ -117,7 +123,7 @@
     "ctaButton": "評価を依頼する",
     "tagline": "Building Value",
     "description": "ジョージア国立銀行に認定された評価会社。ECO・RICS・IVS基準。",
-    "city": "トビリシ、ジョージア",
+    "city": "バトゥミ、ジョージア",
     "navHeading": "ナビゲーション",
     "links": {
       "home": "ホーム",

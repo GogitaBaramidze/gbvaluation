@@ -95,21 +95,27 @@
     "headingLine2": "Hizmetinizde",
     "description": "GB Valuation, Gürcistan Ulusal Bankası tarafından sertifikalandırılmış bir değerleme şirketidir. ECO, RICS ve IVS uluslararası standartlarına uygun olarak her türlü değerlemeyi gerçekleştiriyoruz.",
     "stats": {
-      "experience": { "value": "15+", "label": "Yıllık\nDeneyim" },
-      "completed": { "value": "500+", "label": "Tamamlanan\nDeğerleme" },
-      "satisfaction": { "value": "99%", "label": "Müşteri\nMemnuniyeti" }
+      "experience": { "value": "5+", "label": "Yıllık\nDeneyim" },
+      "completed": { "value": "100+", "label": "Tamamlanan\nDeğerleme" },
+      "satisfaction": { "value": "100%", "label": "Müşteri\nMemnuniyeti" }
     },
     "credentials": [
       "Gürcistan Ulusal Bankası tarafından sertifikalı",
       "RICS ve IVS uluslararası standartları",
-      "500'den fazla memnun müşteri"
+      "100'den fazla memnun müşteri"
     ],
     "cta": "Bize Ulaşın",
-    "name": "Giorgi Beridze",
+    "name": "Gogita Baramidze",
     "role": "Baş Değerleme Uzmanı · RICS",
     "statusLabel": "Durum",
     "statusValue": "NBG Sertifikalı",
     "imageAlt": "GB Valuation — sertifikalı değerleme uzmanı"
+  },
+  "contactModal": {
+    "title": "Bize Ulaşın",
+    "subtitle": "Size en uygun kanalı seçin — hızlıca yanıt veriyoruz.",
+    "email": "E-posta",
+    "close": "Kapat"
   },
   "footer": {
     "ctaHeading": "Değerleme mi gerekiyor?",
@@ -117,7 +123,7 @@
     "ctaButton": "Değerleme Talep Et",
     "tagline": "Building Value",
     "description": "Gürcistan Ulusal Bankası tarafından sertifikalı bir değerleme şirketi. ECO, RICS ve IVS standartları.",
-    "city": "Tiflis, Gürcistan",
+    "city": "Batum, Gürcistan",
     "navHeading": "Gezinme",
     "links": {
       "home": "Ana Sayfa",

@@ -6,6 +6,7 @@ import Expert from "@/components/sections/Expert";
 import { getDictionary } from "@/i18n/dictionaries";
 import { isLocale, locales } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
+import { contactEmail, phoneE164, telegramUrl } from "@/lib/contact";
 
 export default async function HomePage({
   params,
@@ -25,15 +26,16 @@ export default async function HomePage({
     name: siteName,
     description: dict.meta.description,
     url: `${siteUrl}/${lang}`,
-    telephone: "+995595912296",
+    telephone: phoneE164,
+    email: contactEmail,
     image: `${siteUrl}/${lang}/opengraph-image`,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Tbilisi",
+      addressLocality: "Batumi",
       addressCountry: "GE",
     },
     areaServed: { "@type": "Country", name: "Georgia" },
-    sameAs: ["https://www.facebook.com/gogita.baramidze"],
+    sameAs: [telegramUrl],
     availableLanguage: [...locales],
     hasOfferCatalog: {
       "@type": "OfferCatalog",

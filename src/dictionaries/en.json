@@ -95,21 +95,27 @@
     "headingLine2": "At Your Service",
     "description": "GB Valuation is a valuation company certified by the National Bank of Georgia. We perform every type of valuation in accordance with the ECO, RICS and IVS international standards.",
     "stats": {
-      "experience": { "value": "15+", "label": "Years\nExperience" },
-      "completed": { "value": "500+", "label": "Valuations\nCompleted" },
-      "satisfaction": { "value": "99%", "label": "Client\nSatisfaction" }
+      "experience": { "value": "5+", "label": "Years\nExperience" },
+      "completed": { "value": "100+", "label": "Valuations\nCompleted" },
+      "satisfaction": { "value": "100%", "label": "Client\nSatisfaction" }
     },
     "credentials": [
       "Certified by the National Bank of Georgia",
       "RICS & IVS international standards",
-      "More than 500 satisfied clients"
+      "More than 100 satisfied clients"
     ],
     "cta": "Contact Us",
-    "name": "Giorgi Beridze",
+    "name": "Gogita Baramidze",
     "role": "Lead Valuer · RICS",
     "statusLabel": "Status",
     "statusValue": "NBG Certified",
     "imageAlt": "GB Valuation — certified valuer"
+  },
+  "contactModal": {
+    "title": "Contact Us",
+    "subtitle": "Choose the channel that suits you best — we respond quickly.",
+    "email": "Email",
+    "close": "Close"
   },
   "footer": {
     "ctaHeading": "Need a valuation?",
@@ -117,7 +123,7 @@
     "ctaButton": "Order a Valuation",
     "tagline": "Building Value",
     "description": "A valuation company certified by the National Bank of Georgia. ECO, RICS and IVS standards.",
-    "city": "Tbilisi, Georgia",
+    "city": "Batumi, Georgia",
     "navHeading": "Navigation",
     "links": {
       "home": "Home",

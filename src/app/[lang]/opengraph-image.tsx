@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { ImageResponse } from "next/og";
 import { siteName } from "@/lib/site";
 import { isLocale, type Locale } from "@/i18n/config";
@@ -32,18 +34,51 @@ const fontFamilies: Partial<Record<Locale, string>> = {
 const upperCaseLocales = new Set<Locale>(["en", "ru", "tr"]);
 const taglineWeight = 600;
 
+// Brand mark (house + valuation check), same artwork as app/icon.svg.
+// Passed to satori as a data-URI <img> — inline <svg> children crash it.
+const markSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a2e55"/><stop offset="1" stop-color="#071e3d"/></linearGradient></defs><rect width="48" height="48" rx="12" fill="url(#bg)" stroke="rgba(255,255,255,0.14)"/><path d="M9.5 21.5 24 10.5l14.5 11" fill="none" stroke="#60c8f0" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M14.5 24v10.5a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2V24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.92"/><path d="M18.8 29l3.8 3.6 6.8-7.6" fill="none" stroke="#60c8f0" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const markDataUri = `data:image/svg+xml,${encodeURIComponent(markSvg)}`;
+
+// next/og fails to load its own bundled default font under Turbopack
+// ("Cannot read properties of undefined (reading 'split')"), so a font must
+// ALWAYS be passed explicitly. We read the Geist TTF that ships inside the
+// next package as the guaranteed base and layer Google-fetched subsets on top.
+async function loadBaseFont(): Promise<ArrayBuffer | null> {
+  try {
+    const buf = await readFile(
+      path.join(
+        process.cwd(),
+        "node_modules",
+        "next",
+        "dist",
+        "compiled",
+        "@vercel",
+        "og",
+        "Geist-Regular.ttf"
+      )
+    );
+    return buf.buffer.slice(
+      buf.byteOffset,
+      buf.byteOffset + buf.byteLength
+    ) as ArrayBuffer;
+  } catch {
+    return null;
+  }
+}
+
 // Fetch a TTF subset from Google Fonts limited to `text`. An unrecognised
 // User-Agent makes Google serve TTF (satori can't parse woff2). Returns null on
-// any failure so the build still succeeds and we can fall back to English.
+// any failure so the build still succeeds and we can fall back.
 async function loadFontSubset(
   family: string,
-  text: string
+  text: string,
+  weight: number
 ): Promise<ArrayBuffer | null> {
   try {
     const api = `https://fonts.googleapis.com/css2?family=${family.replace(
       / /g,
       "+"
-    )}:wght@${taglineWeight}&text=${encodeURIComponent(text)}`;
+    )}:wght@${weight}&text=${encodeURIComponent(text)}`;
     const css = await (await fetch(api)).text();
     const url = css.match(
       /src: url\((.+?)\) format\('(?:opentype|truetype)'\)/
@@ -71,13 +106,25 @@ export default async function Image({
     : taglines[locale];
 
   const family = fontFamilies[locale];
-  let fontData: ArrayBuffer | null = null;
-  if (family) {
-    fontData = await loadFontSubset(family, tagline);
-    if (!fontData) tagline = taglines.en.toLocaleUpperCase("en");
-  }
+  const [baseFont, wordmarkFont, taglineFont] = await Promise.all([
+    loadBaseFont(),
+    loadFontSubset("Noto Sans", "GB/valuation", 800),
+    family ? loadFontSubset(family, tagline, taglineWeight) : null,
+  ]);
+  if (family && !taglineFont) tagline = taglines.en.toLocaleUpperCase("en");
 
-  const tracking = upperCaseLocales.has(locale) || !fontData;
+  const tracking = upperCaseLocales.has(locale) || !taglineFont;
+
+  const fonts = [];
+  if (baseFont) {
+    fonts.push({ name: "Geist", data: baseFont, weight: 400 as const, style: "normal" as const });
+  }
+  if (wordmarkFont) {
+    fonts.push({ name: "Wordmark", data: wordmarkFont, weight: 800 as const, style: "normal" as const });
+  }
+  if (taglineFont) {
+    fonts.push({ name: "Tagline", data: taglineFont, weight: 600 as const, style: "normal" as const });
+  }
 
   return new ImageResponse(
     (
@@ -92,20 +139,15 @@ export default async function Image({
           background: "linear-gradient(160deg, #040f1e 0%, #071e3d 45%, #0a2e55 100%)",
         }}
       >
-        {/* Brand mark — rising building bars, same as the site logo */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            gap: 10,
-            height: 84,
-            marginBottom: 40,
-          }}
-        >
-          <div style={{ width: 22, height: 34, borderRadius: 5, background: "rgba(255,255,255,0.4)" }} />
-          <div style={{ width: 22, height: 58, borderRadius: 5, background: "rgba(255,255,255,0.72)" }} />
-          <div style={{ width: 22, height: 84, borderRadius: 5, background: "#60c8f0" }} />
-        </div>
+        {/* Brand mark — house with valuation check, same as the site logo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          width={120}
+          height={120}
+          src={markDataUri}
+          alt=""
+          style={{ marginBottom: 40 }}
+        />
         <div
           style={{
             display: "flex",
@@ -114,6 +156,7 @@ export default async function Image({
             fontSize: 92,
             fontWeight: 800,
             color: "#ffffff",
+            fontFamily: wordmarkFont ? "Wordmark" : undefined,
           }}
         >
           GB
@@ -131,7 +174,9 @@ export default async function Image({
             color: "rgba(255,255,255,0.65)",
             letterSpacing: tracking ? 6 : 0,
             direction: locale === "ar" ? "rtl" : "ltr",
-            fontFamily: fontData ? "Tagline" : undefined,
+            // Must never be undefined: satori's letter-spacing pass reads the
+            // font family unconditionally and crashes on undefined.
+            fontFamily: taglineFont ? "Tagline" : "Geist",
           }}
         >
           {tagline}
@@ -165,9 +210,7 @@ export default async function Image({
     ),
     {
       ...size,
-      fonts: fontData
-        ? [{ name: "Tagline", data: fontData, weight: taglineWeight, style: "normal" }]
-        : undefined,
+      fonts: fonts.length ? fonts : undefined,
     }
   );
 }

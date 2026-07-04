@@ -1,5 +1,6 @@
-// Brand logo — three rising "building" bars (property + growing value)
-// on a navy tile, next to the GB/valuation wordmark.
+// Brand logo — a house (roof + walls) with a valuation checkmark on a
+// navy tile, next to the GB/valuation wordmark. The same mark is used in
+// app/icon.svg, app/favicon.ico and the Open Graph share card.
 // variant "light" = dark text for white backgrounds, "dark" = white text
 // for navy backgrounds. The gradient id is namespaced per variant so the
 // navbar and footer instances don't clash.
@@ -35,9 +36,33 @@ export default function Logo({ tagline, variant = "light" }: LogoProps) {
           fill={`url(#${gradId})`}
           stroke={dark ? "rgba(255,255,255,0.14)" : "none"}
         />
-        <rect x="10" y="27" width="7" height="11" rx="1.5" fill="#ffffff" opacity="0.4" />
-        <rect x="20.5" y="19" width="7" height="19" rx="1.5" fill="#ffffff" opacity="0.72" />
-        <rect x="31" y="10" width="7" height="28" rx="1.5" fill="#60c8f0" />
+        {/* Roof */}
+        <path
+          d="M9.5 21.5 24 10.5l14.5 11"
+          fill="none"
+          stroke="#60c8f0"
+          strokeWidth="3.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {/* Walls */}
+        <path
+          d="M14.5 24v10.5a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2V24"
+          fill="none"
+          stroke="#ffffff"
+          strokeWidth="3"
+          strokeLinecap="round"
+          opacity="0.92"
+        />
+        {/* Valuation check */}
+        <path
+          d="M18.8 29l3.8 3.6 6.8-7.6"
+          fill="none"
+          stroke="#60c8f0"
+          strokeWidth="3.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
 
       <span className="flex flex-col leading-none">

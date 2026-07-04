@@ -95,21 +95,27 @@
     "headingLine2": "في خدمتك",
     "description": "GB Valuation شركة تقييم معتمدة من البنك الوطني لجورجيا. ننفّذ جميع أنواع التقييم وفقًا للمعايير الدولية ECO وRICS وIVS.",
     "stats": {
-      "experience": { "value": "15+", "label": "سنة\nخبرة" },
-      "completed": { "value": "500+", "label": "تقييم\nمُنجز" },
-      "satisfaction": { "value": "99%", "label": "رضا\nالعملاء" }
+      "experience": { "value": "5+", "label": "سنة\nخبرة" },
+      "completed": { "value": "100+", "label": "تقييم\nمُنجز" },
+      "satisfaction": { "value": "100%", "label": "رضا\nالعملاء" }
     },
     "credentials": [
       "معتمد من البنك الوطني لجورجيا",
       "معايير RICS وIVS الدولية",
-      "أكثر من 500 عميل راضٍ"
+      "أكثر من 100 عميل راضٍ"
     ],
     "cta": "اتصل بنا",
-    "name": "جيورجي بيريدزه",
+    "name": "غوغيتا باراميدزه",
     "role": "كبير المقيّمين · RICS",
     "statusLabel": "الحالة",
     "statusValue": "معتمد من NBG",
     "imageAlt": "GB Valuation — مقيّم معتمد"
+  },
+  "contactModal": {
+    "title": "اتصل بنا",
+    "subtitle": "اختر القناة الأنسب لك — نرد بسرعة.",
+    "email": "البريد الإلكتروني",
+    "close": "إغلاق"
   },
   "footer": {
     "ctaHeading": "هل تحتاج إلى تقييم؟",
@@ -117,7 +123,7 @@
     "ctaButton": "اطلب تقييمًا",
     "tagline": "Building Value",
     "description": "شركة تقييم معتمدة من البنك الوطني لجورجيا. معايير ECO وRICS وIVS.",
-    "city": "تبليسي، جورجيا",
+    "city": "باتومي، جورجيا",
     "navHeading": "التنقل",
     "links": {
       "home": "الرئيسية",

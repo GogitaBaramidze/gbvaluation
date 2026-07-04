@@ -1,6 +1,14 @@
 import { Phone, MapPin, ArrowRight } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "@/components/layout/Logo";
+import ContactButton from "@/components/contact/ContactButton";
+import { TelegramIcon } from "@/components/ui/icons";
+import {
+  phoneDisplay,
+  phoneE164,
+  telegramHandle,
+  telegramUrl,
+} from "@/lib/contact";
 
 type FooterProps = {
   dict: Dictionary["footer"];
@@ -34,15 +42,10 @@ export default function Footer({ dict }: FooterProps) {
               {dict.ctaSubtext}
             </p>
           </div>
-          <a
-            href="https://wa.me/995595912296"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-sm px-7 py-3 group shrink-0"
-          >
+          <ContactButton className="btn-primary text-sm px-7 py-3 group shrink-0">
             {dict.ctaButton}
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-          </a>
+          </ContactButton>
         </div>
       </div>
 
@@ -63,22 +66,22 @@ export default function Footer({ dict }: FooterProps) {
             <ul className="mt-6 space-y-3">
               <li>
                 <a
-                  href="tel:+995595912296"
+                  href={`tel:${phoneE164}`}
                   className="flex items-center gap-2.5 text-sm text-white/45 hover:text-white transition-colors"
                 >
                   <Phone size={13} className="text-brand-300" />
-                  (+995) 595 91 22 96
+                  {phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.facebook.com/gogita.baramidze"
+                  href={telegramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-sm text-white/45 hover:text-white transition-colors"
                 >
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" className="text-brand-300"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                  Facebook
+                  <TelegramIcon size={13} className="text-brand-300" />
+                  <span dir="ltr">{telegramHandle}</span>
                 </a>
               </li>
               <li className="flex items-center gap-2.5 text-sm text-white/45">
@@ -94,16 +97,25 @@ export default function Footer({ dict }: FooterProps) {
               {dict.navHeading}
             </p>
             <ul className="space-y-3">
-              {links.map(({ label, href }) => (
-                <li key={href}>
-                  <a
-                    href={href}
-                    className="text-sm text-white/50 hover:text-white transition-colors"
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
+              {links.map(({ label, href }) =>
+                href === "#contact" ? (
+                  // Contact opens the channel-picker modal instead of linking.
+                  <li key={href}>
+                    <ContactButton className="text-sm text-white/50 hover:text-white transition-colors">
+                      {label}
+                    </ContactButton>
+                  </li>
+                ) : (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      className="text-sm text-white/50 hover:text-white transition-colors"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 

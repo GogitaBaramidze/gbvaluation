@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import ContactButton from "@/components/contact/ContactButton";
 
 // Language-neutral accreditation marks — no translation needed.
 const certifications = ["NBG", "RICS", "IVS", "ECO"];
@@ -58,13 +59,13 @@ export default function Hero({ dict }: HeroProps) {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center lg:justify-start">
-              <a href="#contact" className="btn-primary group px-7 py-3.5 text-sm">
+              <ContactButton className="btn-primary group px-7 py-3.5 text-sm">
                 {dict.ctaPrimary}
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
-              </a>
+              </ContactButton>
               <a
                 href="#services"
                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"

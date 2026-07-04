@@ -198,3 +198,16 @@ body {
     color: #fff;
   }
 }
+
+/* Contact modal entrance */
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+}

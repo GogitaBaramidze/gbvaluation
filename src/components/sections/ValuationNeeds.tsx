@@ -10,6 +10,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import CardCarousel from "@/components/ui/CardCarousel";
+import ContactButton from "@/components/contact/ContactButton";
 
 type NeedKey =
   | "buySell"
@@ -76,9 +77,12 @@ export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
   });
 
   return (
+    // No overflow-hidden on the section: the white terrain overlays must
+    // bleed 1px past its edges, or sub-pixel rounding shows the dark
+    // background as a hairline where the white sections meet.
     <section
       id="needs"
-      className="relative overflow-hidden"
+      className="relative"
       style={{ background: "var(--gradient-deep)" }}
     >
       {/* ── Dot grid texture ── */}
@@ -153,13 +157,13 @@ export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
         {/* Bottom CTA */}
         <div className="mt-14 text-center">
           <p className="mb-5 text-sm text-white/50">{dict.ctaText}</p>
-          <a href="#contact" className="btn-primary group px-8 py-3.5 text-sm font-bold">
+          <ContactButton className="btn-primary group px-8 py-3.5 text-sm font-bold">
             {dict.ctaButton}
             <ArrowRight
               size={15}
               className="transition-transform group-hover:translate-x-0.5"
             />
-          </a>
+          </ContactButton>
         </div>
       </div>
     </section>

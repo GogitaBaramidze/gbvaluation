@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ContactModalProvider from "@/components/contact/ContactModal";
 import { getDictionary } from "@/i18n/dictionaries";
 import { locales, localeDir, isLocale, type Locale } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
@@ -139,9 +140,11 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
-        <Navbar lang={lang} dict={dict.nav} />
-        {children}
-        <Footer dict={dict.footer} />
+        <ContactModalProvider dict={dict.contactModal}>
+          <Navbar lang={lang} dict={dict.nav} />
+          {children}
+          <Footer dict={dict.footer} />
+        </ContactModalProvider>
       </body>
     </html>
   );

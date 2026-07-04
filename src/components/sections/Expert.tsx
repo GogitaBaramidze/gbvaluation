@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import ContactButton from "@/components/contact/ContactButton";
 
 const statKeys = ["experience", "completed", "satisfaction"] as const;
 
@@ -83,38 +84,35 @@ export default function Expert({ dict }: ExpertProps) {
             </ul>
 
             {/* CTA */}
-            <a href="#contact" className="btn-primary mt-10 text-sm px-7 py-3 group">
+            <ContactButton className="btn-primary mt-10 text-sm px-7 py-3 group">
               {dict.cta}
               <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-            </a>
+            </ContactButton>
           </div>
 
-          {/* ── Right — image without dark panel ── */}
+          {/* ── Right — framed studio portrait ── */}
           <div className="relative flex items-end justify-center">
 
-            {/* Decorative blob behind person */}
-            <div
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 w-85 h-85 lg:w-105 lg:h-105 rounded-full"
-              style={{
-                background: "radial-gradient(circle at 50% 60%, var(--color-brand-100) 0%, var(--color-brand-50) 50%, transparent 80%)",
-              }}
-            />
-
-            {/* Accent ring */}
-            <div
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 w-75 h-75 lg:w-95 lg:h-95 rounded-full"
-              style={{ border: "1.5px dashed rgba(26,111,168,0.2)" }}
-            />
-
-            {/* Person image — transparent bg, natural on white */}
-            <div className="relative w-75 lg:w-95 h-105 lg:h-130">
-              <Image
-                src="/valuer.png"
-                alt={dict.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 300px, 380px"
-                className="object-contain object-bottom"
+            {/* Offset accent frame behind the photo */}
+            <div className="relative">
+              <div
+                className="absolute -bottom-4 -end-4 start-8 top-8 rounded-3xl"
+                style={{
+                  background: "var(--gradient-ice)",
+                  border: "1px solid var(--color-brand-100)",
+                }}
               />
+              {/* Card keeps the photo's native 6:5 shape so it is never
+                  upscaled past the source resolution and stays sharp. */}
+              <div className="relative w-72 lg:w-95 aspect-6/5 overflow-hidden rounded-3xl shadow-xl">
+                <Image
+                  src="/valuer.webp"
+                  alt={dict.imageAlt}
+                  fill
+                  sizes="(max-width: 1024px) 288px, 380px"
+                  className="object-cover"
+                />
+              </div>
             </div>
 
             {/* Floating name card */}

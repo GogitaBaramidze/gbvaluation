@@ -42,6 +42,6 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   // Run on everything except API routes, Next internals, and files with an
-  // extension (e.g. /banner-valuation.svg, /valuer.png, /favicon.ico).
+  // extension (e.g. /banner-valuation.svg, /valuer.webp, /favicon.ico).
   matcher: ["/((?!api|_next/static|_next/image|.*\\..*).*)"],
 };

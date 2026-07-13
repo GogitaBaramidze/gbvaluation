@@ -93,7 +93,10 @@ export default function Expert({ dict }: ExpertProps) {
           {/* ── Right — framed studio portrait ── */}
           <div className="relative flex items-end justify-center">
 
-            {/* Offset accent frame behind the photo */}
+            {/* Offset accent frame behind the photo. The name card and
+                credential badge are anchored here (not to the flex row
+                above), so their position always tracks the photo's actual
+                box instead of drifting on narrower mobile widths. */}
             <div className="relative">
               <div
                 className="absolute -bottom-4 -end-4 start-8 top-8 rounded-3xl"
@@ -113,36 +116,38 @@ export default function Expert({ dict }: ExpertProps) {
                   className="object-cover"
                 />
               </div>
-            </div>
 
-            {/* Floating name card */}
-            <div
-              className="absolute bottom-6 left-0 lg:-left-6 rounded-2xl px-5 py-4 shadow-xl"
-              style={{
-                background: "var(--gradient-card-dark)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <p className="text-white font-bold text-sm">{dict.name}</p>
-              <p className="text-xs font-medium mt-0.5 text-brand-300">
-                {dict.role}
-              </p>
-            </div>
-
-            {/* Floating credential badge */}
-            <div
-              className="absolute top-10 right-0 lg:-right-4 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3"
-              style={{
-                background: "white",
-                border: "1px solid var(--color-brand-100)",
-              }}
-            >
-              <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-brand-100">
-                <ShieldCheck size={16} className="text-brand-600" />
+              {/* Floating name card */}
+              <div
+                className="absolute bottom-6 start-0 lg:-start-6 max-w-[80%] rounded-2xl px-5 py-4 shadow-xl"
+                style={{
+                  background: "var(--gradient-card-dark)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
+              >
+                <p className="text-white font-bold text-sm">{dict.name}</p>
+                <p className="text-xs font-medium mt-0.5 text-brand-300">
+                  {dict.role}
+                </p>
               </div>
-              <div>
-                <p className="text-[10px] text-zinc-400 font-medium">{dict.statusLabel}</p>
-                <p className="text-xs font-bold text-brand-900">{dict.statusValue}</p>
+
+              {/* Floating credential badge — sits above the frame's top
+                  corner on mobile so it never covers the face; on large
+                  screens it drops down and peeks out past the frame edge. */}
+              <div
+                className="absolute -top-6 end-0 lg:top-10 lg:-end-4 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3"
+                style={{
+                  background: "white",
+                  border: "1px solid var(--color-brand-100)",
+                }}
+              >
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-brand-100 shrink-0">
+                  <ShieldCheck size={16} className="text-brand-600" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-zinc-400 font-medium">{dict.statusLabel}</p>
+                  <p className="text-xs font-bold text-brand-900">{dict.statusValue}</p>
+                </div>
               </div>
             </div>
 

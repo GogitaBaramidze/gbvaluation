@@ -10,6 +10,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import MetaPixel from "@/components/analytics/MetaPixel";
 import ContactModalProvider from "@/components/contact/ContactModal";
 import { getDictionary } from "@/i18n/dictionaries";
 import { locales, localeDir, isLocale, type Locale } from "@/i18n/config";
@@ -162,6 +163,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col antialiased" suppressHydrationWarning>
+        <MetaPixel />
         <ContactModalProvider dict={dict.contactModal}>
           <Navbar lang={lang} dict={dict.nav} />
           {children}

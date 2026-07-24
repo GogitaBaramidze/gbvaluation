@@ -91,7 +91,11 @@ export default function Expert({ dict }: ExpertProps) {
           </div>
 
           {/* ── Right — framed studio portrait ── */}
-          <div className="relative flex items-end justify-center">
+          {/* dir="ltr" pins the frame/name-card/badge layout to the photo's
+              actual composition. Without it, RTL locales mirror the
+              logical start/end offsets and the badge lands on the
+              subject's face instead of the empty background behind him. */}
+          <div className="relative flex items-end justify-center" dir="ltr">
 
             {/* Offset accent frame behind the photo. The name card and
                 credential badge are anchored here (not to the flex row

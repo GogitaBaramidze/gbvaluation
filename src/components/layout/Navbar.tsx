@@ -149,12 +149,16 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               aria-haspopup="listbox"
               aria-expanded={langOpen}
               aria-label="Change language"
-              className="flex items-center gap-1.5 rounded px-2 py-1 text-xs font-medium text-white/80 transition-colors hover:text-white"
+              className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold text-white transition-colors ${
+                langOpen
+                  ? "border-white/40 bg-white/15"
+                  : "border-white/15 bg-white/5 hover:border-white/30 hover:bg-white/10"
+              }`}
             >
-              <Globe size={13} className="shrink-0" />
+              <Globe size={16} className="shrink-0" />
               <span>{localeNativeNames[lang]}</span>
               <ChevronDown
-                size={13}
+                size={16}
                 className={`shrink-0 transition-transform duration-200 ${
                   langOpen ? "rotate-180" : ""
                 }`}
@@ -164,7 +168,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             {langOpen && (
               <ul
                 role="listbox"
-                className="absolute end-0 z-50 mt-1.5 w-44 overflow-hidden rounded-xl border border-zinc-200 bg-white py-1.5 shadow-xl"
+                className="absolute end-0 z-50 mt-2 w-48 overflow-hidden rounded-xl border border-zinc-200 bg-white py-1.5 shadow-xl"
               >
                 {locales.map((l) => (
                   <li key={l}>
@@ -172,14 +176,14 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                       role="option"
                       aria-selected={lang === l}
                       onClick={() => switchLocale(l)}
-                      className={`flex w-full items-center justify-between px-3.5 py-2 text-sm transition-colors ${
+                      className={`flex w-full items-center justify-between px-4 py-2.5 text-[15px] transition-colors ${
                         lang === l
                           ? "bg-brand-50 font-semibold text-brand-700"
                           : "text-zinc-600 hover:bg-zinc-50"
                       }`}
                     >
                       <span>{localeNativeNames[l]}</span>
-                      {lang === l && <Check size={14} className="text-brand-600" />}
+                      {lang === l && <Check size={16} className="text-brand-600" />}
                     </button>
                   </li>
                 ))}

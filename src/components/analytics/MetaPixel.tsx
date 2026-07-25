@@ -1,12 +1,8 @@
 import Script from "next/script";
 
-const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+const pixelId = "1056343837348588";
 
-// Renders nothing when no ID is configured, so local/dev/preview builds
-// never fire tracking events against a real (or missing) pixel.
 export default function MetaPixel() {
-  if (!pixelId) return null;
-
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">

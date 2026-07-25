@@ -16,7 +16,6 @@ export default function Expert({ dict }: ExpertProps) {
     <section id="expert" className="bg-white py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
           {/* ── Left — content ── */}
           <div>
             {/* Label */}
@@ -43,9 +42,19 @@ export default function Expert({ dict }: ExpertProps) {
 
             {/* Separator */}
             <div className="flex items-center gap-3 mt-8 mb-8">
-              <div className="h-px flex-1" style={{ background: "linear-gradient(to right, #e2e8f0, transparent)" }} />
+              <div
+                className="h-px flex-1"
+                style={{
+                  background: "linear-gradient(to right, #e2e8f0, transparent)",
+                }}
+              />
               <div className="w-2 h-2 rounded-full bg-brand-600" />
-              <div className="h-px flex-1" style={{ background: "linear-gradient(to left, #e2e8f0, transparent)" }} />
+              <div
+                className="h-px flex-1"
+                style={{
+                  background: "linear-gradient(to left, #e2e8f0, transparent)",
+                }}
+              />
             </div>
 
             {/* Description */}
@@ -61,7 +70,9 @@ export default function Expert({ dict }: ExpertProps) {
                   className={`flex flex-col items-center justify-center py-6 ${
                     i < 2 ? "border-r border-zinc-200" : ""
                   }`}
-                  style={{ background: i === 1 ? "var(--gradient-ice)" : "white" }}
+                  style={{
+                    background: i === 1 ? "var(--gradient-ice)" : "white",
+                  }}
                 >
                   <p className="text-3xl font-extrabold leading-none text-brand-900">
                     {value}
@@ -86,7 +97,10 @@ export default function Expert({ dict }: ExpertProps) {
             {/* CTA */}
             <ContactButton className="btn-primary mt-10 text-sm px-7 py-3 group">
               {dict.cta}
-              <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight
+                size={14}
+                className="group-hover:translate-x-0.5 transition-transform"
+              />
             </ContactButton>
           </div>
 
@@ -96,7 +110,6 @@ export default function Expert({ dict }: ExpertProps) {
               logical start/end offsets and the badge lands on the
               subject's face instead of the empty background behind him. */}
           <div className="relative flex items-end justify-center" dir="ltr">
-
             {/* Offset accent frame behind the photo. The name card and
                 credential badge are anchored here (not to the flex row
                 above), so their position always tracks the photo's actual
@@ -148,13 +161,8 @@ export default function Expert({ dict }: ExpertProps) {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-brand-100 shrink-0">
                   <ShieldCheck size={16} className="text-brand-600" />
                 </div>
-                <div>
-                  <p className="text-[10px] text-zinc-400 font-medium">{dict.statusLabel}</p>
-                  <p className="text-xs font-bold text-brand-900">{dict.statusValue}</p>
-                </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>

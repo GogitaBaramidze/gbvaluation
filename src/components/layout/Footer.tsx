@@ -26,6 +26,7 @@ export default function Footer({ dict }: FooterProps) {
   return (
     <footer
       id="contact"
+      data-contact-source="footer"
       style={{ background: "var(--gradient-footer)" }}
     >
       {/* Top CTA strip */}
@@ -42,7 +43,7 @@ export default function Footer({ dict }: FooterProps) {
               {dict.ctaSubtext}
             </p>
           </div>
-          <ContactButton className="btn-primary text-sm px-7 py-3 group shrink-0">
+          <ContactButton source="footer" className="btn-action min-h-14 text-sm px-7 py-3 group shrink-0">
             {dict.ctaButton}
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
           </ContactButton>
@@ -144,7 +145,7 @@ export default function Footer({ dict }: FooterProps) {
               {dict.certHeading}
             </p>
             <div className="space-y-3">
-              {["NBG", "RICS", "IVS", "ECO"].map((cert) => (
+              {["RICS", "IVS", "ECO"].map((cert) => (
                 <div
                   key={cert}
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg mr-2"

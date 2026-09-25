@@ -41,5 +41,35 @@ Set the canonical origin so metadata, `sitemap.xml`, and `robots.txt` resolve co
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 ```
 
-Placeholder contact details (phone, email, social links) in `Navbar` and `Footer`
-should be replaced with the real ones before launch.
+Contact details are maintained in `src/lib/contact.ts`.
+
+## Contact design and analytics
+
+The landing page includes a primary consultation action, direct phone links,
+a persistent phone/WhatsApp dock, per-service contact actions and a keyboard-accessible
+contact dialog. New content is translated into all six supported languages.
+Accreditation wording and certificate number A-1777 are supplied by the business
+owner. The number is maintained in `src/lib/credentials.ts`. No accrediting
+organisation or IVSC membership of GB Valuation is asserted.
+
+Meta Pixel activation is deferred at the owner's request (25 September 2026).
+Events Manager showed the GB Valuation portfolio as restricted. The previous
+hardcoded ID `1056343837348588` identifies a mobile app named Test APP, not a
+verified website pixel. It has been removed from the integration.
+
+After that restriction is resolved, set `NEXT_PUBLIC_META_PIXEL_ID` to the verified
+**website pixel/dataset ID**, then rebuild and deploy. The value is public and
+embedded at build time. Leaving it unset or empty disables this integration,
+including contact-click tracking, in development and production.
+
+Prepared events:
+
+- `PageView`: one per full page load (locale switching performs a full navigation).
+- `ContactOptionsOpened`: opening the contact dialog, with the button placement.
+- `Contact`: clicking phone, WhatsApp, Telegram or email, with channel and placement.
+
+`Contact` measures an attempted contact, not a completed call, sent message or
+qualified lead. No `Lead` event is sent. No visitor-entered fields are collected.
+Before enabling it, verify PageView and each channel in Meta Test Events and check
+that repeated dialog opens do not produce Contact events. Local QA should keep the
+pixel disabled so test interactions do not enter production reporting.

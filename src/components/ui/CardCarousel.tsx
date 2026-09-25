@@ -9,6 +9,7 @@ type CardCarouselProps = {
   /** Dot colors for dark section backgrounds. */
   dark?: boolean;
   className?: string;
+  dir?: "ltr" | "rtl";
 };
 
 // Mobile swipe carousel (embla — the engine behind shadcn's Carousel).
@@ -18,14 +19,8 @@ export default function CardCarousel({
   slides,
   dark = false,
   className = "",
+  dir = "ltr",
 }: CardCarouselProps) {
-  // Embla needs to know the text direction; read it from <html dir>
-  // after mount so Arabic swipes the right way.
-  const [dir, setDir] = useState<"ltr" | "rtl">("ltr");
-  useEffect(() => {
-    if (document.documentElement.dir === "rtl") setDir("rtl");
-  }, []);
-
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
     direction: dir,

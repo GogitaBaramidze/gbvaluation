@@ -12,6 +12,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MetaPixel from "@/components/analytics/MetaPixel";
 import ContactModalProvider from "@/components/contact/ContactModal";
+import ContactDock from "@/components/contact/ContactDock";
 import { getDictionary } from "@/i18n/dictionaries";
 import { locales, localeDir, isLocale, type Locale } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
@@ -168,6 +169,7 @@ export default async function RootLayout({
           <Navbar lang={lang} dict={dict.nav} />
           {children}
           <Footer dict={dict.footer} />
+          <ContactDock dict={dict.conversion} />
         </ContactModalProvider>
       </body>
     </html>

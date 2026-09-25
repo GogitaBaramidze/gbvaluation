@@ -6,19 +6,22 @@ import {
   useContext,
   useEffect,
   useState,
+  useRef,
 } from "react";
-import { Mail, X } from "lucide-react";
+import { Mail, Phone, ArrowUpRight, X } from "lucide-react";
+import { trackContactOptions } from "@/lib/analytics";
 import type { Dictionary } from "@/i18n/dictionaries";
 import {
   contactEmail,
   phoneDisplay,
+  phoneE164,
   telegramHandle,
   telegramUrl,
   whatsAppUrl,
 } from "@/lib/contact";
 import { TelegramIcon, WhatsAppIcon } from "@/components/ui/icons";
 
-const ContactModalContext = createContext<(() => void) | null>(null);
+const ContactModalContext = createContext<((source?: string) => void) | null>(null);
 
 // Any client component under the provider can open the modal with this hook.
 export function useContactModal() {
@@ -39,14 +42,31 @@ export default function ContactModalProvider({
   children,
 }: ContactModalProviderProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const open = useCallback(() => setIsOpen(true), []);
+  const [source, setSource] = useState("cta");
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const open = useCallback((placement = "cta") => {
+    setSource(placement);
+    trackContactOptions(placement);
+    setIsOpen(true);
+  }, []);
   const close = useCallback(() => setIsOpen(false), []);
 
   // Escape closes the modal; page scroll is locked while it is open.
   useEffect(() => {
     if (!isOpen) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const dialog = dialogRef.current;
+    const controls = () => Array.from(dialog?.querySelectorAll<HTMLElement>('a[href], button') ?? []);
+    controls()[0]?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
+      if (e.key === "Tab") {
+        const items = controls();
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
+      }
     };
     document.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
@@ -54,10 +74,20 @@ export default function ContactModalProvider({
     return () => {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
+      previousFocus?.focus();
     };
   }, [isOpen, close]);
 
   const channels = [
+    {
+      label: dict.phone,
+      detail: phoneDisplay,
+      href: `tel:${phoneE164}`,
+      external: false,
+      icon: <Phone size={20} />,
+      iconBg: "#fff0cf",
+      iconColor: "#7e5200",
+    },
     {
       label: "WhatsApp",
       detail: phoneDisplay,
@@ -97,6 +127,9 @@ export default function ContactModalProvider({
           role="dialog"
           aria-modal="true"
           aria-label={dict.title}
+          aria-describedby="contact-description"
+          data-contact-source={source}
+          ref={dialogRef}
         >
           {/* Backdrop */}
           <div
@@ -107,14 +140,14 @@ export default function ContactModalProvider({
 
           {/* Panel */}
           <div
-            className="relative w-full max-w-sm rounded-3xl bg-white p-6 shadow-2xl"
+            className="relative max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
             style={{ animation: "modal-pop 0.25s ease-out" }}
           >
             <button
               type="button"
               onClick={close}
               aria-label={dict.close}
-              className="absolute end-4 top-4 cursor-pointer rounded-full p-1.5 text-zinc-400 transition-colors hover:bg-zinc-100 hover:text-zinc-700"
+              className="absolute end-3 top-3 flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-full text-slate-500 transition-colors hover:bg-zinc-100 hover:text-zinc-700"
             >
               <X size={18} />
             </button>
@@ -122,7 +155,7 @@ export default function ContactModalProvider({
             <p className="pe-8 text-lg font-extrabold text-brand-900">
               {dict.title}
             </p>
-            <p className="mt-1 text-sm text-zinc-500">{dict.subtitle}</p>
+            <p id="contact-description" className="mt-2 text-sm text-slate-600">{dict.subtitle}</p>
 
             <div className="mt-5 space-y-2.5">
               {channels.map((channel) => (
@@ -148,10 +181,11 @@ export default function ContactModalProvider({
                     <span className="block text-sm font-bold text-brand-900">
                       {channel.label}
                     </span>
-                    <span className="block truncate text-xs text-zinc-400" dir="ltr">
+                    <span className="mt-0.5 block truncate text-xs text-slate-600" dir="ltr">
                       {channel.detail}
                     </span>
                   </span>
+                  <ArrowUpRight size={17} className="ms-auto shrink-0 text-slate-400" aria-hidden="true" />
                 </a>
               ))}
             </div>

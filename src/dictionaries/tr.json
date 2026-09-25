@@ -23,7 +23,7 @@
     "cta": "Değerleme Talep Et"
   },
   "hero": {
-    "badge": "Sertifikalı Değerleme Hizmetleri",
+    "badge": "Akredite değerleme şirketi",
     "titleLine1": "Gayrimenkul Değerlemesi",
     "titleLine2": "Gürcistan'da",
     "subtitle": "Ulusal ve uluslararası standartlara — ECO, RICS ve IVS — uygun olarak, her amaç için her türlü değerlemeyi gerçekleştiriyoruz.",
@@ -99,17 +99,27 @@
     "ctaButton": "Ücretsiz Danışmanlık Alın"
   },
   "expert": {
+    "certificateLabel": "Sertifika",
     "label": "Ekibimiz",
     "headingLine1": "Profesyonel Değerleme Uzmanları",
     "headingLine2": "Hizmetinizde",
-    "description": "GB Valuation, Gürcistan Ulusal Bankası tarafından sertifikalandırılmış bir değerleme şirketidir. ECO, RICS ve IVS uluslararası standartlarına uygun olarak her türlü değerlemeyi gerçekleştiriyoruz.",
+    "description": "GB Valuation, gayrimenkul değerlemesi yapmak için akreditasyona ve resmî yetkiye sahiptir. Ulusal ve uluslararası standartlara — ECO, RICS ve IVS — uygun olarak, her amaç için her türlü değerlemeyi gerçekleştiriyoruz.",
     "stats": {
-      "experience": { "value": "5+", "label": "Yıllık\nDeneyim" },
-      "completed": { "value": "100+", "label": "Tamamlanan\nDeğerleme" },
-      "satisfaction": { "value": "100%", "label": "Müşteri\nMemnuniyeti" }
+      "experience": {
+        "value": "5+",
+        "label": "Yıllık\nDeneyim"
+      },
+      "completed": {
+        "value": "100+",
+        "label": "Tamamlanan\nDeğerleme"
+      },
+      "satisfaction": {
+        "value": "100%",
+        "label": "Müşteri\nMemnuniyeti"
+      }
     },
     "credentials": [
-      "Gürcistan Ulusal Bankası tarafından sertifikalı",
+      "Değerleme yapmak için resmî yetki",
       "RICS ve IVS uluslararası standartları",
       "100'den fazla memnun müşteri"
     ],
@@ -117,21 +127,22 @@
     "name": "Gogita Baramidze",
     "role": "Baş Değerleme Uzmanı · RICS",
     "statusLabel": "Durum",
-    "statusValue": "NBG Sertifikalı",
+    "statusValue": "Akredite değerleme şirketi",
     "imageAlt": "GB Valuation — sertifikalı değerleme uzmanı"
   },
   "contactModal": {
     "title": "Bize Ulaşın",
     "subtitle": "Size en uygun kanalı seçin — hızlıca yanıt veriyoruz.",
     "email": "E-posta",
-    "close": "Kapat"
+    "close": "Kapat",
+    "phone": "Bizi arayın"
   },
   "footer": {
     "ctaHeading": "Değerleme mi gerekiyor?",
     "ctaSubtext": "Bize ulaşın — 1 iş günü içinde yanıt",
     "ctaButton": "Değerleme Talep Et",
     "tagline": "Building Value",
-    "description": "Gürcistan Ulusal Bankası tarafından sertifikalı bir değerleme şirketi. ECO, RICS ve IVS standartları.",
+    "description": "GB Valuation, gayrimenkul değerlemesi yapmak için akreditasyona ve resmî yetkiye sahiptir. ECO · RICS · IVS.",
     "city": "Batum, Gürcistan",
     "navHeading": "Gezinme",
     "links": {
@@ -155,5 +166,44 @@
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik",
     "terms": "Şartlar ve Koşullar"
+  },
+  "conversion": {
+    "contactLabel": "Hızlı iletişim",
+    "call": "Bizi arayın",
+    "more": "Diğer seçenekler",
+    "consultation": "Ücretsiz danışmanlık",
+    "reassurance": "Mülkünüzü anlatın, sonraki adımı açıklayalım.",
+    "location": "Batum · Gürcistan",
+    "writeUs": "Mesaj yazmak ister misiniz?",
+    "messageHint": "Mülkünüzü ve değerleme amacınızı bize anlatın.",
+    "highlights": [
+      "Gayrimenkul ve işletme varlıkları",
+      "ECO · RICS · IVS standartları",
+      "Batum ve tüm Gürcistan"
+    ],
+    "serviceCta": "Değerleme talep edin",
+    "processLabel": "KOLAY BİR SÜREÇ",
+    "processTitle": "İlk görüşmeden değerleme raporunuza",
+    "steps": [
+      {
+        "title": "İletişime geçin",
+        "description": "Mülkünüzün nerede olduğunu ve değerleme amacınızı belirtin."
+      },
+      {
+        "title": "Ayrıntıları belirleyelim",
+        "description": "Gerekli belgeleri, hizmet ücretini ve teslim süresini görüşelim."
+      },
+      {
+        "title": "Raporunuzu alın",
+        "description": "Kararlaştırılan çalışmalar tamamlandığında değerleme raporunuzu alın."
+      }
+    ],
+    "accreditation": {
+      "certificateLabel": "Sertifika",
+      "title": "Akredite değerleme şirketi",
+      "subtitle": "Değerleme yapmak için resmî yetki",
+      "description": "GB Valuation, gayrimenkul değerlemesi yapmak için akreditasyona ve resmî yetkiye sahiptir.",
+      "link": "Şirketimiz hakkında"
+    }
   }
 }

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ShieldCheck, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import ContactButton from "@/components/contact/ContactButton";
+import { valuationCertificateNumber } from "@/lib/credentials";
 
 const statKeys = ["experience", "completed", "satisfaction"] as const;
 
@@ -17,7 +18,7 @@ export default function Expert({ dict }: ExpertProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* ── Left — content ── */}
-          <div>
+          <div className="min-w-0">
             {/* Label */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-zinc-200 bg-zinc-50 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
@@ -27,7 +28,7 @@ export default function Expert({ dict }: ExpertProps) {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl lg:text-4xl font-extrabold leading-snug text-brand-900">
+            <h2 className="break-words text-[clamp(1.5rem,7vw,1.875rem)] lg:text-4xl font-extrabold leading-snug text-brand-900">
               {dict.headingLine1}
               <br />
               <span className="relative inline-block text-brand-600">
@@ -86,6 +87,10 @@ export default function Expert({ dict }: ExpertProps) {
 
             {/* Credentials */}
             <ul className="mt-8 space-y-3">
+              <li className="flex items-center gap-3">
+                <ShieldCheck size={16} className="shrink-0 text-brand-600" aria-hidden="true" />
+                <span className="text-sm font-bold text-brand-900">{dict.certificateLabel} <span dir="ltr">№ {valuationCertificateNumber}</span></span>
+              </li>
               {dict.credentials.map((text) => (
                 <li key={text} className="flex items-center gap-3">
                   <CheckCircle2 size={16} className="shrink-0 text-brand-600" />
@@ -95,7 +100,7 @@ export default function Expert({ dict }: ExpertProps) {
             </ul>
 
             {/* CTA */}
-            <ContactButton className="btn-primary mt-10 text-sm px-7 py-3 group">
+            <ContactButton source="expert" className="btn-action min-h-14 mt-10 text-sm px-7 py-3 group">
               {dict.cta}
               <ArrowRight
                 size={14}
@@ -114,7 +119,7 @@ export default function Expert({ dict }: ExpertProps) {
                 credential badge are anchored here (not to the flex row
                 above), so their position always tracks the photo's actual
                 box instead of drifting on narrower mobile widths. */}
-            <div className="relative">
+            <div className="relative max-w-full">
               <div
                 className="absolute -bottom-4 -end-4 start-8 top-8 rounded-3xl"
                 style={{
@@ -124,7 +129,7 @@ export default function Expert({ dict }: ExpertProps) {
               />
               {/* Card keeps the photo's native 6:5 shape so it is never
                   upscaled past the source resolution and stays sharp. */}
-              <div className="relative w-72 lg:w-95 aspect-6/5 overflow-hidden rounded-3xl shadow-xl">
+              <div className="relative w-72 max-w-full lg:w-95 aspect-6/5 overflow-hidden rounded-3xl shadow-xl">
                 <Image
                   src="/valuer.webp"
                   alt={dict.imageAlt}
@@ -161,6 +166,7 @@ export default function Expert({ dict }: ExpertProps) {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-brand-100 shrink-0">
                   <ShieldCheck size={16} className="text-brand-600" />
                 </div>
+                <div className="max-w-40"><p className="text-xs font-bold leading-relaxed text-brand-900">{dict.statusValue}</p><p className="mt-1 text-xs font-semibold text-brand-600" dir="ltr">№ {valuationCertificateNumber}</p></div>
               </div>
             </div>
           </div>

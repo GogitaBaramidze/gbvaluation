@@ -3,8 +3,10 @@ import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import ValuationNeeds from "@/components/sections/ValuationNeeds";
 import Expert from "@/components/sections/Expert";
+import Process from "@/components/sections/Process";
+import Accreditation from "@/components/sections/Accreditation";
 import { getDictionary } from "@/i18n/dictionaries";
-import { isLocale, locales } from "@/i18n/config";
+import { isLocale, locales, localeDir } from "@/i18n/config";
 import { siteUrl, siteName } from "@/lib/site";
 import { contactEmail, phoneE164, telegramUrl } from "@/lib/contact";
 
@@ -75,9 +77,11 @@ export default async function HomePage({
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <Hero dict={dict.hero} />
-      <Services dict={dict.services} />
-      <ValuationNeeds dict={dict.needs} />
+      <Hero dict={dict.hero} conversion={dict.conversion} />
+      <Accreditation dict={dict.conversion.accreditation} />
+      <Services dict={dict.services} cta={dict.conversion.serviceCta} />
+      <Process dict={dict.conversion} />
+      <ValuationNeeds dict={dict.needs} dir={localeDir[lang]} />
       <Expert dict={dict.expert} />
     </main>
   );

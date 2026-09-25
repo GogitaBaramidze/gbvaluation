@@ -163,6 +163,22 @@ body {
    ============================================================ */
 
 @layer components {
+  .btn-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    border-radius: 0.75rem;
+    background: #f6c76a;
+    color: #071e3d;
+    font-weight: 700;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 18px rgb(246 199 106 / 12%);
+  }
+  .btn-action:hover {
+    background: #ffda8e;
+    box-shadow: 0 6px 24px rgb(246 199 106 / 24%);
+  }
   /* Filled brand pill — primary call-to-action */
   .btn-primary {
     display: inline-flex;
@@ -200,6 +216,14 @@ body {
 }
 
 /* Contact modal entrance */
+.contact-dock { padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }
+@media (max-width: 1023px) {
+  body { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
 @keyframes modal-fade {
   from {
     opacity: 0;

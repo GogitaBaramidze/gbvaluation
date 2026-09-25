@@ -47,7 +47,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
       document.cookie = `NEXT_LOCALE=${target};path=/;max-age=31536000;samesite=lax`;
       const segments = pathname.split("/");
       segments[1] = target;
-      window.location.assign(segments.join("/") || `/${target}`);
+      window.location.assign((segments.join("/") || `/${target}`) + window.location.search + window.location.hash);
     },
     [pathname]
   );
@@ -93,7 +93,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   const scrollToId = useCallback((id: string) => {
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
       setActiveId(id);
     }
   }, []);
@@ -103,7 +103,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
       if (href === "#contact") {
-        openContactModal();
+        openContactModal("navigation");
       } else {
         scrollToId(href.slice(1));
       }
@@ -112,7 +112,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     setActiveId("");
     setMobileOpen(false);
   };
@@ -120,25 +120,25 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   const isActive = (href: string) => activeId === href.slice(1);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50" data-contact-source="navigation">
       {/* ── Top info bar ── always dark navy ── */}
       <div className="bg-brand-900">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-10">
-          <div className="hidden lg:flex items-center gap-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-10">
+          <div className="flex items-center gap-5">
 
             <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/60 text-xs hover:text-white transition-colors">
+              className="hidden lg:flex items-center gap-1.5 text-white/80 text-xs hover:text-white transition-colors">
               <WhatsAppIcon size={11} />
               WhatsApp
             </a>
             <a href={telegramUrl} target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-white/60 text-xs hover:text-white transition-colors">
+              className="hidden lg:flex items-center gap-1.5 text-white/80 text-xs hover:text-white transition-colors">
               <TelegramIcon size={11} />
               Telegram
             </a>
-            <span className="text-white/20">|</span>
+            <span className="hidden lg:block text-white/20">|</span>
             <a href={`tel:${phoneE164}`}
-              className="flex items-center gap-1.5 text-white/60 text-xs hover:text-white transition-colors">
+              className="flex min-h-10 shrink-0 items-center gap-1.5 whitespace-nowrap text-white/90 text-[10px] sm:text-xs hover:text-white transition-colors" dir="ltr">
               <Phone size={11} />
               {phoneDisplay}
             </a>
@@ -149,7 +149,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               aria-haspopup="listbox"
               aria-expanded={langOpen}
               aria-label="Change language"
-              className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-semibold text-white transition-colors ${
+              className={`flex items-center gap-1.5 rounded-full border px-2 sm:px-3 py-1.5 text-sm font-semibold text-white transition-colors ${
                 langOpen
                   ? "border-white/40 bg-white/15"
                   : "border-white/15 bg-white/5 hover:border-white/30 hover:bg-white/10"
@@ -234,16 +234,19 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                onClick={openContactModal}
-                className="hidden lg:inline-flex btn-outline-navy cursor-pointer text-[13px] px-5 py-2"
+                onClick={() => openContactModal("navigation")}
+                aria-haspopup="dialog"
+                className="hidden lg:inline-flex btn-action min-h-11 cursor-pointer text-[13px] px-5 py-2"
               >
                 {dict.cta}
               </button>
 
               <button
-                className="lg:hidden p-1 text-zinc-600 transition-colors"
+                className="lg:hidden min-h-11 min-w-11 flex items-center justify-center text-zinc-600 transition-colors"
                 onClick={() => setMobileOpen((v) => !v)}
                 aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-navigation"
               >
                 {mobileOpen ? <X size={22} /> : <Menu size={22} />}
               </button>
@@ -256,7 +259,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
       {/* ── Mobile menu ── always solid ── */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-zinc-100 shadow-lg">
-          <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
+          <nav id="mobile-navigation" className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -275,7 +278,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
               type="button"
               onClick={() => {
                 setMobileOpen(false);
-                openContactModal();
+                openContactModal("mobile_navigation");
               }}
               className="btn-outline-navy mt-3 cursor-pointer text-sm px-5 py-2.5"
             >

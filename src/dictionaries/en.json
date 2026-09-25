@@ -24,7 +24,7 @@
     "cta": "Order a Valuation"
   },
   "hero": {
-    "badge": "Certified Valuation Services",
+    "badge": "Accredited valuation company",
     "titleLine1": "Property Valuation",
     "titleLine2": "in Georgia",
     "subtitle": "We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
@@ -100,17 +100,27 @@
     "ctaButton": "Get a Free Consultation"
   },
   "expert": {
+    "certificateLabel": "Certificate",
     "label": "Our Team",
     "headingLine1": "Professional Valuers",
     "headingLine2": "At Your Service",
-    "description": "GB Valuation is a valuation company certified by the National Bank of Georgia. We perform every type of valuation in accordance with the ECO, RICS and IVS international standards.",
+    "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations. We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
     "stats": {
-      "experience": { "value": "5+", "label": "Years\nExperience" },
-      "completed": { "value": "100+", "label": "Valuations\nCompleted" },
-      "satisfaction": { "value": "100%", "label": "Client\nSatisfaction" }
+      "experience": {
+        "value": "5+",
+        "label": "Years\nExperience"
+      },
+      "completed": {
+        "value": "100+",
+        "label": "Valuations\nCompleted"
+      },
+      "satisfaction": {
+        "value": "100%",
+        "label": "Client\nSatisfaction"
+      }
     },
     "credentials": [
-      "Certified by the National Bank of Georgia",
+      "Officially authorised to carry out valuations",
       "RICS & IVS international standards",
       "More than 100 satisfied clients"
     ],
@@ -118,21 +128,22 @@
     "name": "Gogita Baramidze",
     "role": "Lead Valuer · RICS",
     "statusLabel": "Status",
-    "statusValue": "NBG Certified",
+    "statusValue": "Accredited valuation company",
     "imageAlt": "GB Valuation — certified valuer"
   },
   "contactModal": {
     "title": "Contact Us",
     "subtitle": "Choose the channel that suits you best — we respond quickly.",
     "email": "Email",
-    "close": "Close"
+    "close": "Close",
+    "phone": "Call us"
   },
   "footer": {
     "ctaHeading": "Need a valuation?",
     "ctaSubtext": "Get in touch — response within 1 business day",
     "ctaButton": "Order a Valuation",
     "tagline": "Building Value",
-    "description": "A valuation company certified by the National Bank of Georgia. ECO, RICS and IVS standards.",
+    "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations. ECO · RICS · IVS.",
     "city": "Batumi, Georgia",
     "navHeading": "Navigation",
     "links": {
@@ -156,5 +167,44 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms & Conditions"
+  },
+  "conversion": {
+    "contactLabel": "Quick contact",
+    "call": "Call us",
+    "more": "More options",
+    "consultation": "Free consultation",
+    "reassurance": "Tell us about your property. We will explain the next step.",
+    "location": "Batumi · Georgia",
+    "writeUs": "Prefer to message?",
+    "messageHint": "Tell us about your property and the purpose of the valuation.",
+    "highlights": [
+      "Property and business assets",
+      "ECO · RICS · IVS standards",
+      "Batumi and across Georgia"
+    ],
+    "serviceCta": "Request a valuation",
+    "processLabel": "A SIMPLE PROCESS",
+    "processTitle": "From the first conversation to your valuation",
+    "steps": [
+      {
+        "title": "Get in touch",
+        "description": "Tell us where your property is and why you need a valuation."
+      },
+      {
+        "title": "Agree on the details",
+        "description": "We discuss the documents, service fee and delivery timeline."
+      },
+      {
+        "title": "Receive your valuation",
+        "description": "Receive your valuation report once the agreed work is complete."
+      }
+    ],
+    "accreditation": {
+      "certificateLabel": "Certificate",
+      "title": "Accredited valuation company",
+      "subtitle": "Officially authorised to carry out valuations",
+      "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations.",
+      "link": "About our company"
+    }
   }
 }

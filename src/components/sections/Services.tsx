@@ -5,10 +5,11 @@ import {
   Briefcase,
   Scale,
   MapPin,
+  ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
-import CardCarousel from "@/components/ui/CardCarousel";
+import ContactButton from "@/components/contact/ContactButton";
 
 type ServiceKey =
   | "residential"
@@ -29,15 +30,16 @@ const services: { icon: LucideIcon; key: ServiceKey }[] = [
 
 type ServicesProps = {
   dict: Dictionary["services"];
+  cta: string;
 };
 
-export default function Services({ dict }: ServicesProps) {
+export default function Services({ dict, cta }: ServicesProps) {
   const cards = services.map(({ icon: Icon, key }) => {
     const item = dict.items[key];
     return (
       <div
         key={key}
-        className="group relative h-full rounded-2xl border border-zinc-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_16px_40px_-12px_rgba(7,30,61,0.18)]"
+        className="group relative flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-[0_16px_40px_-12px_rgba(7,30,61,0.18)]"
       >
         {/* Top accent line, revealed on hover */}
         <span
@@ -54,13 +56,14 @@ export default function Services({ dict }: ServicesProps) {
         </div>
 
         <h3 className="mb-2.5 text-lg font-bold text-brand-900">{item.title}</h3>
-        <p className="text-sm leading-relaxed text-slate-500">{item.desc}</p>
+        <p className="mb-5 text-sm leading-relaxed text-slate-600">{item.desc}</p>
+        <ContactButton source={`service_${key}`} className="mt-auto flex min-h-11 items-center justify-between gap-3 border-t border-slate-100 pt-4 text-start text-sm font-semibold text-brand-700">{cta}<ArrowUpRight size={18} className="shrink-0" aria-hidden="true" /></ContactButton>
       </div>
     );
   });
 
   return (
-    <section id="services" className="relative overflow-hidden bg-white py-24 lg:py-32">
+    <section id="services" className="relative overflow-hidden bg-white py-16 lg:py-24">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-10">
 
         {/* Header */}
@@ -80,9 +83,7 @@ export default function Services({ dict }: ServicesProps) {
           </p>
         </div>
 
-        {/* Cards — swipe carousel on mobile, grid from sm up */}
-        <CardCarousel slides={cards} className="sm:hidden" />
-        <div className="hidden gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {cards}
         </div>
 

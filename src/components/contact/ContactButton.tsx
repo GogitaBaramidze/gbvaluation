@@ -5,6 +5,7 @@ import { useContactModal } from "@/components/contact/ContactModal";
 type ContactButtonProps = {
   className?: string;
   children: React.ReactNode;
+  source?: string;
 };
 
 // Drop-in contact CTA for server components: renders a button that opens
@@ -12,13 +13,15 @@ type ContactButtonProps = {
 export default function ContactButton({
   className,
   children,
+  source = "cta",
 }: ContactButtonProps) {
   const openContactModal = useContactModal();
 
   return (
     <button
       type="button"
-      onClick={openContactModal}
+      onClick={() => openContactModal(source)}
+      aria-haspopup="dialog"
       className={`cursor-pointer ${className ?? ""}`}
     >
       {children}

@@ -31,9 +31,10 @@ const needs: { icon: LucideIcon; key: NeedKey }[] = [
 
 type ValuationNeedsProps = {
   dict: Dictionary["needs"];
+  dir: "ltr" | "rtl";
 };
 
-export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
+export default function ValuationNeeds({ dict, dir }: ValuationNeedsProps) {
   const cards = needs.map(({ icon: Icon, key }) => {
     const item = dict.items[key];
     return (
@@ -138,7 +139,7 @@ export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
               {dict.label}
             </p>
           </div>
-          <h2 className="text-balance text-3xl font-extrabold leading-tight text-white lg:text-4xl">
+          <h2 className="break-words text-balance text-[clamp(1.5rem,7vw,1.875rem)] font-extrabold leading-tight text-white sm:text-3xl lg:text-4xl">
             {dict.headingPre}{" "}
             <span className="text-brand-300">{dict.headingHighlight}</span>{" "}
             {dict.headingPost}
@@ -149,7 +150,7 @@ export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
         </div>
 
         {/* Cards — swipe carousel on mobile, grid from sm up */}
-        <CardCarousel slides={cards} dark className="sm:hidden" />
+        <CardCarousel slides={cards} dir={dir} dark className="sm:hidden" />
         <div className="hidden gap-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {cards}
         </div>
@@ -157,7 +158,7 @@ export default function ValuationNeeds({ dict }: ValuationNeedsProps) {
         {/* Bottom CTA */}
         <div className="mt-14 text-center">
           <p className="mb-5 text-sm text-white/50">{dict.ctaText}</p>
-          <ContactButton className="btn-primary group px-8 py-3.5 text-sm font-bold">
+          <ContactButton source="valuation_needs" className="btn-action min-h-14 group px-8 py-3.5 text-sm font-bold">
             {dict.ctaButton}
             <ArrowRight
               size={15}

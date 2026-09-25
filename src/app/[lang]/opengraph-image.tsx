@@ -188,7 +188,7 @@ export default async function Image({
             gap: 18,
           }}
         >
-          {["NBG", "RICS", "IVS", "ECO"].map((cert) => (
+          {["RICS", "IVS", "ECO"].map((cert) => (
             <div
               key={cert}
               style={{

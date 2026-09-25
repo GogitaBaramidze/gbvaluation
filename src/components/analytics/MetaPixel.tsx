@@ -1,8 +1,34 @@
-import Script from "next/script";
+"use client";
 
-const pixelId = "1056343837348588";
+import { useEffect } from "react";
+import Script from "next/script";
+import { trackContact, type ContactChannel } from "@/lib/analytics";
+import { phoneE164, contactEmail, whatsAppUrl, telegramUrl } from "@/lib/contact";
+
+const configuredId = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
+const pixelId = /^\d+$/.test(configuredId) ? configuredId : null;
+const channels = new Map<string, ContactChannel>([
+  [`tel:${phoneE164}`, "phone"], [`mailto:${contactEmail}`, "email"],
+  [whatsAppUrl, "whatsapp"], [telegramUrl, "telegram"],
+]);
 
 export default function MetaPixel() {
+  useEffect(() => {
+    if (!pixelId) return;
+    const onClick = (event: MouseEvent) => {
+      if (!(event.target instanceof Element)) return;
+      const link = event.target.closest<HTMLAnchorElement>("a[href]");
+      if (!link) return;
+      const channel = channels.get(link.getAttribute("href") ?? "");
+      if (!channel) return;
+      const source = link.closest<HTMLElement>("[data-contact-source]")?.dataset.contactSource ?? "site";
+      trackContact(channel, source);
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, []);
+
+  if (!pixelId) return null;
   return (
     <>
       <Script id="meta-pixel" strategy="afterInteractive">
@@ -19,15 +45,6 @@ export default function MetaPixel() {
           fbq('track', 'PageView');
         `}
       </Script>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          alt=""
-          style={{ display: "none" }}
-          src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
-        />
-      </noscript>
     </>
   );
 }

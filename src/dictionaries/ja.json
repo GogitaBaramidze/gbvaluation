@@ -23,7 +23,7 @@
     "cta": "評価を依頼する"
   },
   "hero": {
-    "badge": "認定評価サービス",
+    "badge": "認定評価会社",
     "titleLine1": "不動産評価",
     "titleLine2": "ジョージアにて",
     "subtitle": "国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
@@ -99,17 +99,27 @@
     "ctaButton": "無料相談を受ける"
   },
   "expert": {
+    "certificateLabel": "認定証",
     "label": "私たちのチーム",
     "headingLine1": "プロの評価士が",
     "headingLine2": "あなたのために",
-    "description": "GB Valuationは、ジョージア国立銀行に認定された評価会社です。ECO・RICS・IVSの国際基準に準拠し、あらゆる種類の評価を行います。",
+    "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。 国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
     "stats": {
-      "experience": { "value": "5+", "label": "年の\n経験" },
-      "completed": { "value": "100+", "label": "件の\n評価実績" },
-      "satisfaction": { "value": "100%", "label": "顧客\n満足度" }
+      "experience": {
+        "value": "5+",
+        "label": "年の\n経験"
+      },
+      "completed": {
+        "value": "100+",
+        "label": "件の\n評価実績"
+      },
+      "satisfaction": {
+        "value": "100%",
+        "label": "顧客\n満足度"
+      }
     },
     "credentials": [
-      "ジョージア国立銀行による認定",
+      "資産評価を行う正式な資格",
       "RICS・IVS 国際基準",
       "100名以上の満足された顧客"
     ],
@@ -117,21 +127,22 @@
     "name": "ゴギタ・バラミゼ",
     "role": "主任評価士 · RICS",
     "statusLabel": "ステータス",
-    "statusValue": "NBG認定",
+    "statusValue": "認定評価会社",
     "imageAlt": "GB Valuation — 認定評価士"
   },
   "contactModal": {
     "title": "お問い合わせ",
     "subtitle": "ご都合のよい方法をお選びください。迅速に対応いたします。",
     "email": "メール",
-    "close": "閉じる"
+    "close": "閉じる",
+    "phone": "電話する"
   },
   "footer": {
     "ctaHeading": "評価が必要ですか？",
     "ctaSubtext": "お問い合わせください — 1営業日以内に回答します",
     "ctaButton": "評価を依頼する",
     "tagline": "Building Value",
-    "description": "ジョージア国立銀行に認定された評価会社。ECO・RICS・IVS基準。",
+    "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。 ECO · RICS · IVS.",
     "city": "バトゥミ、ジョージア",
     "navHeading": "ナビゲーション",
     "links": {
@@ -155,5 +166,44 @@
     "rights": "全著作権所有。",
     "privacy": "プライバシー",
     "terms": "利用規約"
+  },
+  "conversion": {
+    "contactLabel": "お問い合わせ",
+    "call": "電話する",
+    "more": "その他",
+    "consultation": "無料相談",
+    "reassurance": "物件についてお聞かせください。次の手順をご案内します。",
+    "location": "バトゥミ · ジョージア",
+    "writeUs": "メッセージで相談",
+    "messageHint": "物件の情報と評価の目的をお知らせください。",
+    "highlights": [
+      "不動産・事業資産",
+      "ECO · RICS · IVS基準",
+      "バトゥミ・ジョージア全域"
+    ],
+    "serviceCta": "評価を依頼する",
+    "processLabel": "ご利用の流れ",
+    "processTitle": "最初のご相談から評価報告書まで",
+    "steps": [
+      {
+        "title": "お問い合わせ",
+        "description": "物件の所在地と評価が必要な目的をお知らせください。"
+      },
+      {
+        "title": "詳細の確認",
+        "description": "必要書類、料金、納期についてご相談します。"
+      },
+      {
+        "title": "評価報告書の受け取り",
+        "description": "合意した業務の完了後、評価報告書をお渡しします。"
+      }
+    ],
+    "accreditation": {
+      "certificateLabel": "認定証",
+      "title": "認定評価会社",
+      "subtitle": "資産評価を行う正式な資格",
+      "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。",
+      "link": "会社について"
+    }
   }
 }

@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { ImageResponse } from "next/og";
 import { siteName } from "@/lib/site";
+import { valuationCertificateNumber } from "@/lib/credentials";
 import { isLocale, type Locale } from "@/i18n/config";
 
 // Per-locale share card. `params` is a promise in this Next.js version.
@@ -113,9 +114,7 @@ export default async function Image({
   ]);
   if (family && !taglineFont) tagline = taglines.en.toLocaleUpperCase("en");
 
-  const tracking = upperCaseLocales.has(locale) || !taglineFont;
-
-  const fonts = [];
+  const fonts: { name: string; data: ArrayBuffer; weight: 400 | 600 | 800; style: "normal" }[] = [];
   if (baseFont) {
     fonts.push({ name: "Geist", data: baseFont, weight: 400 as const, style: "normal" as const });
   }
@@ -126,7 +125,10 @@ export default async function Image({
     fonts.push({ name: "Tagline", data: taglineFont, weight: 600 as const, style: "normal" as const });
   }
 
-  return new ImageResponse(
+  const renderCard = (fallback = false) => {
+    const useLocalizedFont = Boolean(taglineFont) && !fallback;
+    const tracking = fallback || upperCaseLocales.has(locale) || !taglineFont;
+    return new ImageResponse(
     (
       <div
         style={{
@@ -173,13 +175,13 @@ export default async function Image({
             fontWeight: taglineWeight,
             color: "rgba(255,255,255,0.65)",
             letterSpacing: tracking ? 6 : 0,
-            direction: locale === "ar" ? "rtl" : "ltr",
+            direction: locale === "ar" && !fallback ? "rtl" : "ltr",
             // Must never be undefined: satori's letter-spacing pass reads the
             // font family unconditionally and crashes on undefined.
-            fontFamily: taglineFont ? "Tagline" : "Geist",
+            fontFamily: useLocalizedFont ? "Tagline" : "Geist",
           }}
         >
-          {tagline}
+          {fallback ? taglines.en.toLocaleUpperCase("en") : tagline}
         </div>
         <div
           style={{
@@ -188,7 +190,7 @@ export default async function Image({
             gap: 18,
           }}
         >
-          {["RICS", "IVS", "ECO"].map((cert) => (
+          {[valuationCertificateNumber].map((cert) => (
             <div
               key={cert}
               style={{
@@ -210,7 +212,18 @@ export default async function Image({
     ),
     {
       ...size,
-      fonts: fonts.length ? fonts : undefined,
+      fonts: fonts.length ? fonts.filter((font) => !fallback || font.name !== "Tagline") : undefined,
     }
-  );
+    );
+  };
+
+  // Font downloads can succeed even when Satori cannot shape a font's GSUB
+  // tables (notably Arabic). Materialize the stream before sending headers so
+  // rendering errors produce a usable English brand card, not a broken image.
+  try {
+    const response = renderCard();
+    return new Response(await response.arrayBuffer(), { headers: response.headers });
+  } catch {
+    return renderCard(true);
+  }
 }

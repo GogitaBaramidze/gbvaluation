@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GB Valuation — Batum'da Sertifikalı Gayrimenkul Değerleme",
-    "description": "Batum'da ve tüm Gürcistan'da sertifikalı gayrimenkul ve varlık değerleme. Raporlar bankalar, mahkemeler ve devlet kurumlarınca tanınır — ECO, RICS ve IVS standartları.",
+    "title": "Batum Gayrimenkul Değerleme | GB Valuation",
+    "description": "Batum ve Gürcistan’da gayrimenkul, arsa ve işletme varlıkları değerleme. Sertifikalı uzman A-1777. Kapsam, ücret ve teslim tarihi için iletişime geçin.",
     "keywords": [
       "gayrimenkul değerleme",
       "emlak ekspertiz",
@@ -25,8 +25,8 @@
   "hero": {
     "badge": "Akredite bir kuruluş tarafından sertifikalı",
     "titleLine1": "Gayrimenkul Değerlemesi",
-    "titleLine2": "Gürcistan'da",
-    "subtitle": "Ulusal ve uluslararası standartlara — ECO, RICS ve IVS — uygun olarak, her amaç için her türlü değerlemeyi gerçekleştiriyoruz.",
+    "titleLine2": "Batum ve Gürcistan’da",
+    "subtitle": "Batum ve Gürcistan genelinde daire, ev, ticari alan, arsa ve işletme varlıkları değerleme. Amacı, ücreti ve teslim tarihini işe başlamadan kararlaştırıyoruz.",
     "ctaPrimary": "Değerleme Talep Et",
     "ctaSecondary": "Hizmetlerimiz",
     "imageAlt": "GB Valuation — gayrimenkul değerlemesi"
@@ -35,7 +35,7 @@
     "label": "Hizmetlerimiz",
     "headingPre": "Değerleme",
     "headingHighlight": "Türleri",
-    "subtitle": "Dairelerden ticari varlıklara kadar — her rapor uluslararası standartlara göre hazırlanır; bankalar, mahkemeler ve devlet kurumları tarafından tanınır.",
+    "subtitle": "Batum ve Gürcistan genelinde daire, ev, ticari alan, arsa ve işletme varlıkları değerleme. Amacı, ücreti ve teslim tarihini işe başlamadan kararlaştırıyoruz.",
     "items": {
       "residential": {
         "title": "Konut Gayrimenkulü",
@@ -76,7 +76,7 @@
       },
       "loan": {
         "title": "Banka Kredisi ve İpotek",
-        "desc": "Bankalar kredi veya ipotek için bağımsız bir değerleme talep eder — raporumuz tüm bankalar tarafından tanınır."
+        "desc": "Kredi veya ipotek için değerleme gerekiyorsa, siparişten önce bankanın uzmana ve rapora ilişkin şartlarını doğrulayın."
       },
       "insurance": {
         "title": "Gayrimenkul Sigortası",
@@ -128,7 +128,7 @@
     "role": "Baş Değerleme Uzmanı",
     "statusLabel": "Durum",
     "statusValue": "Sertifikalı değerleme uzmanı",
-    "imageAlt": "GB Valuation — sertifikalı değerleme uzmanı"
+    "imageAlt": "Gogita Baramidze — Sertifikalı değerleme uzmanı, A-1777"
   },
   "contactModal": {
     "title": "Bize Ulaşın",
@@ -161,8 +161,8 @@
       "İşletme Varlıkları",
       "Hukuki Değerleme"
     ],
-    "certHeading": "Sertifikalar",
-    "certNote": "Değerlemelerimiz tüm bankalar, mahkemeler ve devlet kurumları tarafından tanınmaktadır.",
+    "certHeading": "Sertifikalı değerleme uzmanı",
+    "certNote": "GB Valuation’ın değerleme uzmanı, akredite bir belgelendirme kuruluşu tarafından verilmiş mesleki sertifikaya sahiptir.",
     "rights": "Tüm hakları saklıdır.",
     "privacy": "Gizlilik",
     "terms": "Şartlar ve Koşullar"

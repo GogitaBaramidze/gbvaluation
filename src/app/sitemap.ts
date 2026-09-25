@@ -1,19 +1,14 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 import { siteUrl } from "@/lib/site";
+import { languageAlternates } from "@/lib/seo";
+import { serviceSlugs } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
-  return locales.map((lang) => ({
-    url: `${siteUrl}/${lang}`,
-    lastModified,
-    changeFrequency: "monthly",
-    priority: lang === locales[0] ? 1 : 0.8,
-    alternates: {
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${siteUrl}/${l}`])
-      ),
-    },
-  }));
+  const paths = ["", ...Object.values(serviceSlugs).map((slug) => `/services/${slug}`)];
+  // Omit lastModified until actual per-page editorial dates are maintained.
+  return paths.flatMap((path) => locales.map((lang) => ({
+    url: `${siteUrl}/${lang}${path}`,
+    alternates: { languages: languageAlternates(path) },
+  })));
 }

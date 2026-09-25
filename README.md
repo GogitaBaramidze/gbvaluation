@@ -1,6 +1,6 @@
 # GB Valuation
 
-Marketing site for GB Valuation — a multilingual (EN/KA/RU/JA/TR/AR), single-page
+Marketing site for GB Valuation — a multilingual (EN/KA/RU/JA/TR/AR)
 Next.js App Router site.
 
 ## Stack
@@ -20,7 +20,8 @@ npm run lint
 
 ## Structure
 
-- `src/app/[lang]/` — localized layout + homepage
+- `src/app/[lang]/` — localized layout, homepage and six service detail pages
+- `src/content/services/` — translated service details and homepage FAQs
 - `src/components/sections/` — Hero, Services, ValuationNeeds, Expert
 - `src/components/layout/` — Navbar, Footer
 - `src/i18n/` + `src/dictionaries/` — locale config and translations
@@ -38,10 +39,56 @@ whole site. Reusable button styles: `.btn-primary`, `.btn-outline-navy`.
 Set the canonical origin so metadata, `sitemap.xml`, and `robots.txt` resolve correctly:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://your-domain.example
+NEXT_PUBLIC_SITE_URL=https://www.gbvaluation.ge
+# Optional HTML verification token from Google Search Console:
+GOOGLE_SITE_VERIFICATION=
 ```
 
 Contact details are maintained in `src/lib/contact.ts`.
+
+## Search visibility
+
+The production host redirects the apex domain to `www`. Canonical, sitemap,
+hreflang, Open Graph and structured-data URLs use that final origin; legacy
+apex environment values are normalized. Each of the 42 localized pages has its
+own metadata and reciprocal language links. The existing Russian fallback is
+also the `x-default`. Tracking parameters do not create separate canonicals.
+
+Service pages cover residential, commercial, industrial, land, business assets
+and legal-purpose valuation. Content is rendered in server HTML, with crawlable
+links, visible breadcrumbs and Service/BreadcrumbList structured data. Homepages
+describe the organization and the valuer's actual certificate. No invented office
+coordinates, review scores or personal RICS/IVSC membership are published in schema.
+FAQs are visible content; FAQ rich results are not promised for this business.
+Share-image rendering falls back to an English brand card if a localized font
+cannot be shaped by the image renderer, rather than returning a broken image.
+The desktop-only hero illustration uses a media source so mobile visitors do
+not download its 576 KB SVG.
+Sitemap modification dates are omitted until real editorial dates are maintained.
+
+Verify the production build in one terminal and audit it in another:
+
+```bash
+npm run build
+npm run start -- --port 3100
+npm run check:seo -- http://127.0.0.1:3100
+# Or check the deployed pages:
+npm run check:seo -- https://www.gbvaluation.ge
+```
+
+Owner/account work still required: verify the domain in Google Search Console
+(DNS verification covers all protocols/subdomains; an optional HTML verification
+token is supported above), submit `https://www.gbvaluation.ge/sitemap.xml`, and
+inspect representative URLs after deployment. Link a verified Google Business
+Profile once its public URL and genuine service-area/address details are supplied.
+Keep the business name, contact details and location consistent. Add real project
+examples and client reviews only with permission. Monitor Search Console clicks,
+impressions, queries and indexing; deployed technical changes are not a guarantee
+of indexing or rankings.
+
+References: [canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls),
+[localized versions](https://developers.google.com/search/docs/crawling-indexing/localized-versions),
+[structured-data policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies).
 
 ## Contact design and analytics
 

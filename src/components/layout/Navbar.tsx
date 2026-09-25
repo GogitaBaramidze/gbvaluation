@@ -25,6 +25,7 @@ type NavbarProps = {
 
 export default function Navbar({ lang, dict }: NavbarProps) {
   const pathname = usePathname();
+  const isHome = pathname === `/${lang}`;
   const openContactModal = useContactModal();
 
   const navLinks = [
@@ -88,7 +89,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
 
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   const scrollToId = useCallback((id: string) => {
     const el = document.getElementById(id);
@@ -101,16 +102,19 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   // The Contact link opens the channel-picker modal; other links scroll.
   const handleNavClick =
     (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       if (href === "#contact") {
+        e.preventDefault();
         openContactModal("navigation");
-      } else {
+      } else if (isHome) {
+        e.preventDefault();
         scrollToId(href.slice(1));
       }
       setMobileOpen(false);
     };
 
   const scrollToTop = (e: React.MouseEvent) => {
+    if (!isHome || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
     setActiveId("");
@@ -199,7 +203,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           <div className="flex items-center justify-between h-[72px]">
 
             {/* Logo */}
-            <a href="#top" onClick={scrollToTop} className="shrink-0">
+            <a href={`/${lang}`} onClick={scrollToTop} className="shrink-0">
               <Logo tagline={dict.tagline} />
             </a>
 
@@ -210,7 +214,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 return (
                   <a
                     key={link.href}
-                    href={link.href}
+                    href={`/${lang}${link.href}`}
                     onClick={handleNavClick(link.href)}
                     className={`relative text-[13.5px] font-medium px-3.5 py-2 transition-colors ${
                       active
@@ -263,7 +267,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={`/${lang}${link.href}`}
                 onClick={handleNavClick(link.href)}
                 className={`text-sm py-2.5 px-3 rounded transition-colors ${
                   isActive(link.href)

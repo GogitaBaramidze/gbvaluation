@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Check, Phone, MapPin } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import ContactButton from "@/components/contact/ContactButton";
@@ -30,7 +29,13 @@ export default function Hero({ dict, conversion }: HeroProps) {
           <div className="relative hidden lg:block">
             <div className="relative rounded-[2rem] border border-white/15 bg-white/[0.04] p-6">
               <div className="flex items-center justify-between text-[11px] font-medium tracking-widest text-white/60"><span>GB / VALUATION</span><span className="flex items-center gap-1.5"><MapPin size={13} aria-hidden="true" />{conversion.location}</span></div>
-              <div className="relative mx-auto aspect-[1.3] w-full"><Image src="/banner-valuation.svg" alt={dict.imageAlt} fill loading="eager" sizes="(min-width: 1024px) 440px, 1px" className="object-contain p-2" /></div>
+              <div className="relative mx-auto aspect-[1.3] w-full">
+                <picture>
+                  <source media="(min-width: 1024px)" srcSet="/banner-valuation.svg" />
+                  {/* The illustration is desktop-only; avoid downloading 576 KB on mobile. */}
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" width={1300} height={1000} alt={dict.imageAlt} className="absolute inset-0 h-full w-full object-contain p-2" />
+                </picture>
+              </div>
               <div className="flex items-center justify-between gap-5 rounded-2xl bg-white p-5 shadow-xl">
                 <div><p className="text-sm font-bold text-brand-900">{conversion.writeUs}</p><p className="mt-1 text-xs leading-relaxed text-slate-500">{conversion.messageHint}</p></div>
                 <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 transition-colors hover:bg-emerald-100"><WhatsAppIcon size={25} /></a>

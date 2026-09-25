@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "GB Valuation — Certified Property Valuation in Batumi, Georgia",
-    "description": "Certified property and asset valuations in Batumi and across Georgia. Reports recognised by banks, courts and state institutions — ECO, RICS and IVS standards.",
+    "title": "Property Valuation in Batumi, Georgia | GB Valuation",
+    "description": "Property, land and business asset valuation in Batumi and across Georgia. Certified valuer A-1777. Contact GB Valuation to discuss scope, fees and timing.",
     "keywords": [
       "property valuation",
       "real estate appraisal",
@@ -26,8 +26,8 @@
   "hero": {
     "badge": "Certified by an accredited certification body",
     "titleLine1": "Property Valuation",
-    "titleLine2": "in Georgia",
-    "subtitle": "We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
+    "titleLine2": "in Batumi, Georgia",
+    "subtitle": "Valuation of apartments, houses, commercial premises, land and business assets in Batumi and across Georgia. We agree the purpose, fee and delivery date before starting.",
     "ctaPrimary": "Order a Valuation",
     "ctaSecondary": "Our Services",
     "imageAlt": "GB Valuation — property valuation"
@@ -36,7 +36,7 @@
     "label": "Our Services",
     "headingPre": "Types of",
     "headingHighlight": "Valuation",
-    "subtitle": "From apartments to business assets — every report is prepared to international standards and recognised by banks, courts and state institutions.",
+    "subtitle": "Valuation of apartments, houses, commercial premises, land and business assets in Batumi and across Georgia. We agree the purpose, fee and delivery date before starting.",
     "items": {
       "residential": {
         "title": "Residential Property",
@@ -77,7 +77,7 @@
       },
       "loan": {
         "title": "Bank Loans & Mortgages",
-        "desc": "Banks require an independent valuation to issue a loan or mortgage — our report is recognised by every bank."
+        "desc": "For a loan or mortgage valuation, confirm the bank’s requirements for the valuer and report before commissioning the work."
       },
       "insurance": {
         "title": "Property Insurance",
@@ -129,7 +129,7 @@
     "role": "Lead Valuer",
     "statusLabel": "Status",
     "statusValue": "Certified valuer",
-    "imageAlt": "GB Valuation — certified valuer"
+    "imageAlt": "Gogita Baramidze — Certified valuer, A-1777"
   },
   "contactModal": {
     "title": "Contact Us",
@@ -162,8 +162,8 @@
       "Business Assets",
       "Legal Valuation"
     ],
-    "certHeading": "Certifications",
-    "certNote": "Our valuations are recognised by all banks, courts and government bodies.",
+    "certHeading": "Certified valuer",
+    "certNote": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body.",
     "rights": "All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms & Conditions"

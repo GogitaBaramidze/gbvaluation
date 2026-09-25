@@ -62,16 +62,6 @@ const localeFont: Record<Locale, { variable: string }> = {
   ar: notoArabic,
 };
 
-// Facebook/Open Graph expects `language_TERRITORY`, not a bare locale code.
-const ogLocale: Record<Locale, string> = {
-  en: "en_US",
-  ka: "ka_GE",
-  ru: "ru_RU",
-  ja: "ja_JP",
-  tr: "tr_TR",
-  ar: "ar_AR",
-};
-
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
 }
@@ -80,29 +70,11 @@ export const viewport: Viewport = {
   themeColor: "#071e3d",
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-  if (!isLocale(lang)) return {};
-
-  const dict = await getDictionary(lang);
-  return {
+export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: {
-      default: dict.meta.title,
+      default: siteName,
       template: `%s | ${siteName}`,
-    },
-    description: dict.meta.description,
-    keywords: dict.meta.keywords,
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        ...Object.fromEntries(locales.map((l) => [l, `/${l}`])),
-        "x-default": `/${locales[0]}`,
-      },
     },
     robots: {
       index: true,
@@ -120,29 +92,8 @@ export async function generateMetadata({
     creator: "Gogita Baramidze",
     publisher: siteName,
     category: "Real Estate",
-    // Local-SEO hints: Batumi, Adjara, Georgia.
-    other: {
-      "geo.region": "GE-AJ",
-      "geo.placename": "Batumi",
-      "geo.position": "41.6168;41.6367",
-      ICBM: "41.6168, 41.6367",
-    },
-    openGraph: {
-      type: "website",
-      url: `/${lang}`,
-      locale: ogLocale[lang],
-      alternateLocale: locales.filter((l) => l !== lang).map((l) => ogLocale[l]),
-      siteName,
-      title: dict.meta.title,
-      description: dict.meta.description,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.meta.title,
-      description: dict.meta.description,
-    },
-  };
-}
+    verification: { google: process.env.GOOGLE_SITE_VERIFICATION || undefined },
+};
 
 export default async function RootLayout({
   children,
@@ -168,7 +119,7 @@ export default async function RootLayout({
         <ContactModalProvider dict={dict.contactModal}>
           <Navbar lang={lang} dict={dict.nav} />
           {children}
-          <Footer dict={dict.footer} />
+          <Footer dict={dict.footer} lang={lang} />
           <ContactDock dict={dict.conversion} />
         </ContactModalProvider>
       </body>

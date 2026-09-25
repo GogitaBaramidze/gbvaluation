@@ -10,6 +10,8 @@ import {
 import type { LucideIcon } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import ContactButton from "@/components/contact/ContactButton";
+import type { Locale } from "@/i18n/config";
+import { serviceSlugs } from "@/lib/services";
 
 type ServiceKey =
   | "residential"
@@ -29,11 +31,13 @@ const services: { icon: LucideIcon; key: ServiceKey }[] = [
 ];
 
 type ServicesProps = {
+  lang: Locale;
   dict: Dictionary["services"];
   cta: string;
+  detailsLabel: string;
 };
 
-export default function Services({ dict, cta }: ServicesProps) {
+export default function Services({ lang, dict, cta, detailsLabel }: ServicesProps) {
   const cards = services.map(({ icon: Icon, key }) => {
     const item = dict.items[key];
     return (
@@ -55,9 +59,10 @@ export default function Services({ dict, cta }: ServicesProps) {
           <Icon size={22} className="text-brand-300" strokeWidth={1.7} />
         </div>
 
-        <h3 className="mb-2.5 text-lg font-bold text-brand-900">{item.title}</h3>
+        <h3 className="mb-2.5 text-lg font-bold text-brand-900"><a href={`/${lang}/services/${serviceSlugs[key]}`} className="hover:text-brand-600">{item.title}</a></h3>
         <p className="mb-5 text-sm leading-relaxed text-slate-600">{item.desc}</p>
-        <ContactButton source={`service_${key}`} className="mt-auto flex min-h-11 items-center justify-between gap-3 border-t border-slate-100 pt-4 text-start text-sm font-semibold text-brand-700">{cta}<ArrowUpRight size={18} className="shrink-0" aria-hidden="true" /></ContactButton>
+        <a href={`/${lang}/services/${serviceSlugs[key]}`} className="mt-auto flex min-h-11 items-center justify-between gap-3 text-sm font-semibold text-brand-700">{detailsLabel}<ArrowUpRight size={18} className="shrink-0" aria-hidden="true" /></a>
+        <ContactButton source={`service_${key}`} className="mt-3 flex min-h-11 items-center gap-3 border-t border-slate-100 pt-3 text-start text-sm font-semibold text-brand-700">{cta}</ContactButton>
       </div>
     );
   });

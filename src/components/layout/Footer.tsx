@@ -2,6 +2,10 @@ import { Phone, MapPin, ArrowRight } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "@/components/layout/Logo";
 import ContactButton from "@/components/contact/ContactButton";
+import LanguageLinks from "@/components/layout/LanguageLinks";
+import type { Locale } from "@/i18n/config";
+import { serviceKeys, serviceSlugs } from "@/lib/services";
+import { valuationCertificateNumber } from "@/lib/credentials";
 import { TelegramIcon } from "@/components/ui/icons";
 import {
   phoneDisplay,
@@ -12,9 +16,10 @@ import {
 
 type FooterProps = {
   dict: Dictionary["footer"];
+  lang: Locale;
 };
 
-export default function Footer({ dict }: FooterProps) {
+export default function Footer({ dict, lang }: FooterProps) {
   const links = [
     { label: dict.links.home, href: "#" },
     { label: dict.links.services, href: "#services" },
@@ -56,7 +61,7 @@ export default function Footer({ dict }: FooterProps) {
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#" className="mb-5 inline-block">
+            <a href={`/${lang}`} className="mb-5 inline-block">
               <Logo tagline={dict.tagline} variant="dark" />
             </a>
             <p className="text-white/45 text-sm leading-relaxed">
@@ -109,7 +114,7 @@ export default function Footer({ dict }: FooterProps) {
                 ) : (
                   <li key={href}>
                     <a
-                      href={href}
+                      href={`/${lang}${href === "#" ? "" : href}`}
                       className="text-sm text-white/50 hover:text-white transition-colors"
                     >
                       {label}
@@ -126,10 +131,10 @@ export default function Footer({ dict }: FooterProps) {
               {dict.servicesHeading}
             </p>
             <ul className="space-y-3">
-              {dict.services.map((s) => (
+              {dict.services.map((s, index) => (
                 <li key={s}>
                   <a
-                    href="#services"
+                    href={`/${lang}/services/${serviceSlugs[serviceKeys[index]]}`}
                     className="text-sm text-white/50 hover:text-white transition-colors"
                   >
                     {s}
@@ -145,7 +150,7 @@ export default function Footer({ dict }: FooterProps) {
               {dict.certHeading}
             </p>
             <div className="space-y-3">
-              {["RICS", "IVS", "ECO"].map((cert) => (
+              {[valuationCertificateNumber].map((cert) => (
                 <div
                   key={cert}
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg mr-2"
@@ -160,7 +165,7 @@ export default function Footer({ dict }: FooterProps) {
                 </div>
               ))}
             </div>
-            <p className="text-white/35 text-xs leading-relaxed mt-5">
+            <p className="text-white/60 text-xs leading-relaxed mt-5">
               {dict.certNote}
             </p>
           </div>
@@ -177,14 +182,7 @@ export default function Footer({ dict }: FooterProps) {
           <p className="text-xs text-white/25">
             © {new Date().getFullYear()} GB Valuation. {dict.rights}
           </p>
-          <div className="flex gap-5">
-            <a href="#" className="text-xs text-white/25 hover:text-white/60 transition-colors">
-              {dict.privacy}
-            </a>
-            <a href="#" className="text-xs text-white/25 hover:text-white/60 transition-colors">
-              {dict.terms}
-            </a>
-          </div>
+          <LanguageLinks lang={lang} />
         </div>
       </div>
     </footer>

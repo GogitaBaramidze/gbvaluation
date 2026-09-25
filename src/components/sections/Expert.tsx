@@ -109,66 +109,34 @@ export default function Expert({ dict }: ExpertProps) {
             </ContactButton>
           </div>
 
-          {/* ── Right — framed studio portrait ── */}
-          {/* dir="ltr" pins the frame/name-card/badge layout to the photo's
-              actual composition. Without it, RTL locales mirror the
-              logical start/end offsets and the badge lands on the
-              subject's face instead of the empty background behind him. */}
-          <div className="relative flex items-end justify-center" dir="ltr">
-            {/* Offset accent frame behind the photo. The name card and
-                credential badge are anchored here (not to the flex row
-                above), so their position always tracks the photo's actual
-                box instead of drifting on narrower mobile widths. */}
-            <div className="relative max-w-full">
-              <div
-                className="absolute -bottom-4 -end-4 start-8 top-8 rounded-3xl"
-                style={{
-                  background: "var(--gradient-ice)",
-                  border: "1px solid var(--color-brand-100)",
-                }}
-              />
-              {/* Card keeps the photo's native 6:5 shape so it is never
-                  upscaled past the source resolution and stays sharp. */}
-              <div className="relative w-72 max-w-full lg:w-95 aspect-6/5 overflow-hidden rounded-3xl shadow-xl">
+          {/* Captions stay below the image at every width and text direction. */}
+          <div className="flex min-w-0 justify-center">
+            <figure className="w-full max-w-95 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+              <div className="relative aspect-6/5 w-full bg-slate-100">
                 <Image
                   src="/valuer.webp"
                   alt={dict.imageAlt}
                   fill
-                  sizes="(max-width: 1024px) 288px, 380px"
-                  className="object-cover"
+                  sizes="(max-width: 428px) calc(100vw - 48px), 380px"
+                  className="object-contain"
                 />
               </div>
-
-              {/* Floating name card */}
-              <div
-                className="absolute bottom-6 start-0 lg:-start-6 max-w-[80%] rounded-2xl px-5 py-4 shadow-xl"
-                style={{
-                  background: "var(--gradient-card-dark)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
-                <p className="text-white font-bold text-sm">{dict.name}</p>
-                <p className="text-xs font-medium mt-0.5 text-brand-300">
-                  {dict.role}
-                </p>
-              </div>
-
-              {/* Floating credential badge — sits above the frame's top
-                  corner on mobile so it never covers the face; on large
-                  screens it drops down and peeks out past the frame edge. */}
-              <div
-                className="absolute -top-6 end-0 lg:top-10 lg:-end-4 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3"
-                style={{
-                  background: "white",
-                  border: "1px solid var(--color-brand-100)",
-                }}
-              >
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-brand-100 shrink-0">
-                  <ShieldCheck size={16} className="text-brand-600" />
+              <figcaption>
+                <div className="px-6 py-5" style={{ background: "var(--gradient-card-dark)" }}>
+                  <p className="text-base font-bold text-white">{dict.name}</p>
+                  <p className="mt-1 text-sm font-medium text-brand-300">{dict.role}</p>
                 </div>
-                <div className="max-w-40"><p className="text-xs font-bold leading-relaxed text-brand-900">{dict.statusValue}</p><p className="mt-1 text-xs font-semibold text-brand-600" dir="ltr">№ {valuationCertificateNumber}</p></div>
-              </div>
-            </div>
+                <div className="flex items-center gap-3 px-6 py-5">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                    <ShieldCheck size={21} aria-hidden="true" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="text-sm font-bold text-brand-900">{dict.statusValue}</p>
+                    <p className="mt-1 text-xs font-medium text-slate-600">{dict.certificateLabel} <bdi>№ {valuationCertificateNumber}</bdi></p>
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

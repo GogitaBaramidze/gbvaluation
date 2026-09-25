@@ -23,7 +23,7 @@
     "cta": "評価を依頼する"
   },
   "hero": {
-    "badge": "認定評価会社",
+    "badge": "認定された認証機関による資格認証",
     "titleLine1": "不動産評価",
     "titleLine2": "ジョージアにて",
     "subtitle": "国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
@@ -103,7 +103,7 @@
     "label": "私たちのチーム",
     "headingLine1": "プロの評価士が",
     "headingLine2": "あなたのために",
-    "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。 国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
+    "description": "GB Valuationの評価士は、認定された認証機関が発行した専門資格証明書を保有しています。 国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
     "stats": {
       "experience": {
         "value": "5+",
@@ -119,15 +119,15 @@
       }
     },
     "credentials": [
-      "資産評価を行う正式な資格",
+      "認定認証機関が発行した専門資格証明書",
       "RICS・IVS 国際基準",
       "100名以上の満足された顧客"
     ],
     "cta": "お問い合わせ",
     "name": "ゴギタ・バラミゼ",
-    "role": "主任評価士 · RICS",
+    "role": "主任評価士",
     "statusLabel": "ステータス",
-    "statusValue": "認定評価会社",
+    "statusValue": "資格認証を受けた評価士",
     "imageAlt": "GB Valuation — 認定評価士"
   },
   "contactModal": {
@@ -142,7 +142,7 @@
     "ctaSubtext": "お問い合わせください — 1営業日以内に回答します",
     "ctaButton": "評価を依頼する",
     "tagline": "Building Value",
-    "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。 ECO · RICS · IVS.",
+    "description": "GB Valuationの評価士は、認定された認証機関が発行した専門資格証明書を保有しています。",
     "city": "バトゥミ、ジョージア",
     "navHeading": "ナビゲーション",
     "links": {
@@ -200,10 +200,17 @@
     ],
     "accreditation": {
       "certificateLabel": "認定証",
-      "title": "認定評価会社",
-      "subtitle": "資産評価を行う正式な資格",
-      "description": "GB Valuationは認定を受け、不動産評価を行う正式な資格を有しています。",
-      "link": "会社について"
+      "title": "専門資格を持つ評価士によるサービス",
+      "subtitle": "資格認証を受けた評価士",
+      "description": "GB Valuationの評価士は、認定された認証機関が発行した専門資格証明書を保有しています。",
+      "link": "会社について",
+      "detailsLabel": "資格認証と認定について",
+      "bodyLabel": "証明書の発行機関",
+      "bodyName": "評価士・専門家職業能力開発センターの認証機関",
+      "bodyAccreditationLabel": "認証機関の認定",
+      "accreditationBody": "ジョージアの国家認定機関 — 認定センター",
+      "standardLabel": "要員認証に関する国家規格",
+      "principles": "認証機関は公平性を守り、利益相反を管理し、資格認証を受けた専門家に関する苦情を審査します。"
     }
   }
 }

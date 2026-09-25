@@ -48,9 +48,13 @@ Contact details are maintained in `src/lib/contact.ts`.
 The landing page includes a primary consultation action, direct phone links,
 a persistent phone/WhatsApp dock, per-service contact actions and a keyboard-accessible
 contact dialog. New content is translated into all six supported languages.
-Accreditation wording and certificate number A-1777 are supplied by the business
-owner. The number is maintained in `src/lib/credentials.ts`. No accrediting
-organisation or IVSC membership of GB Valuation is asserted.
+Certification details are supplied by the business owner. A-1777 identifies the
+valuer's certificate; GAC-PC-0010 identifies the issuing certification body's
+accreditation. These references and the national personnel-certification standard
+are maintained in `src/lib/credentials.ts`. The expandable certification details
+name the issuer and accreditation body. No accreditation of GB Valuation itself
+or IVSC/RICS membership of the company or valuer is asserted.
+The expert's name and certificate appear below the portrait, with no text overlay.
 
 Meta Pixel activation is deferred at the owner's request (25 September 2026).
 Events Manager showed the GB Valuation portfolio as restricted. The previous

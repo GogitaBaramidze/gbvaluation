@@ -24,7 +24,7 @@
     "cta": "Order a Valuation"
   },
   "hero": {
-    "badge": "Accredited valuation company",
+    "badge": "Certified by an accredited certification body",
     "titleLine1": "Property Valuation",
     "titleLine2": "in Georgia",
     "subtitle": "We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
@@ -104,7 +104,7 @@
     "label": "Our Team",
     "headingLine1": "Professional Valuers",
     "headingLine2": "At Your Service",
-    "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations. We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
+    "description": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body. We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
     "stats": {
       "experience": {
         "value": "5+",
@@ -120,15 +120,15 @@
       }
     },
     "credentials": [
-      "Officially authorised to carry out valuations",
+      "Professional certificate issued by an accredited body",
       "RICS & IVS international standards",
       "More than 100 satisfied clients"
     ],
     "cta": "Contact Us",
     "name": "Gogita Baramidze",
-    "role": "Lead Valuer · RICS",
+    "role": "Lead Valuer",
     "statusLabel": "Status",
-    "statusValue": "Accredited valuation company",
+    "statusValue": "Certified valuer",
     "imageAlt": "GB Valuation — certified valuer"
   },
   "contactModal": {
@@ -143,7 +143,7 @@
     "ctaSubtext": "Get in touch — response within 1 business day",
     "ctaButton": "Order a Valuation",
     "tagline": "Building Value",
-    "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations. ECO · RICS · IVS.",
+    "description": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body.",
     "city": "Batumi, Georgia",
     "navHeading": "Navigation",
     "links": {
@@ -201,10 +201,17 @@
     ],
     "accreditation": {
       "certificateLabel": "Certificate",
-      "title": "Accredited valuation company",
-      "subtitle": "Officially authorised to carry out valuations",
-      "description": "GB Valuation holds accreditation and official authorisation to carry out property valuations.",
-      "link": "About our company"
+      "title": "Professionally certified valuation service",
+      "subtitle": "Certified valuer",
+      "description": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body.",
+      "link": "About our company",
+      "detailsLabel": "About certification and accreditation",
+      "bodyLabel": "Certificate issuer",
+      "bodyName": "Certification Body of the Professional Development Centre of Valuers and Experts",
+      "bodyAccreditationLabel": "Certification body accreditation",
+      "accreditationBody": "Georgia’s national accreditation body — Accreditation Centre",
+      "standardLabel": "National standard for personnel certification",
+      "principles": "The certification body upholds impartiality, manages conflicts of interest and reviews complaints concerning certified specialists."
     }
   }
 }

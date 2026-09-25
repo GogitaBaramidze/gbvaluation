@@ -1,6 +1,10 @@
 import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { valuationCertificateNumber } from "@/lib/credentials";
+import {
+  valuationCertificateNumber,
+  certificationBodyAccreditationNumber,
+  personnelCertificationStandard,
+} from "@/lib/credentials";
 
 export default function Accreditation({ dict }: { dict: Dictionary["conversion"]["accreditation"] }) {
   return (
@@ -13,6 +17,17 @@ export default function Accreditation({ dict }: { dict: Dictionary["conversion"]
             <span className="inline-flex items-center gap-2 rounded-lg border border-brand-100 bg-white px-3 py-1.5 text-xs font-semibold text-brand-700">{dict.certificateLabel}<span dir="ltr">№ {valuationCertificateNumber}</span></span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-slate-600">{dict.description}</p>
+          <details className="mt-3 rounded-xl border border-brand-100 bg-white">
+            <summary className="cursor-pointer px-4 py-3 text-sm font-semibold text-brand-700">{dict.detailsLabel}</summary>
+            <div className="border-t border-brand-100 px-4 py-4 text-sm leading-relaxed text-slate-600">
+              <dl className="space-y-3">
+                <div><dt className="font-semibold text-brand-900">{dict.bodyLabel}</dt><dd className="mt-1">{dict.bodyName}</dd></div>
+                <div><dt className="font-semibold text-brand-900">{dict.bodyAccreditationLabel}</dt><dd className="mt-1">{dict.accreditationBody} · <bdi>№ {certificationBodyAccreditationNumber}</bdi></dd></div>
+                <div><dt className="font-semibold text-brand-900">{dict.standardLabel}</dt><dd className="mt-1"><bdi>{personnelCertificationStandard}</bdi></dd></div>
+              </dl>
+              <p className="mt-4 border-t border-slate-100 pt-4">{dict.principles}</p>
+            </div>
+          </details>
         </div>
         <a href="#expert" className="inline-flex min-h-11 shrink-0 items-center gap-2 text-sm font-semibold text-brand-700">{dict.link}<ArrowUpRight size={17} aria-hidden="true" /></a>
       </div>

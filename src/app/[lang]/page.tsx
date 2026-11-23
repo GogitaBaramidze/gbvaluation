@@ -35,12 +35,12 @@ export default async function HomePage({ params }: Props) {
       <Hero dict={dict.hero} conversion={dict.conversion} />
       <Accreditation dict={dict.conversion.accreditation} />
       <Services lang={lang} dict={dict.services} cta={dict.conversion.serviceCta} detailsLabel={content.labels.details} />
-      {lang === "ka" && <AdditionalServices />}
+      <AdditionalServices lang={lang} />
       <Process dict={dict.conversion} />
       <ValuationNeeds dict={dict.needs} dir={localeDir[lang]} />
       <Expert dict={dict.expert} />
       <FAQ title={content.labels.faq} items={content.faq} />
-      {lang === "ka" && <ArticlesPreview />}
+      <ArticlesPreview lang={lang} />
     </main>
   );
 }

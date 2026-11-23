@@ -1,55 +1,135 @@
 {
   "labels": {
-    "details": "Hizmet ayrıntıları", "scope": "Değeri etkileyen unsurlar", "documents": "Hazırlanacak bilgiler", "approach": "Değerleme yaklaşımı", "related": "Diğer değerleme hizmetleri", "faq": "Değerleme hakkında sorular", "quote": "Mülkünüzü görüşelim", "quoteText": "Konumu, mülk türünü ve raporun amacını bildirin. İşe başlamadan kapsam, ücret ve teslim tarihini kararlaştıralım.", "coverage": "Batum merkezli olarak Gürcistan genelindeki talepleri değerlendiriyoruz. Yerinde inceleme koşulları konuma ve işin kapsamına bağlıdır.", "preparationNote": "Bu bir başlangıç listesidir. Gerekli belgeler ve mülke erişim koşulları her iş için ayrıca belirlenir.", "report": "Değerleme raporunuz", "reportText": "Raporda değerlenen varlık, değerleme tarihi ve amacı, kullanılan bilgiler, önemli varsayımlar ve değer sonucu açıklanır. İşin kapsamı ve raporu alacak kurumun gereksinimleri önceden kararlaştırılır."
+    "details": "Hizmet ayrıntıları",
+    "scope": "Değeri etkileyen unsurlar",
+    "documents": "Hazırlanacak bilgiler",
+    "approach": "Değerleme yaklaşımı",
+    "related": "Diğer değerleme hizmetleri",
+    "faq": "Değerleme hakkında sorular",
+    "quote": "Mülkünüzü görüşelim",
+    "quoteText": "Konumu, mülk türünü ve raporun amacını bildirin. İşe başlamadan kapsam, ücret ve teslim tarihini kararlaştıralım.",
+    "coverage": "Gürcistan genelindeki talepleri değerlendiriyoruz. Yerinde inceleme koşulları konuma ve işin kapsamına bağlıdır.",
+    "preparationNote": "Bu bir başlangıç listesidir. Gerekli belgeler ve mülke erişim koşulları her iş için ayrıca belirlenir.",
+    "report": "Değerleme raporunuz",
+    "reportText": "Raporda değerlenen varlık, değerleme tarihi ve amacı, kullanılan bilgiler, önemli varsayımlar ve değer sonucu açıklanır. İşin kapsamı ve raporu alacak kurumun gereksinimleri önceden kararlaştırılır."
   },
   "faq": [
-    { "question": "Gayrimenkul değerleme ücreti ne kadar?", "answer": "Ücret; mülkün türü, konumu, karmaşıklığı, mevcut bilgiler ve raporun amacına bağlıdır. Adres veya kadastro kodunu kısa bir açıklamayla gönderin; işi görüşüp fiyat teklifi sunalım." },
-    { "question": "Değerleme ne kadar sürer?", "answer": "Teslim tarihi; iş, belgeler ve inceleme ihtiyacı değerlendirildikten sonra belirlenir. Bir banka veya başka alıcı tarih belirlediyse ilk görüşmede bildirin." },
-    { "question": "Raporu bankaya veya mahkemeye sunabilir miyim?", "answer": "Raporu kimin, hangi amaçla kullanacağını önceden bildirin. Kurumların uzman, kapsam, değerleme tarihi ve rapor biçimi için farklı şartları olabilir. Sipariş vermeden önce kabul koşullarını raporu alacak kurumla doğrulayın." },
-    { "question": "Batum dışında da çalışıyor musunuz?", "answer": "GB Valuation Batum merkezlidir ve Gürcistan genelinden gelen talepleri değerlendirir. Kapsamı ve yerinde inceleme gereksinimini belirlemek için mülkün konumunu gönderin." },
-    { "question": "Değerlemeyi kim yapıyor?", "answer": "Baş değerleme uzmanı Gogita Baramidze, A-1777 numaralı sertifikaya sahiptir. Belge, Değerleme Uzmanları ve Eksperler Mesleki Gelişim Merkezi'nin belgelendirme organınca verilmiştir. Bu organın GAC-PC-0010 akreditasyonu, uzmanın kişisel sertifikasından ayrıdır." }
+    {
+      "question": "Gayrimenkul değerleme ücreti ne kadar?",
+      "answer": "Ücret; mülkün türü, konumu, karmaşıklığı, mevcut bilgiler ve raporun amacına bağlıdır. Adres veya kadastro kodunu kısa bir açıklamayla gönderin; işi görüşüp fiyat teklifi sunalım."
+    },
+    {
+      "question": "Değerleme ne kadar sürer?",
+      "answer": "Teslim tarihi; iş, belgeler ve inceleme ihtiyacı değerlendirildikten sonra belirlenir. Bir banka veya başka alıcı tarih belirlediyse ilk görüşmede bildirin."
+    },
+    {
+      "question": "Raporu bankaya veya mahkemeye sunabilir miyim?",
+      "answer": "Raporu kimin, hangi amaçla kullanacağını önceden bildirin. Kurumların uzman, kapsam, değerleme tarihi ve rapor biçimi için farklı şartları olabilir. Sipariş vermeden önce kabul koşullarını raporu alacak kurumla doğrulayın."
+    },
+    {
+      "question": "Hangi bölgelerde hizmet veriyorsunuz?",
+      "answer": "GB Valuation, Tiflis ve Batum dâhil Gürcistan genelindeki talepleri değerlendirir. Kapsamı ve yerinde inceleme gereksinimini belirlemek için mülkün konumunu gönderin."
+    },
+    {
+      "question": "Değerlemeyi kim yapıyor?",
+      "answer": "Baş değerleme uzmanı Gogita Baramidze, A-1777 numaralı sertifikaya sahiptir. Belge, Değerleme Uzmanları ve Eksperler Mesleki Gelişim Merkezi'nin belgelendirme organınca verilmiştir. Bu organın GAC-PC-0010 akreditasyonu, uzmanın kişisel sertifikasından ayrıdır."
+    }
   ],
   "services": {
     "residential": {
-      "title": "Batum'da Daire ve Konut Değerleme", "description": "Batum ve Gürcistan genelinde daire ve ev değerleme. Değeri etkileyen unsurlar, hazırlanacak belgeler ve fiyat teklifi için iletişim.",
+      "title": "Daire ve Konut Değerleme",
+      "description": "Gürcistan genelinde daire ve ev değerleme. Değeri etkileyen unsurlar, hazırlanacak belgeler ve fiyat teklifi için iletişim.",
       "intro": "İlandaki satış fiyatı her zaman piyasa değerini göstermez. Konut değerlemesi, satış, satın alma veya finansman gibi belirlenen bir amaç ve tarih için mülkün özelliklerini ve ilgili piyasa verilerini ele alır.",
-      "factors": ["Konum, erişim, binanın durumu, kat ve plan", "Kayıtlı alan, tadilat durumu ve kapsama giren arsa", "Benzer mülkler ile konum, durum ve işlem koşullarındaki farklar"],
-      "documents": ["Adres veya kadastro kodu ve mevcut sicil belgesi", "Plan, alan bilgileri ve güncel fotoğraflar", "Değerleme amacı, raporun alıcısı ve gereken değerleme tarihi"],
+      "factors": [
+        "Konum, erişim, binanın durumu, kat ve plan",
+        "Kayıtlı alan, tadilat durumu ve kapsama giren arsa",
+        "Benzer mülkler ile konum, durum ve işlem koşullarındaki farklar"
+      ],
+      "documents": [
+        "Adres veya kadastro kodu ve mevcut sicil belgesi",
+        "Plan, alan bilgileri ve güncel fotoğraflar",
+        "Değerleme amacı, raporun alıcısı ve gereken değerleme tarihi"
+      ],
       "approach": "Daire ve evlerde karşılaştırılabilir piyasa verileri önemlidir. İlan fiyatları bağlamı içinde incelenir; tamamlanmış satış fiyatı olarak kabul edilmez. Kiraya verilmiş mülklerde kira bilgileri de yararlı olabilir. Yaklaşım, mülke ve mevcut kanıtlara göre belirlenir."
     },
     "commercial": {
-      "title": "Batum'da Ticari Gayrimenkul Değerleme", "description": "Batum ve Gürcistan'da ofis, mağaza ve ticari alan değerleme. Kira bilgileri, mülk belgeleri ve raporun kullanım amacını görüşün.",
+      "title": "Ticari Gayrimenkul Değerleme",
+      "description": "Gürcistan’da ofis, mağaza ve ticari alan değerleme. Kira bilgileri, mülk belgeleri ve raporun kullanım amacını görüşün.",
       "intro": "Ticari alanlarda konum, izin verilen kullanım ve kiracılar açısından uygunluk dikkate alınır. Çalışma; işlem, finansman veya varlık incelemesi amacıyla bir ofis, mağaza ya da hizmet alanını kapsayabilir.",
-      "factors": ["Cadde cephesi, görünürlük, erişim ve işlevsel plan", "Gerektiğinde kira koşulları, doluluk, kira ve işletme giderleri", "Benzer satışlar ve kiralamalar, durum ve izin verilen kullanım"],
-      "documents": ["Kadastro kodu, sicil belgesi ve planlar", "Kiralanmışsa kira sözleşmeleri, gelir ve gider özeti", "Mülk açıklaması, fotoğraflar ve raporun kullanım amacı"],
+      "factors": [
+        "Cadde cephesi, görünürlük, erişim ve işlevsel plan",
+        "Gerektiğinde kira koşulları, doluluk, kira ve işletme giderleri",
+        "Benzer satışlar ve kiralamalar, durum ve izin verilen kullanım"
+      ],
+      "documents": [
+        "Kadastro kodu, sicil belgesi ve planlar",
+        "Kiralanmışsa kira sözleşmeleri, gelir ve gider özeti",
+        "Mülk açıklaması, fotoğraflar ve raporun kullanım amacı"
+      ],
       "approach": "Piyasa karşılaştırmaları ve yeterli veri varsa gelir yaklaşımı kullanılabilir. Sözleşmedeki kira, piyasa kirası ve boş kalma varsayımlarıyla birlikte ele alınır. Boş ve kiracılı alanlar farklı varsayımlar gerektirebilir; bunlar raporda açıklanır."
     },
     "industrial": {
-      "title": "Depo ve Sanayi Gayrimenkulü Değerleme", "description": "Gürcistan'da depo ve üretim tesisi değerleme. Kapsama giren arsa, binalar ve ekipmanı belirleyip gerekli bilgileri hazırlayın.",
+      "title": "Depo ve Sanayi Gayrimenkulü Değerleme",
+      "description": "Gürcistan'da depo ve üretim tesisi değerleme. Kapsama giren arsa, binalar ve ekipmanı belirleyip gerekli bilgileri hazırlayın.",
       "intro": "Depo veya üretim tesisinde fiziksel büyüklük kadar kullanım uygunluğu da önemlidir. İşe başlamadan arsa ve binalar; ekipman, stok ve diğer varlıklardan ayrılarak kapsam belirlenir.",
-      "factors": ["Yol erişimi, yükleme koşulları, tavan yüksekliği ve kullanılabilir alan", "Bina durumu, altyapı bağlantıları ve işlevsel uygunluk", "Arsa hakları, izin verilen kullanım ve benzer tesisler"],
-      "documents": ["Arsa ve binaların sicil bilgileri ve vaziyet planları", "Teknik açıklama, alanlar ve tesis fotoğrafları", "Dahil edilen varlık listesi, ilgili kiralar ve kısıtlamalar"],
+      "factors": [
+        "Yol erişimi, yükleme koşulları, tavan yüksekliği ve kullanılabilir alan",
+        "Bina durumu, altyapı bağlantıları ve işlevsel uygunluk",
+        "Arsa hakları, izin verilen kullanım ve benzer tesisler"
+      ],
+      "documents": [
+        "Arsa ve binaların sicil bilgileri ve vaziyet planları",
+        "Teknik açıklama, alanlar ve tesis fotoğrafları",
+        "Dahil edilen varlık listesi, ilgili kiralar ve kısıtlamalar"
+      ],
       "approach": "Tesise ve verilere göre piyasa, gelir veya maliyet yaklaşımları uygun olabilir. Yıpranmayı yalnızca yaş belirlemez; durum ve güncel kullanıma uygunluk da önemlidir. Ekipman ancak ayrıca kararlaştırılırsa dahil edilir; böylece eksik veya çift sayım önlenir."
     },
     "land": {
-      "title": "Batum ve Gürcistan'da Arsa Değerleme", "description": "Batum ve Gürcistan'da tarım arazisi ve arsa değerleme. Kadastro bilgileri, erişim, kullanım amacı ve hazırlanacak belgeler.",
+      "title": "Gürcistan’da Arsa Değerleme",
+      "description": "Gürcistan’da tarım arazisi ve arsa değerleme. Kadastro bilgileri, erişim, kullanım amacı ve hazırlanacak belgeler.",
       "intro": "Aynı büyüklükteki iki parselin değeri çok farklı olabilir. Arsa değerlemesi; belirlenen tarih için parselin haklarını, fiziksel özelliklerini, konumunu ve belgelerle desteklenen kullanım olanaklarını inceler.",
-      "factors": ["Konum, büyüklük, şekil, eğim ve erişim", "Kayıtlı nitelik, kısıtlamalar ve belgelenmiş izinli kullanım", "Altyapı olanakları ve karşılaştırılabilir arazi verileri"],
-      "documents": ["Kadastro kodu ve güncel sicil belgesi", "Kadastro planı ve mevcut sınır veya ölçüm bilgileri", "Mevcut planlama belgeleri, kısıtlamalar ve değerleme amacı"],
+      "factors": [
+        "Konum, büyüklük, şekil, eğim ve erişim",
+        "Kayıtlı nitelik, kısıtlamalar ve belgelenmiş izinli kullanım",
+        "Altyapı olanakları ve karşılaştırılabilir arazi verileri"
+      ],
+      "documents": [
+        "Kadastro kodu ve güncel sicil belgesi",
+        "Kadastro planı ve mevcut sınır veya ölçüm bilgileri",
+        "Mevcut planlama belgeleri, kısıtlamalar ve değerleme amacı"
+      ],
       "approach": "Benzer arsalar; erişim, nitelik ve geliştirme potansiyeli farklarıyla değerlendirilir. Gelecekteki bir proje fikri kendiliğinden yapılaşma hakkı yaratmaz. Planlama varsayımları belgeye dayanmalıdır; değerleme ilgili makamın izninin yerine geçmez."
     },
     "business": {
-      "title": "İşletme Varlıkları ve Ekipman Değerleme", "description": "Gürcistan'da şirket varlıkları, makine ve ekipman değerleme. Varlık listesi, mülkiyet, durum ve teklif için gereken bilgileri belirleyin.",
+      "title": "İşletme Varlıkları ve Ekipman Değerleme",
+      "description": "Gürcistan'da şirket varlıkları, makine ve ekipman değerleme. Varlık listesi, mülkiyet, durum ve teklif için gereken bilgileri belirleyin.",
       "intro": "Muhasebe kayıtlarındaki tutarlar, bir işlem veya özel amaç için gereken değerden farklı olabilir. Önce varlıklar, sahipleri ve kullanımın devamı mı yoksa ayrı satış mı varsayıldığı belirlenir.",
-      "factors": ["Teknik özellikler, yaş, durum ve bakım geçmişi", "Mülkiyet, kalan kullanım faydası ve piyasa talebi", "İşle ilgili kurulum, söküm veya taşıma varsayımları"],
-      "documents": ["Varsa model, seri numarası ve edinim bilgileriyle varlık listesi", "Teknik belgeler, bakım kayıtları ve fotoğraflar", "Değerleme amacı, mülkiyet bilgileri ve ilgili mali veriler"],
+      "factors": [
+        "Teknik özellikler, yaş, durum ve bakım geçmişi",
+        "Mülkiyet, kalan kullanım faydası ve piyasa talebi",
+        "İşle ilgili kurulum, söküm veya taşıma varsayımları"
+      ],
+      "documents": [
+        "Varsa model, seri numarası ve edinim bilgileriyle varlık listesi",
+        "Teknik belgeler, bakım kayıtları ve fotoğraflar",
+        "Değerleme amacı, mülkiyet bilgileri ve ilgili mali veriler"
+      ],
       "approach": "Makine ve ekipmanda piyasa ve maliyet verileri kullanılabilir. Maddi olmayan varlıklarda yaklaşım, haklara ve mevcut bilgilere bağlıdır. Varlık değerlemesi otomatik olarak işletmenin tamamının değerlemesi değildir. Her varlık sınıfı için kapsam ve veri gereksinimleri kararlaştırılır."
     },
     "legal": {
-      "title": "Hukuki Amaçlar İçin Mülk Değerleme", "description": "Gürcistan'da miras, mal paylaşımı ve uyuşmazlıklar için mülk değerleme. Tarih, mülkiyet hakları ve rapor alıcısının koşullarını önceden belirleyin.",
+      "title": "Hukuki Amaçlar İçin Mülk Değerleme",
+      "description": "Gürcistan'da miras, mal paylaşımı ve uyuşmazlıklar için mülk değerleme. Tarih, mülkiyet hakları ve rapor alıcısının koşullarını önceden belirleyin.",
       "intro": "Miras, mal paylaşımı ve mülkiyet uyuşmazlıkları belirli bir tarih ve amaç için değerleme gerektirebilir. Önce hangi mülk veya hakkın değerleneceği, raporu kimin kullanacağı ve alıcının talepleri netleştirilir.",
-      "factors": ["Göreve dahil olan mülk veya mülkiyet payı", "Bugünden farklı olabilecek değerleme tarihi", "O tarihe ait belgeler, varsayımlar ve veriler"],
-      "documents": ["Mülkü tanımlayan ve mülkiyeti gösteren belgeler", "Amacın ve rapor alıcısının gereksinimlerinin yazılı açıklaması", "Geçmiş tarihli değerleme için o döneme ait mülk bilgileri"],
+      "factors": [
+        "Göreve dahil olan mülk veya mülkiyet payı",
+        "Bugünden farklı olabilecek değerleme tarihi",
+        "O tarihe ait belgeler, varsayımlar ve veriler"
+      ],
+      "documents": [
+        "Mülkü tanımlayan ve mülkiyeti gösteren belgeler",
+        "Amacın ve rapor alıcısının gereksinimlerinin yazılı açıklaması",
+        "Geçmiş tarihli değerleme için o döneme ait mülk bilgileri"
+      ],
       "approach": "Geçmiş tarih için o döneme uygun veriler gerekir. Mahkemeye sunum veya başka resmi kullanım şartları siparişten önce alıcıyla açıklığa kavuşturulmalıdır. Değerleme, kararlaştırılan kapsamda değeri belirler; mülkiyet hakkını tespit etmez veya hukuki uyuşmazlığı çözmez."
     }
   }

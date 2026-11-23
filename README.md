@@ -20,7 +20,7 @@ npm run lint
 
 ## Structure
 
-- `src/app/[lang]/` — localized layout, homepage and six service detail pages
+- `src/app/[lang]/` — localized layout, homepage, eight service pages and article routes
 - `src/content/services/` — translated service details and homepage FAQs
 - `src/components/sections/` — Hero, Services, ValuationNeeds, Expert
 - `src/components/layout/` — Navbar, Footer
@@ -46,19 +46,22 @@ GOOGLE_SITE_VERIFICATION=
 
 Contact details are maintained in `src/lib/contact.ts`.
 
-## Georgian guides and additional services
+## Multilingual guides and additional services
 
-`/ka/articles` lists eight original Georgian guides with static, crawlable article
-URLs. Edit their content and genuine publication dates in `src/content/articles/ka.json`.
+`/[lang]/articles` lists eight guides in each of the six supported languages.
+Edit content and genuine publication dates in `src/content/articles/<lang>.json`;
+shared interface translations are in `ui-<lang>.json` in the same directory.
 Each article has its own canonical, Article/Open Graph metadata, visible publication
 date, contents links, related reading and service/contact links. Authorship is the
 GB Valuation organization; expert review is not asserted.
 
-The Georgian homepage also links to full business/share valuation and property
+Every localized homepage also links to full business/share valuation and property
 measurement service pages. Measurement is carried out by a partner specialist.
-These pages and the guides are Georgian only: hreflang includes only the actual
-Georgian URL, and language switching leads to the selected locale's homepage.
-The sitemap includes these pages alongside the existing 42 localized pages.
+These pages and the guides have reciprocal language links; language switching
+preserves the current page. The sitemap contains 108 localized pages.
+Primary headings and descriptions position the business nationwide. City names
+appear only where useful in context. The old `binis-shefaseba-batumshi` article
+slug permanently redirects to `binis-shefaseba`, preserving query parameters.
 
 Facebook post text is editorial material in the article data; publication to a
 social account is a separate action. No tracking pixel is enabled by this update.
@@ -67,7 +70,7 @@ social account is a separate action. No tracking pixel is enabled by this update
 
 The production host redirects the apex domain to `www`. Canonical, sitemap,
 hreflang, Open Graph and structured-data URLs use that final origin; legacy
-apex environment values are normalized. Each of the 42 localized pages has its
+apex environment values are normalized. Each of the 108 localized pages has its
 own metadata and reciprocal language links. The existing Russian fallback is
 also the `x-default`. Tracking parameters do not create separate canonicals.
 
@@ -81,7 +84,7 @@ Share-image rendering falls back to an English brand card if a localized font
 cannot be shaped by the image renderer, rather than returning a broken image.
 The desktop-only hero illustration uses a media source so mobile visitors do
 not download its 576 KB SVG.
-Sitemap modification dates are omitted until real editorial dates are maintained.
+Sitemap modification dates are included for articles with genuine editorial dates.
 
 Verify the production build in one terminal and audit it in another:
 

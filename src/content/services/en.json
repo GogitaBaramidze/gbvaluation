@@ -1,55 +1,135 @@
 {
   "labels": {
-    "details": "View service details", "scope": "What affects the value", "documents": "What to prepare", "approach": "How the valuation is approached", "related": "Other valuation services", "faq": "Questions about property valuation", "quote": "Discuss your property", "quoteText": "Tell us the location, property type and purpose of the report. We agree the scope, fee and delivery date before starting.", "coverage": "Based in Batumi, serving clients across Georgia. Inspection arrangements depend on the property's location and the agreed scope.", "preparationNote": "These are starting points. We confirm the documents and access needed for your particular assignment.", "report": "Your valuation report", "reportText": "The report sets out the asset being valued, valuation date and purpose, information used, relevant assumptions and the conclusion of value. The scope and the intended recipient's requirements are agreed before work begins."
+    "details": "View service details",
+    "scope": "What affects the value",
+    "documents": "What to prepare",
+    "approach": "How the valuation is approached",
+    "related": "Other valuation services",
+    "faq": "Questions about property valuation",
+    "quote": "Discuss your property",
+    "quoteText": "Tell us the location, property type and purpose of the report. We agree the scope, fee and delivery date before starting.",
+    "coverage": "We handle enquiries across Georgia. Inspection arrangements depend on the property location and agreed scope.",
+    "preparationNote": "These are starting points. We confirm the documents and access needed for your particular assignment.",
+    "report": "Your valuation report",
+    "reportText": "The report sets out the asset being valued, valuation date and purpose, information used, relevant assumptions and the conclusion of value. The scope and the intended recipient's requirements are agreed before work begins."
   },
   "faq": [
-    { "question": "How much does a property valuation cost?", "answer": "The fee depends on the property type, location, complexity, available information and purpose of the report. Send the address or cadastral code with a brief description so we can discuss the work and provide a quote." },
-    { "question": "How long does a valuation take?", "answer": "The delivery date is agreed after we review the assignment, documents and any inspection requirements. Tell us about your deadline at the first contact, especially if a bank or another recipient has set a date." },
-    { "question": "Can I use the report for a bank or court?", "answer": "Tell us who will receive the report and for what purpose. Banks, courts and other institutions may have their own requirements for the valuer, scope, valuation date and report format. Confirm acceptance with the intended recipient before commissioning." },
-    { "question": "Do you work outside Batumi?", "answer": "GB Valuation is based in Batumi and handles enquiries from across Georgia. Send the property's location so we can agree the scope, whether an inspection is needed and how it will be arranged." },
-    { "question": "Who carries out the valuation?", "answer": "The lead valuer is Gogita Baramidze, certificate A-1777. The certificate was issued by the certification body of the Professional Development Centre of Valuers and Experts. The issuing body holds accreditation GAC-PC-0010; this is separate from the valuer's personal certificate." }
+    {
+      "question": "How much does a property valuation cost?",
+      "answer": "The fee depends on the property type, location, complexity, available information and purpose of the report. Send the address or cadastral code with a brief description so we can discuss the work and provide a quote."
+    },
+    {
+      "question": "How long does a valuation take?",
+      "answer": "The delivery date is agreed after we review the assignment, documents and any inspection requirements. Tell us about your deadline at the first contact, especially if a bank or another recipient has set a date."
+    },
+    {
+      "question": "Can I use the report for a bank or court?",
+      "answer": "Tell us who will receive the report and for what purpose. Banks, courts and other institutions may have their own requirements for the valuer, scope, valuation date and report format. Confirm acceptance with the intended recipient before commissioning."
+    },
+    {
+      "question": "Which regions do you cover?",
+      "answer": "GB Valuation handles enquiries across Georgia, including Tbilisi and Batumi. Send the location so we can agree the scope, whether an inspection is needed and how it will be arranged."
+    },
+    {
+      "question": "Who carries out the valuation?",
+      "answer": "The lead valuer is Gogita Baramidze, certificate A-1777. The certificate was issued by the certification body of the Professional Development Centre of Valuers and Experts. The issuing body holds accreditation GAC-PC-0010; this is separate from the valuer's personal certificate."
+    }
   ],
   "services": {
     "residential": {
-      "title": "Apartment & House Valuation in Batumi", "description": "Apartment and house valuation in Batumi and across Georgia. Find out what affects the value, what documents to prepare and how to request a quote.",
+      "title": "Apartment & House Valuation",
+      "description": "Apartment and house valuation across Georgia. Find out what affects the value, what documents to prepare and how to request a quote.",
       "intro": "An apartment's asking price is not necessarily its market value. A residential valuation considers the specific property and relevant market evidence for an agreed date and purpose, such as a sale, purchase or financing application.",
-      "factors": ["Location, access, building condition, floor and layout", "Registered area, renovation condition and any included land", "Comparable properties and differences in condition, location and transaction terms"],
-      "documents": ["Address or cadastral code and available registry extract", "Floor plan, area information and recent photographs", "Valuation purpose, intended recipient and required valuation date"],
+      "factors": [
+        "Location, access, building condition, floor and layout",
+        "Registered area, renovation condition and any included land",
+        "Comparable properties and differences in condition, location and transaction terms"
+      ],
+      "documents": [
+        "Address or cadastral code and available registry extract",
+        "Floor plan, area information and recent photographs",
+        "Valuation purpose, intended recipient and required valuation date"
+      ],
       "approach": "Comparable market evidence helps assess apartments and houses. An advertised asking price is assessed in context rather than treated as a completed sale. For a rented property, rental information may also be relevant. The appropriate approach depends on the property and available evidence."
     },
     "commercial": {
-      "title": "Commercial Property Valuation in Batumi", "description": "Valuation of offices, retail units and commercial premises in Batumi and Georgia. Discuss rental evidence, property documents and the purpose of your report.",
+      "title": "Commercial Property Valuation",
+      "description": "Valuation of offices, retail units and commercial premises across Georgia. Discuss rental evidence, property documents and the purpose of your report.",
       "intro": "Commercial premises are assessed in relation to their location, permitted use and ability to attract occupiers. The assignment may concern an office, retail unit or service premises, with the scope tailored to a transaction, financing or asset review.",
-      "factors": ["Street frontage, visibility, access and functional layout", "Lease terms, occupancy, rent and operating costs where relevant", "Comparable sales and rentals, condition and permitted use"],
-      "documents": ["Cadastral code, registry extract and floor plans", "Lease agreements and a rent and expense summary, if let", "Property description, photographs and intended use of the report"],
+      "factors": [
+        "Street frontage, visibility, access and functional layout",
+        "Lease terms, occupancy, rent and operating costs where relevant",
+        "Comparable sales and rentals, condition and permitted use"
+      ],
+      "documents": [
+        "Cadastral code, registry extract and floor plans",
+        "Lease agreements and a rent and expense summary, if let",
+        "Property description, photographs and intended use of the report"
+      ],
       "approach": "Market comparisons and, where supported by evidence, an income approach can inform the valuation. Contract rent is reviewed alongside market rent and vacancy assumptions. A vacant unit and a tenanted unit may require different assumptions, which should be made clear in the report."
     },
     "industrial": {
-      "title": "Industrial Property & Warehouse Valuation", "description": "Warehouse and industrial property valuation in Georgia. Clarify the buildings, land and equipment included, access requirements and documents for a quote.",
+      "title": "Industrial Property & Warehouse Valuation",
+      "description": "Warehouse and industrial property valuation in Georgia. Clarify the buildings, land and equipment included, access requirements and documents for a quote.",
       "intro": "A warehouse or production site needs an assessment of its practical use as well as its physical size. Before starting, we distinguish the land and buildings from equipment, stock and other assets so that the assignment has a clear boundary.",
-      "factors": ["Road access, loading facilities, ceiling height and usable space", "Building condition, utility connections and functional suitability", "Land rights, permitted use and evidence from comparable sites"],
-      "documents": ["Land and building registry information and site plans", "Technical descriptions, areas and photographs of the facilities", "A list of included assets and any relevant leases or restrictions"],
+      "factors": [
+        "Road access, loading facilities, ceiling height and usable space",
+        "Building condition, utility connections and functional suitability",
+        "Land rights, permitted use and evidence from comparable sites"
+      ],
+      "documents": [
+        "Land and building registry information and site plans",
+        "Technical descriptions, areas and photographs of the facilities",
+        "A list of included assets and any relevant leases or restrictions"
+      ],
       "approach": "Depending on the site and evidence, market, income or cost approaches may be relevant. Age alone does not explain depreciation: condition and suitability for current use also matter. Equipment is included only when specifically agreed, helping avoid omissions or double counting."
     },
     "land": {
-      "title": "Land Valuation in Batumi & Georgia", "description": "Agricultural and non-agricultural land valuation in Batumi and Georgia. Review cadastral information, access, permitted use and the documents to prepare.",
+      "title": "Land Valuation",
+      "description": "Agricultural and non-agricultural land valuation across Georgia. Review cadastral information, access, permitted use and the documents to prepare.",
       "intro": "Two plots of the same size can have very different values. Land valuation considers the rights and characteristics of a specific plot, its location and the uses supported by the available documentation, at the agreed valuation date.",
-      "factors": ["Location, plot size, shape, terrain and access", "Registered designation, restrictions and documented permitted use", "Available utilities and comparable land market evidence"],
-      "documents": ["Cadastral code and current registry extract", "Cadastral plan and available boundary or survey information", "Existing planning documents, restrictions and valuation purpose"],
+      "factors": [
+        "Location, plot size, shape, terrain and access",
+        "Registered designation, restrictions and documented permitted use",
+        "Available utilities and comparable land market evidence"
+      ],
+      "documents": [
+        "Cadastral code and current registry extract",
+        "Cadastral plan and available boundary or survey information",
+        "Existing planning documents, restrictions and valuation purpose"
+      ],
       "approach": "Comparable land evidence is reviewed with attention to differences in access, designation and development potential. A possible future project does not automatically establish development rights. Planning assumptions need documentary support; the valuation does not replace permission from the relevant authority."
     },
     "business": {
-      "title": "Business Asset & Equipment Valuation", "description": "Valuation of company assets, machinery and equipment in Georgia. Define the assets, ownership, condition and information needed for a valuation proposal.",
+      "title": "Business Asset & Equipment Valuation",
+      "description": "Valuation of company assets, machinery and equipment in Georgia. Define the assets, ownership, condition and information needed for a valuation proposal.",
       "intro": "An asset register's accounting values can differ from the values needed for a transaction or another specific purpose. Start by identifying the assets to be valued, who owns them and whether they will remain in use or be considered separately.",
-      "factors": ["Asset specification, age, condition and maintenance history", "Ownership, remaining utility and market demand", "Installation, removal or transfer assumptions relevant to the assignment"],
-      "documents": ["Asset list with model, serial number and acquisition information where available", "Technical documents, maintenance records and photographs", "Purpose of valuation, ownership information and any relevant financial data"],
+      "factors": [
+        "Asset specification, age, condition and maintenance history",
+        "Ownership, remaining utility and market demand",
+        "Installation, removal or transfer assumptions relevant to the assignment"
+      ],
+      "documents": [
+        "Asset list with model, serial number and acquisition information where available",
+        "Technical documents, maintenance records and photographs",
+        "Purpose of valuation, ownership information and any relevant financial data"
+      ],
       "approach": "Market and cost evidence may be used for machinery and equipment, while the approach for intangible assets depends on the rights and information available. An asset valuation is not automatically a valuation of the whole business. Scope and data requirements must be agreed for each asset class."
     },
     "legal": {
-      "title": "Property Valuation for Legal Proceedings", "description": "Property valuation for inheritance, asset division and disputes in Georgia. Agree the valuation date, property rights and recipient's requirements before starting.",
+      "title": "Property Valuation for Legal Proceedings",
+      "description": "Property valuation for inheritance, asset division and disputes in Georgia. Agree the valuation date, property rights and recipient's requirements before starting.",
       "intro": "Inheritance, division of assets and property disputes can require a valuation for a clearly defined purpose and date. We first clarify what property or interest needs to be valued and who will use the report, including any requirements provided by that recipient.",
-      "factors": ["The property or ownership interest covered by the assignment", "The required valuation date, which may differ from today's date", "Documents, assumptions and evidence relevant to that date"],
-      "documents": ["Property identification and ownership documents", "A written explanation of the valuation purpose and recipient's requirements", "Relevant historical property information if a past valuation date is required"],
+      "factors": [
+        "The property or ownership interest covered by the assignment",
+        "The required valuation date, which may differ from today's date",
+        "Documents, assumptions and evidence relevant to that date"
+      ],
+      "documents": [
+        "Property identification and ownership documents",
+        "A written explanation of the valuation purpose and recipient's requirements",
+        "Relevant historical property information if a past valuation date is required"
+      ],
       "approach": "For a past valuation date, the analysis needs evidence relevant to that period. Requirements for court submission or other formal use should be clarified with the recipient before commissioning. A valuation addresses value within its agreed scope; it does not determine ownership or resolve the legal dispute."
     }
   }

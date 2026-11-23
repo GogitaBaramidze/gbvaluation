@@ -1,11 +1,10 @@
 {
   "meta": {
-    "title": "Property Valuation in Batumi, Georgia | GB Valuation",
-    "description": "Property, land and business asset valuation in Batumi and across Georgia. Certified valuer A-1777. Contact GB Valuation to discuss scope, fees and timing.",
+    "title": "Property Valuation | GB Valuation",
+    "description": "Apartment, land, commercial property and business valuation. Property measurement and plans through a partner specialist. Contact GB Valuation to discuss your requirements.",
     "keywords": [
       "property valuation",
       "real estate appraisal",
-      "property valuation Batumi",
       "certified valuer Georgia",
       "asset valuation",
       "RICS valuation",
@@ -25,9 +24,9 @@
   },
   "hero": {
     "badge": "Certified by an accredited certification body",
-    "titleLine1": "Property Valuation",
-    "titleLine2": "in Batumi, Georgia",
-    "subtitle": "Valuation of apartments, houses, commercial premises, land and business assets in Batumi and across Georgia. We agree the purpose, fee and delivery date before starting.",
+    "titleLine1": "Property",
+    "titleLine2": "Valuation",
+    "subtitle": "Valuation of apartments, houses, land, commercial property and businesses. Measurement services through a partner specialist. We agree the scope, fee and timing before starting.",
     "ctaPrimary": "Order a Valuation",
     "ctaSecondary": "Our Services",
     "imageAlt": "GB Valuation — property valuation"
@@ -36,7 +35,7 @@
     "label": "Our Services",
     "headingPre": "Types of",
     "headingHighlight": "Valuation",
-    "subtitle": "Valuation of apartments, houses, commercial premises, land and business assets in Batumi and across Georgia. We agree the purpose, fee and delivery date before starting.",
+    "subtitle": "Valuation of apartments, houses, land, commercial property and businesses. Measurement services through a partner specialist. We agree the scope, fee and timing before starting.",
     "items": {
       "residential": {
         "title": "Residential Property",
@@ -144,7 +143,7 @@
     "ctaButton": "Order a Valuation",
     "tagline": "Building Value",
     "description": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body.",
-    "city": "Batumi, Georgia",
+    "city": "Georgia",
     "navHeading": "Navigation",
     "links": {
       "home": "Home",
@@ -174,13 +173,13 @@
     "more": "More options",
     "consultation": "Free consultation",
     "reassurance": "Tell us about your property. We will explain the next step.",
-    "location": "Batumi · Georgia",
+    "location": "Georgia",
     "writeUs": "Prefer to message?",
     "messageHint": "Tell us about your property and the purpose of the valuation.",
     "highlights": [
       "Property and business assets",
       "ECO · RICS · IVS standards",
-      "Batumi and across Georgia"
+      "Across Georgia"
     ],
     "serviceCta": "Request a valuation",
     "processLabel": "A SIMPLE PROCESS",

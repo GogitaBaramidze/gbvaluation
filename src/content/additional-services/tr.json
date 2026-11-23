@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "business-valuation",
+    "title": "Gürcistan'da işletme ve şirket payı değerleme",
+    "cardTitle": "İşletme değerleme",
+    "description": "Tüm işletmenin, şirketin ve mülkiyet payının değerlemesi. Amaç, değerleme konusu hak, gerekli veriler, ücret ve teslim süresini GB Valuation ile önceden kararlaştırın.",
+    "intro": "İşletme satışı, satın alma veya yeni ortak katılımını değerlendirirken yalnızca gayrimenkul ve makinelerin değerini bilmek yeterli değildir. GB Valuation belirli bir amaç ve kararlaştırılmış tarih için tüm işletmenin ve şirket payının değerlemesini sunar.",
+    "serviceType": "Tüm işletmenin ve şirket payının değerlemesi",
+    "badge": "İşletme · Şirket · Mülkiyet payı",
+    "purpose": ["İşletme veya şirket payının alım satımını değerlendirmek", "Ortağın katılması, ayrılması veya mülkiyet yapısının değişmesi", "Malik için işletme değeri analizi ve müzakereye hazırlık"],
+    "sections": [
+      {"heading": "Önce neyin değerlendiğini netleştiririz", "paragraphs": ["Başlamadan önce görevin faal işletmenin bütününü, belirli bir şirketi veya mülkiyet payını kapsayıp kapsamadığını belirleriz. Amacı, tarihi, raporun muhatabını ve kullanım koşullarını kararlaştırırız. Hangi varlık ve yükümlülüklerin dahil olduğu ve paya hangi hakların bağlı olduğu önemlidir.", "Şirket payının değeri her zaman tüm işletmenin değerinin ilgili yüzdeyle çarpılmasıyla bulunmaz. Ortaklar sözleşmesi, kararlara katılma hakkı ve payın devir koşulları önemli olabilir; etkilerini belirli görev kapsamında inceleriz."]},
+      {"heading": "Hangi bilgileri analiz ederiz?", "paragraphs": ["Çalışma, işletmenin faaliyetlerinin ve mevcut verilerin incelenmesine dayanır. Gelir, gider, kâr ve nakit akışını ayırır; yükümlülükleri, faaliyet için gerekli varlıkları ve işletmenin özelliklerini değerlendiririz.", "Gerektiğinde gelir ve piyasa yaklaşımları; işletmenin niteliğine göre varlık ve yükümlülük analizi de incelenir. Yöntem veri kalitesine ve göreve uygun olmalıdır. Yalnızca ciro veya tek bir evrensel katsayı gerekçeli sonuç için yeterli değildir."], "items": ["Mali sonuçlar, değişimleri ve bir defalık gelir ya da giderler", "Müşterilere, tedarikçilere veya belirli kişilere bağımlılık", "Sözleşmeler, yükümlülükler, finansman ve faaliyet açısından önemli haklar", "Tahminlerin dayanağı, varsayımlar ve mevcut karşılaştırılabilir veriler"]},
+      {"heading": "İşletme değerlemesi ve varlık değerlemesi", "paragraphs": ["Tüm işletme değerlenirken faaliyeti ve değerleme konusu mülkiyet hakkını kararlaştırılan kapsamda inceleriz. Bir makine, ekipman, bina veya başka varlığın ayrı değerlemesi bağımsız bir görev olabilir. İlk görüşmede hangi hizmetin amacınıza uygun olduğunu netleştiririz."]}
+    ],
+    "documents": ["Şirketin adı, kimlik bilgileri ve faaliyetin kısa açıklaması", "Mülkiyet yapısı, değerleme konusu pay ve varsa ortaklar sözleşmesi", "Mevcut mali tablolar; gelir, gider, varlık ve yükümlülük ayrıntıları", "Varsa önemli sözleşmeler ve dayandıkları varsayımlarla tahminler", "Değerleme amacı, gerekli tarih ve raporun muhatabının şartları"],
+    "deliverable": "Kararlaştırılan çalışma tamamlandığında işletmeyi veya payı, değerleme amacı ve tarihini, kullanılan bilgileri, yaklaşımları, önemli varsayımları ve değere ilişkin sonucu açıklayan bir değerleme raporu alırsınız.",
+    "note": "Ücret ve teslim süresi; işletme yapısı, iş kapsamı ve verilerin mevcudiyeti incelendikten sonra kararlaştırılır. Rapor belirli bir kuruma sunulacaksa şartlarını önceden iletin.",
+    "related": [{"href": "/tr/services/business-asset-valuation", "label": "İşletme varlıkları ve ekipman değerleme"}, {"href": "/tr/services/commercial-property-valuation", "label": "Ticari gayrimenkul değerleme"}, {"href": "/tr/services/property-measurement", "label": "İş ortağı uzmanla gayrimenkul ölçümü"}]
+  },
+  {
+    "slug": "property-measurement",
+    "title": "Gürcistan'da gayrimenkul ölçümü",
+    "cardTitle": "Gayrimenkul ölçümü",
+    "description": "Arsa ve bina ölçüm çalışmalarının iş ortağı uzmanla organize edilmesi. Amacı, gerekli planı, ücreti ve teslim süresini önceden kararlaştıralım.",
+    "intro": "Arsa veya binanın ölçülmesine ve ilgili planın hazırlanmasına ihtiyacınız varsa GB Valuation çalışmanın iş ortağı uzmanla organize edilmesine yardımcı olur. Ölçümü iş ortağı uzman yapar; iş türünü ve alınacak materyali önceden kararlaştırırız.",
+    "serviceType": "Gayrimenkul ölçüm çalışmalarının iş ortağı uzmanla organize edilmesi",
+    "badge": "Ölçüm çalışmaları · İş ortağı uzman",
+    "purpose": ["Taşınmazın alanı ve planı hakkında bilgi hazırlamak", "Arsa veya bina için ölçüm görevini değerlendirmek", "Değerleme veya kararlaştırılan başka bir amaç için gerekli planı hazırlamak"],
+    "sections": [
+      {"heading": "Ölçüme hangi amaçla ihtiyacınız var?", "paragraphs": ["İlk adım amacı belirlemektir: hangi taşınmaz ölçülecek, hangi bilgi gerekli ve materyali kim kullanacak? Arsa, daire ve bina görevleri farklı çalışmalar ve biçimler gerektirebilir.", "Adresi veya kadastro kodunu, kısa açıklamayı ve varsa mevcut planı gönderin. Bu bilgilerle iş ortağı uzmanla erişim koşullarını, yapılacak işi ve sonuç biçimini netleştiririz."]},
+      {"heading": "Çalışma nasıl organize edilir?", "paragraphs": ["GB Valuation organizasyon için iletişim noktanızdır; ölçüm bölümünü iş ortağı uzman yapar. Siparişten önce hangi alan veya parselin inceleneceğini, alacağınız materyali ve ek teknik şartların kiminle netleştirileceğini görüşürüz.", "Taşınmaza erişim, anahtarı olan kişi ve mevcut belgelerin ulaşılabilirliği önceden kararlaştırılmalıdır. Fiilî durum sunulan plan veya bilgilerden farklıysa ilk görüşmede uzmana bildirin."], "items": ["Taşınmazı ve ölçüm amacını netleştirmek", "İş ortağı uzmanla kapsam, ücret ve süreyi kararlaştırmak", "İnceleme ve ölçümü kararlaştırılan koşullarda organize etmek", "Kararlaştırılan materyali almak ve kapsamını açıklamak"]},
+      {"heading": "Ölçüm ve gayrimenkul değerleme", "paragraphs": ["Ölçüm çalışması taşınmazın boyutlarını ve kararlaştırılmış fiziksel özelliklerini açıklar. Değerlemenin amacı ise taşınmazın değerini belirlemektir. İkisine de ihtiyacınız varsa her birinin kapsamını ve değerleme için gereken bilgileri en baştan kararlaştırırız.", "Materyal kamu sicili veya başka bir kurum için gerekiyorsa muhatabın şartlarını iletin. Biçim ve sunulacak belgeler ilgili kurum ve işi yapacak uzmanla önceden netleştirilmelidir. Materyalin hazırlanması tek başına tescil sonucunu belirlemez."]}
+    ],
+    "documents": ["Taşınmazın adresi veya kadastro kodu ve iletişim kişisinin bilgileri", "Mevcut sicil kaydı, kadastro planı veya iç ölçüm planı", "Taşınmazın açıklaması ve mevcut durum ya da değişiklikler", "Ölçüm amacı ve varsa materyali alacak kurumun şartları", "Taşınmaza erişim olanağı ve istediğiniz süre"],
+    "deliverable": "İş ortağı uzmanın hazırladığı, türü ve biçimi önceden kararlaştırılmış ölçüm materyalini alırsınız. Plan veya diğer materyalin tam içeriği amacınıza ve taşınmaza göre siparişten önce belirlenir.",
+    "note": "Hizmetin uygunluğu, ücret ve süre taşınmazın konumuna, kapsamına, erişim koşullarına ve gerekli materyale bağlıdır. Gürcistan genelindeki konumlar için çalışma organizasyonunu ayrı ayrı değerlendiririz.",
+    "related": [{"href": "/tr/services/land-valuation", "label": "Arsa değerleme"}, {"href": "/tr/services/residential-property-valuation", "label": "Daire ve ev değerleme"}, {"href": "/tr/services/business-valuation", "label": "İşletme ve şirket payı değerleme"}]
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "slug": "business-valuation",
+    "title": "Business and company ownership-interest valuation",
+    "cardTitle": "Business valuation",
+    "description": "Valuation of an entire business, company or ownership interest. Agree the purpose, interest being valued, information required, fee and delivery time with GB Valuation in advance.",
+    "intro": "When considering a business sale, purchase or the admission of a new partner, knowing the value of property and equipment alone is not enough. GB Valuation offers valuation of entire businesses and company ownership interests for a specific purpose and agreed date.",
+    "serviceType": "Valuation of entire businesses and company ownership interests",
+    "badge": "Business · Company · Ownership interest",
+    "purpose": [
+      "Considering the purchase or sale of a business or company ownership interest",
+      "A partner joining or leaving, or a change in the ownership structure",
+      "Analysis of business value for the owner and preparation for negotiations"
+    ],
+    "sections": [
+      {
+        "heading": "First, we clarify what is being valued",
+        "paragraphs": [
+          "Before the valuation begins, we define whether the assignment covers an entire operating business, a particular company or an ownership interest. We agree the purpose, valuation date, report recipient and conditions of use. It matters which assets and liabilities the assignment includes and what rights attach to the interest being valued.",
+          "The value of a company ownership interest is not always obtained by multiplying the value of the whole business by the corresponding percentage. A shareholders' or partners' agreement, decision-making rights and transfer conditions may be important; we consider their effect within the specific assignment."
+        ]
+      },
+      {
+        "heading": "The information we analyse",
+        "paragraphs": [
+          "The work is based on a review of the business's activities and available information. We distinguish revenue, expenses, profit and cash flows, and consider liabilities, assets essential to the business and the nature of its operations.",
+          "Income and market approaches are considered as appropriate, together with analysis of assets and liabilities depending on the business. The method should fit the quality of the evidence and the assignment. Turnover alone or a single universal multiple is not enough to support a conclusion."
+        ],
+        "items": [
+          "Financial performance, changes in results and one-off income or expenses",
+          "Dependence on customers, suppliers or particular individuals",
+          "Contracts, liabilities, financing and rights important to the business",
+          "The basis of forecasts, assumptions and available comparable evidence"
+        ]
+      },
+      {
+        "heading": "Business valuation and asset valuation",
+        "paragraphs": [
+          "When valuing an entire business, we consider the operations and ownership interest within the agreed scope. Valuing an individual machine, item of equipment, building or other asset can also be a separate assignment. In the initial discussion, we clarify which service fits your purpose."
+        ]
+      }
+    ],
+    "documents": [
+      "Company name, identifying details and a brief description of its activities",
+      "Ownership structure, the interest to be valued and any shareholders' or partners' agreement",
+      "Available financial statements and details of revenue, expenses, assets and liabilities",
+      "Significant contracts and any forecasts with the assumptions on which they are based",
+      "Valuation purpose, required date and the report recipient's requirements"
+    ],
+    "deliverable": "After the agreed work is completed, you receive a valuation report describing the business or interest being valued, the purpose and valuation date, information used, approaches, significant assumptions and the conclusion on value.",
+    "note": "The fee and delivery time are agreed after we review the business structure, scope of work and availability of information. If the report is to be submitted to a particular institution, provide its requirements in advance.",
+    "related": [
+      { "href": "/en/services/business-asset-valuation", "label": "Business asset, plant and equipment valuation" },
+      { "href": "/en/services/commercial-property-valuation", "label": "Commercial property valuation" },
+      { "href": "/en/services/property-measurement", "label": "Property measurement with a partner specialist" }
+    ]
+  },
+  {
+    "slug": "property-measurement",
+    "title": "Property measurement",
+    "cardTitle": "Property measurement",
+    "description": "Arranging measurement of land and buildings with a partner specialist. Agree the purpose, plan required, fee and timing in advance.",
+    "intro": "If you need a land plot or building measured and a corresponding plan prepared, GB Valuation can help arrange the work with a partner specialist. The partner specialist carries out the measurement; the type of work and materials to be delivered are agreed in advance.",
+    "serviceType": "Arranging property measurement with a partner specialist",
+    "badge": "Measurement work · Partner specialist",
+    "purpose": [
+      "Preparing information about a property's area and layout",
+      "Discussing a measurement assignment for land or buildings",
+      "Preparing a plan needed for valuation or another agreed purpose"
+    ],
+    "sections": [
+      {
+        "heading": "Why do you need measurement?",
+        "paragraphs": [
+          "The first step is to clarify the purpose: which property needs to be measured, what information is required and who will use the materials. Land, apartment and building assignments may need different work and formats.",
+          "Provide the address or cadastral code, a brief description and an existing plan if available. Using this information, we will clarify access arrangements, the work required and the output format with the partner specialist."
+        ]
+      },
+      {
+        "heading": "How the work is arranged",
+        "paragraphs": [
+          "GB Valuation is your point of contact for arranging the work, while a partner specialist carries out the measurement. Before an order is placed, we discuss which space or plot will be examined, what materials you will receive and with whom any additional technical requirements should be clarified.",
+          "Property access, a person with the keys and the availability of existing documents should be agreed in advance. If the present condition differs from the plan or information supplied, tell the specialist at the first discussion."
+        ],
+        "items": [
+          "Clarifying the property and purpose of measurement",
+          "Agreeing the scope, fee and timing with the partner specialist",
+          "Arranging inspection and measurement on the agreed terms",
+          "Receiving the agreed materials and an explanation of their scope"
+        ]
+      },
+      {
+        "heading": "Measurement and property valuation",
+        "paragraphs": [
+          "Measurement work describes the property's dimensions and agreed physical characteristics. Valuation aims to determine the property's value. If you need both services, we will agree the scope of each and what information will be needed for the valuation from the outset.",
+          "If you need materials for the Public Registry or another institution, provide the recipient's requirements. The format and documents to be submitted should be clarified in advance with the institution and the specialist. Preparing materials does not in itself determine the outcome of registration."
+        ]
+      }
+    ],
+    "documents": [
+      "Property address or cadastral code and contact person's details",
+      "Any available registry extract, cadastral plan or internal measured plan",
+      "A description of the property, its current condition and any alterations",
+      "Measurement purpose and any requirements of the recipient",
+      "Access arrangements and your requested delivery time"
+    ],
+    "deliverable": "You receive measurement materials of the type and format agreed in advance, prepared by the partner specialist. Exactly what the plan or other materials include is defined before the order is placed, according to your purpose and property.",
+    "note": "Service availability, fee and timing depend on the location, scope, access conditions and materials required. We discuss arrangements individually.",
+    "related": [
+      { "href": "/en/services/land-valuation", "label": "Land valuation" },
+      { "href": "/en/services/residential-property-valuation", "label": "Apartment and house valuation" },
+      { "href": "/en/services/business-valuation", "label": "Business and company ownership-interest valuation" }
+    ]
+  }
+]

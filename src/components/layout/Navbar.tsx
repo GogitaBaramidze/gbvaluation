@@ -33,7 +33,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { label: dict.links.services, href: "#services" },
     { label: dict.links.needs, href: "#needs" },
     { label: dict.links.expert, href: "#expert" },
-    { label: articleNavLabels[lang], href: "/ka/articles" },
+    { label: articleNavLabels[lang], href: `/${lang}/articles` },
     { label: dict.links.contact, href: "#contact" },
   ];
 

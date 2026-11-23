@@ -1,11 +1,10 @@
 {
   "meta": {
-    "title": "Batum Gayrimenkul Değerleme | GB Valuation",
-    "description": "Batum ve Gürcistan’da gayrimenkul, arsa ve işletme varlıkları değerleme. Sertifikalı uzman A-1777. Kapsam, ücret ve teslim tarihi için iletişime geçin.",
+    "title": "Gayrimenkul Değerleme | GB Valuation",
+    "description": "Daire, arsa, ticari gayrimenkul ve işletme değerleme. İş ortağı uzmanla ölçüm ve plan hazırlama. Gereksinimlerinizi GB Valuation ile görüşün.",
     "keywords": [
       "gayrimenkul değerleme",
       "emlak ekspertiz",
-      "Batum gayrimenkul değerleme",
       "varlık değerleme",
       "sertifikalı değerleme uzmanı",
       "Batum",
@@ -24,9 +23,9 @@
   },
   "hero": {
     "badge": "Akredite bir kuruluş tarafından sertifikalı",
-    "titleLine1": "Gayrimenkul Değerlemesi",
-    "titleLine2": "Batum ve Gürcistan’da",
-    "subtitle": "Batum ve Gürcistan genelinde daire, ev, ticari alan, arsa ve işletme varlıkları değerleme. Amacı, ücreti ve teslim tarihini işe başlamadan kararlaştırıyoruz.",
+    "titleLine1": "Gayrimenkul",
+    "titleLine2": "Değerleme",
+    "subtitle": "Daire, konut, arsa, ticari gayrimenkul ve işletme değerleme. Ölçüm işleri iş ortağı uzman tarafından yapılır. Kapsamı, ücreti ve süreyi önceden kararlaştırırız.",
     "ctaPrimary": "Değerleme Talep Et",
     "ctaSecondary": "Hizmetlerimiz",
     "imageAlt": "GB Valuation — gayrimenkul değerlemesi"
@@ -35,7 +34,7 @@
     "label": "Hizmetlerimiz",
     "headingPre": "Değerleme",
     "headingHighlight": "Türleri",
-    "subtitle": "Batum ve Gürcistan genelinde daire, ev, ticari alan, arsa ve işletme varlıkları değerleme. Amacı, ücreti ve teslim tarihini işe başlamadan kararlaştırıyoruz.",
+    "subtitle": "Daire, konut, arsa, ticari gayrimenkul ve işletme değerleme. Ölçüm işleri iş ortağı uzman tarafından yapılır. Kapsamı, ücreti ve süreyi önceden kararlaştırırız.",
     "items": {
       "residential": {
         "title": "Konut Gayrimenkulü",
@@ -143,7 +142,7 @@
     "ctaButton": "Değerleme Talep Et",
     "tagline": "Building Value",
     "description": "GB Valuation’ın değerleme uzmanı, akredite bir belgelendirme kuruluşu tarafından verilmiş mesleki sertifikaya sahiptir.",
-    "city": "Batum, Gürcistan",
+    "city": "Gürcistan",
     "navHeading": "Gezinme",
     "links": {
       "home": "Ana Sayfa",
@@ -173,13 +172,13 @@
     "more": "Diğer seçenekler",
     "consultation": "Ücretsiz danışmanlık",
     "reassurance": "Mülkünüzü anlatın, sonraki adımı açıklayalım.",
-    "location": "Batum · Gürcistan",
+    "location": "Gürcistan",
     "writeUs": "Mesaj yazmak ister misiniz?",
     "messageHint": "Mülkünüzü ve değerleme amacınızı bize anlatın.",
     "highlights": [
       "Gayrimenkul ve işletme varlıkları",
       "ECO · RICS · IVS standartları",
-      "Batum ve tüm Gürcistan"
+      "Gürcistan genelinde"
     ],
     "serviceCta": "Değerleme talep edin",
     "processLabel": "KOLAY BİR SÜREÇ",

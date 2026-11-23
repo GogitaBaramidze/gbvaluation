@@ -1,4 +1,16 @@
-import content from "./ka.json";
+import ka from "./ka.json";
+import en from "./en.json";
+import ru from "./ru.json";
+import tr from "./tr.json";
+import ja from "./ja.json";
+import ar from "./ar.json";
+import uiKa from "./ui-ka.json";
+import uiEn from "./ui-en.json";
+import uiRu from "./ui-ru.json";
+import uiTr from "./ui-tr.json";
+import uiJa from "./ui-ja.json";
+import uiAr from "./ui-ar.json";
+import type { Locale } from "@/i18n/config";
 import type { ServiceKey } from "@/lib/services";
 
 export type Article = {
@@ -17,21 +29,24 @@ export type Article = {
   facebookPost: string;
 };
 
-export const articles = content as Article[];
-export const articlesPath = "/ka/articles";
-export const articlesTitle = "სტატიები ქონების შეფასებაზე, ბიზნესსა და აზომვაზე";
-export const articlesDescription = "ბინის შეფასება, ბიზნესის ღირებულება, მიწის შეფასება და ბინის აზომვა: პრაქტიკული გზამკვლევები GB Valuation-ისგან საქართველოში.";
+const content: Record<Locale, Article[]> = { ka, en, ru, tr, ja, ar } as Record<Locale, Article[]>;
+export type ArticleUI = typeof uiKa;
+const labels: Record<Locale, ArticleUI> = { ka: uiKa, en: uiEn, ru: uiRu, tr: uiTr, ja: uiJa, ar: uiAr };
+export const getArticles = (lang: Locale) => content[lang];
+export const getArticleUI = (lang: Locale) => labels[lang];
+export const articles = getArticles("ka");
+export const articlesPath = (lang: Locale) => `/${lang}/articles`;
 
-export function getArticle(slug: string) {
-  return articles.find((article) => article.slug === slug);
+export function getArticle(slug: string, lang: Locale = "ka") {
+  return getArticles(lang).find((article) => article.slug === slug);
 }
 
-export function articlePath(article: Pick<Article, "slug">) {
-  return `${articlesPath}/${article.slug}`;
+export function articlePath(article: Pick<Article, "slug">, lang: Locale = "ka") {
+  return `${articlesPath(lang)}/${article.slug}`;
 }
 
-export function articleDate(date: string) {
-  return new Intl.DateTimeFormat("ka-GE", {
+export function articleDate(date: string, lang: Locale = "ka") {
+  return new Intl.DateTimeFormat(lang, {
     day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Tbilisi",
   }).format(new Date(`${date}T12:00:00+04:00`));
 }

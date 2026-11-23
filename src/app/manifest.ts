@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: siteName,
     short_name: siteName,
-    description: "Certified property and asset valuations in Batumi, Georgia.",
+    description: "Property and business valuation, with measurement services through a partner specialist.",
     start_url: "/",
     display: "standalone",
     background_color: "#071e3d",

@@ -5,6 +5,8 @@ import ContactButton from "@/components/contact/ContactButton";
 import LanguageLinks from "@/components/layout/LanguageLinks";
 import type { Locale } from "@/i18n/config";
 import { serviceKeys, serviceSlugs } from "@/lib/services";
+import { articleNavLabels } from "@/lib/navigation";
+import { additionalServices } from "@/content/additional-services";
 import { valuationCertificateNumber } from "@/lib/credentials";
 import { TelegramIcon } from "@/components/ui/icons";
 import {
@@ -25,6 +27,7 @@ export default function Footer({ dict, lang }: FooterProps) {
     { label: dict.links.services, href: "#services" },
     { label: dict.links.needs, href: "#needs" },
     { label: dict.links.about, href: "#expert" },
+    { label: articleNavLabels[lang], href: "/ka/articles" },
     { label: dict.links.contact, href: "#contact" },
   ];
 
@@ -114,7 +117,7 @@ export default function Footer({ dict, lang }: FooterProps) {
                 ) : (
                   <li key={href}>
                     <a
-                      href={`/${lang}${href === "#" ? "" : href}`}
+                      href={href.startsWith("/") ? href : `/${lang}${href === "#" ? "" : href}`}
                       className="text-sm text-white/50 hover:text-white transition-colors"
                     >
                       {label}
@@ -140,6 +143,9 @@ export default function Footer({ dict, lang }: FooterProps) {
                     {s}
                   </a>
                 </li>
+              ))}
+              {lang === "ka" && additionalServices.map((service) => (
+                <li key={service.slug}><a href={`/ka/services/${service.slug}`} className="text-sm text-white/70 hover:text-white transition-colors">{service.title}</a></li>
               ))}
             </ul>
           </div>

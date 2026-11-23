@@ -46,6 +46,23 @@ GOOGLE_SITE_VERIFICATION=
 
 Contact details are maintained in `src/lib/contact.ts`.
 
+## Georgian guides and additional services
+
+`/ka/articles` lists eight original Georgian guides with static, crawlable article
+URLs. Edit their content and genuine publication dates in `src/content/articles/ka.json`.
+Each article has its own canonical, Article/Open Graph metadata, visible publication
+date, contents links, related reading and service/contact links. Authorship is the
+GB Valuation organization; expert review is not asserted.
+
+The Georgian homepage also links to full business/share valuation and property
+measurement service pages. Measurement is carried out by a partner specialist.
+These pages and the guides are Georgian only: hreflang includes only the actual
+Georgian URL, and language switching leads to the selected locale's homepage.
+The sitemap includes these pages alongside the existing 42 localized pages.
+
+Facebook post text is editorial material in the article data; publication to a
+social account is a separate action. No tracking pixel is enabled by this update.
+
 ## Search visibility
 
 The production host redirects the apex domain to `www`. Canonical, sitemap,

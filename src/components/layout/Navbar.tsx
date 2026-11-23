@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Phone, Menu, X, Globe, ChevronDown, Check } from "lucide-react";
 import { locales, localeNativeNames, type Locale } from "@/i18n/config";
+import { articleNavLabels, localizedPathname } from "@/lib/navigation";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "@/components/layout/Logo";
 import { useContactModal } from "@/components/contact/ContactModal";
@@ -32,6 +33,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     { label: dict.links.services, href: "#services" },
     { label: dict.links.needs, href: "#needs" },
     { label: dict.links.expert, href: "#expert" },
+    { label: articleNavLabels[lang], href: "/ka/articles" },
     { label: dict.links.contact, href: "#contact" },
   ];
 
@@ -46,9 +48,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
   const switchLocale = useCallback(
     (target: Locale) => {
       document.cookie = `NEXT_LOCALE=${target};path=/;max-age=31536000;samesite=lax`;
-      const segments = pathname.split("/");
-      segments[1] = target;
-      window.location.assign((segments.join("/") || `/${target}`) + window.location.search + window.location.hash);
+      const destination = localizedPathname(pathname, target);
+      const samePage = destination.split("/").slice(2).join("/") === pathname.split("/").slice(2).join("/");
+      window.location.assign(destination + (samePage ? window.location.search + window.location.hash : ""));
     },
     [pathname]
   );
@@ -106,7 +108,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
       if (href === "#contact") {
         e.preventDefault();
         openContactModal("navigation");
-      } else if (isHome) {
+      } else if (isHome && href.startsWith("#")) {
         e.preventDefault();
         scrollToId(href.slice(1));
       }
@@ -121,7 +123,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     setMobileOpen(false);
   };
 
-  const isActive = (href: string) => activeId === href.slice(1);
+  const isActive = (href: string) => href.startsWith("#") ? activeId === href.slice(1) : pathname.startsWith(href);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50" data-contact-source="navigation">
@@ -214,9 +216,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 return (
                   <a
                     key={link.href}
-                    href={`/${lang}${link.href}`}
+                    href={link.href.startsWith("#") ? `/${lang}${link.href}` : link.href}
                     onClick={handleNavClick(link.href)}
-                    className={`relative text-[13.5px] font-medium px-3.5 py-2 transition-colors ${
+                    className={`relative text-sm font-medium px-2.5 py-2 transition-colors ${
                       active
                         ? "text-brand-850"
                         : "text-zinc-500 hover:text-zinc-900"
@@ -267,7 +269,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={`/${lang}${link.href}`}
+                href={link.href.startsWith("#") ? `/${lang}${link.href}` : link.href}
                 onClick={handleNavClick(link.href)}
                 className={`text-sm py-2.5 px-3 rounded transition-colors ${
                   isActive(link.href)

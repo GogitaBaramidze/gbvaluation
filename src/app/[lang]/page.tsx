@@ -6,6 +6,8 @@ import Expert from "@/components/sections/Expert";
 import Process from "@/components/sections/Process";
 import Accreditation from "@/components/sections/Accreditation";
 import FAQ from "@/components/sections/FAQ";
+import ArticlesPreview from "@/components/sections/ArticlesPreview";
+import AdditionalServices from "@/components/sections/AdditionalServices";
 import StructuredData from "@/components/seo/StructuredData";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getServiceContent } from "@/content/services";
@@ -33,10 +35,12 @@ export default async function HomePage({ params }: Props) {
       <Hero dict={dict.hero} conversion={dict.conversion} />
       <Accreditation dict={dict.conversion.accreditation} />
       <Services lang={lang} dict={dict.services} cta={dict.conversion.serviceCta} detailsLabel={content.labels.details} />
+      {lang === "ka" && <AdditionalServices />}
       <Process dict={dict.conversion} />
       <ValuationNeeds dict={dict.needs} dir={localeDir[lang]} />
       <Expert dict={dict.expert} />
       <FAQ title={content.labels.faq} items={content.faq} />
+      {lang === "ka" && <ArticlesPreview />}
     </main>
   );
 }

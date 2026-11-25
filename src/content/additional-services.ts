@@ -12,7 +12,7 @@ export type AdditionalServiceSection = {
 };
 
 export type AdditionalService = {
-  slug: "business-valuation" | "property-measurement";
+  slug: "business-valuation" | "property-measurement" | "bank-mortgage-valuation";
   title: string;
   cardTitle: string;
   description: string;
@@ -30,7 +30,7 @@ export type AdditionalService = {
 
 const content = {ka, en, ru, tr, ja, ar} as Record<Locale, AdditionalService[]>;
 export const getAdditionalServices = (lang: Locale) => content[lang];
-export const additionalServiceSlugs = ["business-valuation", "property-measurement"] as const;
+export const additionalServiceSlugs = ["business-valuation", "property-measurement", "bank-mortgage-valuation"] as const;
 export function getAdditionalService(slug: AdditionalService["slug"], lang: Locale = "ka") {
   return getAdditionalServices(lang).find((service) => service.slug === slug)!;
 }

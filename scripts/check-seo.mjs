@@ -26,14 +26,14 @@ for (const [locale, translations] of articlesByLocale) {
 }
 const articlePaths = locales.flatMap((locale) => articles.map((article) => `/${locale}/articles/${article.slug}`));
 const articlePathSet = new Set(articlePaths);
-const extraServiceSlugs = ["property-measurement", "business-valuation"];
+const extraServiceSlugs = ["property-measurement", "business-valuation", "bank-mortgage-valuation"];
 const extraServicePaths = locales.flatMap((locale) => extraServiceSlugs.map((slug) => `/${locale}/services/${slug}`));
 const legacyServiceSlugs = ["residential-property-valuation", "commercial-property-valuation", "industrial-property-valuation", "land-valuation", "business-asset-valuation", "valuation-for-legal-proceedings"];
 const expectedPaths = new Set([
   ...locales.flatMap((locale) => [`/${locale}`, `/${locale}/articles`, ...legacyServiceSlugs.map((slug) => `/${locale}/services/${slug}`)]),
   ...articlePaths, ...extraServicePaths,
 ]);
-assert.equal(expectedPaths.size, 108, "Expected 108 published routes across six locales");
+assert.equal(expectedPaths.size, 114, "Expected 114 published routes across six locales");
 const publicationDate = "2026-11-23";
 const cityRestrictedHeadline = /ბათუმ|batum|батум|باتوم|バト(?:ゥー?|ウ)?ミ|バツミ/iu;
 const decode = (text) => text.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#x27;|&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
@@ -50,7 +50,7 @@ async function get(path) {
 
 const sitemap = await (await get("/sitemap.xml")).text();
 const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => decode(m[1]));
-assert.equal(urls.length, expectedPaths.size, "Sitemap must contain all 108 localized home, service, article-index and article routes");
+assert.equal(urls.length, expectedPaths.size, "Sitemap must contain all 114 localized home, service, article-index and article routes");
 assert.equal(new Set(urls).size, urls.length, "Duplicate sitemap URLs");
 const origin = new URL(urls[0]).origin;
 assert.deepEqual(new Set(urls.map((url) => new URL(url).pathname)), expectedPaths, "Sitemap must list exactly the published routes");
@@ -138,6 +138,12 @@ for (let start = 0; start < urls.length; start += 6) {
       }
     } else {
       assert.equal(graph.find((item) => item["@type"] === "Person")?.hasCredential?.identifier, "A-1777", `${url}: valuer credential`);
+      const organization = graph.find((item) => hasType(item, "Organization"));
+      assert(organization.sameAs?.includes("https://www.facebook.com/profile.php?id=61588747678941"), `${url}: verified Facebook profile`);
+      assert(organization.sameAs?.some((link) => link.startsWith("https://www.google.com/maps/place/GB+Valuation/")), `${url}: verified Maps profile`);
+      const offerUrls = organization.hasOfferCatalog?.itemListElement?.map((offer) => offer.itemOffered?.url);
+      assert.deepEqual(new Set(offerUrls), new Set([...legacyServiceSlugs, ...extraServiceSlugs].map((slug) => `${origin}/${lang}/services/${slug}`)), `${url}: visible services must match the offer catalog`);
+      assert(!organization.aggregateRating, `${url}: no unsupported self-serving rating schema`);
       assert.equal(tags(html, "details").length, 6, `${url}: certification and 5 FAQs`);
     }
     for (const locale of locales) {
@@ -147,6 +153,10 @@ for (let start = 0; start < urls.length; start += 6) {
       assert(switchLinks.every((tag) => new URL(tag.href, url).pathname === expectedPath), `${url}: ${locale} switcher must retain the translated page path`);
     }
     pages.set(route.pathname, html);
+    assert(tags(html, "a").some((tag) => tag.href === "mailto:Gobaramidze@gmail.com"), `${url}: crawlable email`);
+    assert(tags(html, "a").some((tag) => tag.href === "https://www.facebook.com/profile.php?id=61588747678941"), `${url}: Facebook link`);
+    assert(tags(html, "a").some((tag) => tag.href?.startsWith("https://www.google.com/maps/place/GB+Valuation/")), `${url}: Maps and review link`);
+    if (suffix.startsWith("services/")) assert(tags(html, "p").some((tag) => tag["data-service-fee"] === "quotation"), `${url}: visible individually agreed fee`);
   }));
 }
 

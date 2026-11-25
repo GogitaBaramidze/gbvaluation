@@ -20,7 +20,7 @@ npm run lint
 
 ## Structure
 
-- `src/app/[lang]/` — localized layout, homepage, eight service pages and article routes
+- `src/app/[lang]/` — localized layout, homepage, nine service pages and article routes
 - `src/content/services/` — translated service details and homepage FAQs
 - `src/components/sections/` — Hero, Services, ValuationNeeds, Expert
 - `src/components/layout/` — Navbar, Footer
@@ -58,7 +58,7 @@ GB Valuation organization; expert review is not asserted.
 Every localized homepage also links to full business/share valuation and property
 measurement service pages. Measurement is carried out by a partner specialist.
 These pages and the guides have reciprocal language links; language switching
-preserves the current page. The sitemap contains 108 localized pages.
+preserves the current page. The sitemap contains 114 localized pages.
 Primary headings and descriptions position the business nationwide. City names
 appear only where useful in context. The old `binis-shefaseba-batumshi` article
 slug permanently redirects to `binis-shefaseba`, preserving query parameters.
@@ -70,7 +70,7 @@ social account is a separate action. No tracking pixel is enabled by this update
 
 The production host redirects the apex domain to `www`. Canonical, sitemap,
 hreflang, Open Graph and structured-data URLs use that final origin; legacy
-apex environment values are normalized. Each of the 108 localized pages has its
+apex environment values are normalized. Each of the 114 localized pages has its
 own metadata and reciprocal language links. The existing Russian fallback is
 also the `x-default`. Tracking parameters do not create separate canonicals.
 

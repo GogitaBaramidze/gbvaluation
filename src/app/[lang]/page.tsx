@@ -37,7 +37,7 @@ export default async function HomePage({ params }: Props) {
       <Services lang={lang} dict={dict.services} cta={dict.conversion.serviceCta} detailsLabel={content.labels.details} />
       <AdditionalServices lang={lang} />
       <Process dict={dict.conversion} />
-      <ValuationNeeds dict={dict.needs} dir={localeDir[lang]} />
+      <ValuationNeeds dict={dict.needs} dir={localeDir[lang]} lang={lang} />
       <Expert dict={dict.expert} />
       <FAQ title={content.labels.faq} items={content.faq} />
       <ArticlesPreview lang={lang} />

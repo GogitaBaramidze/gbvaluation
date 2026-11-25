@@ -111,5 +111,65 @@
       { "href": "/en/services/residential-property-valuation", "label": "Apartment and house valuation" },
       { "href": "/en/services/business-valuation", "label": "Business and company ownership-interest valuation" }
     ]
+  },
+  {
+    "slug": "bank-mortgage-valuation",
+    "title": "Property valuation for bank and mortgage purposes",
+    "cardTitle": "Bank and mortgage valuation",
+    "description": "Property valuation for loan, mortgage and refinancing purposes. Confirm the bank's requirements before commissioning; fees and delivery dates are agreed individually.",
+    "intro": "When applying for a loan, mortgage or refinancing, you may need a property valuation report. GB Valuation considers residential and commercial assignments across Georgia, subject to the intended recipient's requirements and an agreed scope.",
+    "serviceType": "Property valuation for bank and mortgage purposes",
+    "badge": "Bank lending · Mortgage · Refinancing",
+    "purpose": [
+      "Establishing property value for a financing application",
+      "Discussing valuation of mortgage security or other collateral",
+      "Clarifying report requirements for refinancing"
+    ],
+    "sections": [
+      {
+        "heading": "Confirm acceptance before commissioning",
+        "paragraphs": [
+          "First ask the bank whether it will accept a report from the particular GB Valuation valuer for your application. Obtain its requirements for the valuer, report format, basis of value, valuation date and submission deadline. Conditions may differ between banks and lending products.",
+          "Share those requirements before ordering the work so we can assess whether the assignment is suitable. The bank makes its own decisions about report acceptance and lending. A valuation does not itself confirm financing."
+        ]
+      },
+      {
+        "heading": "Agree the purpose, date and scope",
+        "paragraphs": [
+          "We identify the property and interest to be valued, purpose, recipient, scope and valuation date. The valuation date specifies when the value applies; it can differ from the report's preparation and delivery dates.",
+          "Tell us about any bank deadline at the first discussion. We agree the fee and delivery date after considering the property type, location, complexity, available information and inspection requirements."
+        ]
+      },
+      {
+        "heading": "Documents, evidence and inspection",
+        "paragraphs": [
+          "Start with an address or cadastral code, an available Public Registry extract, plan and property description. A leased commercial property may also require the lease and information about income and expenses.",
+          "Disclose differences between the property's current condition and its documents. We agree inspection arrangements, access and photographs according to the assignment and bank requirements. Relevant market evidence supports the analysis; an advertised asking price alone does not replace a valuation."
+        ]
+      }
+    ],
+    "documents": [
+      "Address or cadastral code and available registry extract",
+      "Plan, area information, property description and existing photographs",
+      "Bank requirements and intended recipient's contact details",
+      "Valuation purpose, required valuation date and submission deadline",
+      "Access arrangements and lease information where relevant"
+    ],
+    "deliverable": "After the agreed work, you receive a report identifying the property, purpose and valuation date, evidence used, approach, significant assumptions and conclusion on value. Its format and scope are agreed in advance.",
+    "note": "Price on request. Confirm the bank's acceptance requirements for the valuer and report before commissioning. Service availability and delivery timing are confirmed after reviewing the specific assignment.",
+    "related": [
+      {
+        "href": "/en/services/residential-property-valuation",
+        "label": "Apartment and house valuation"
+      },
+      {
+        "href": "/en/services/commercial-property-valuation",
+        "label": "Commercial property valuation"
+      },
+      {
+        "href": "/en/articles/qonebis-shefasebis-dokumentebi",
+        "label": "Documents to prepare for property valuation"
+      }
+    ]
   }
 ]

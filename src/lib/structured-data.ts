@@ -4,6 +4,8 @@ import { siteName, siteUrl } from "@/lib/site";
 import { contactEmail, phoneE164 } from "@/lib/contact";
 import { valuationCertificateNumber } from "@/lib/credentials";
 import { serviceKeys, serviceSlugs } from "@/lib/services";
+import { getAdditionalServices } from "@/content/additional-services";
+import { facebookUrl, googleMapsUrl } from "@/lib/profiles";
 
 export const businessId = `${siteUrl}/#business`;
 
@@ -15,19 +17,25 @@ export function homeStructuredData(lang: Locale, dict: Dictionary) {
       {
         "@type": "Organization", "@id": businessId, name: siteName,
         url: siteUrl, description: dict.meta.description,
+        sameAs: [facebookUrl, googleMapsUrl],
         telephone: phoneE164, email: contactEmail, logo: `${siteUrl}/icon-512.png`,
         areaServed: { "@type": "Country", name: "Georgia" },
         location: { "@type": "Place", name: "Batumi, Georgia" },
         contactPoint: { "@type": "ContactPoint", telephone: phoneE164, email: contactEmail, contactType: "customer service" },
         hasOfferCatalog: {
           "@type": "OfferCatalog", name: dict.services.label,
-          itemListElement: serviceKeys.map((key) => ({
+          itemListElement: [...serviceKeys.map((key) => ({
             "@type": "Offer", itemOffered: {
               "@type": "Service", name: dict.services.items[key].title,
               url: `${url}/services/${serviceSlugs[key]}`,
               provider: { "@id": businessId },
             },
-          })),
+          })), ...getAdditionalServices(lang).map((service) => ({
+            "@type": "Offer", itemOffered: {
+              "@type": "Service", name: service.cardTitle, description: service.description,
+              url: `${url}/services/${service.slug}`, provider: { "@id": businessId },
+            },
+          }))],
         },
       },
       {

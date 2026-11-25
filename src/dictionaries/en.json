@@ -105,23 +105,23 @@
     "headingLine2": "At Your Service",
     "description": "GB Valuation’s valuer holds a professional certificate issued by an accredited certification body. We carry out every type of valuation in accordance with national and international standards — ECO, RICS and IVS — for any purpose.",
     "stats": {
-      "experience": {
-        "value": "5+",
-        "label": "Years\nExperience"
+      "certificate": {
+        "value": "A-1777",
+        "label": "Professional\ncertificate"
       },
-      "completed": {
-        "value": "100+",
-        "label": "Valuations\nCompleted"
+      "coverage": {
+        "value": "Georgia",
+        "label": "Service\ncoverage"
       },
-      "satisfaction": {
-        "value": "100%",
-        "label": "Client\nSatisfaction"
+      "languages": {
+        "value": "6",
+        "label": "Website\nlanguages"
       }
     },
     "credentials": [
       "Professional certificate issued by an accredited body",
       "RICS & IVS international standards",
-      "More than 100 satisfied clients"
+      "Scope, fees and delivery dates agreed before work begins"
     ],
     "cta": "Contact Us",
     "name": "Gogita Baramidze",
@@ -132,7 +132,7 @@
   },
   "contactModal": {
     "title": "Contact Us",
-    "subtitle": "Choose the channel that suits you best — we respond quickly.",
+    "subtitle": "To request a quote, send the property or business type, location and purpose of valuation. We will agree the fee and timing individually.",
     "email": "Email",
     "close": "Close",
     "phone": "Call us"

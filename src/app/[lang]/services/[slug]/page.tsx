@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ArrowUpRight, Check, ChevronRight, FileText, Phone, ShieldCheck } from "lucide-react";
 import ContactButton from "@/components/contact/ContactButton";
+import ServiceFee from "@/components/sections/ServiceFee";
 import StructuredData from "@/components/seo/StructuredData";
 import { getServiceContent } from "@/content/services";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -84,6 +85,7 @@ export default async function ServicePage({ params }: Props) {
             <aside className="rounded-2xl border border-white/15 bg-white/5 p-6" data-contact-source={`service_page_${key}`}>
               <h2 className="text-lg font-bold">{labels.quote}</h2>
               <p className="mt-3 text-sm leading-7 text-slate-300">{labels.quoteText}</p>
+              <ServiceFee lang={lang} dark />
               <ContactButton source={`service_page_${key}`} className="btn-action mt-6 min-h-12 w-full px-4 text-sm">{dict.conversion.serviceCta}<ArrowUpRight size={18} className="shrink-0" aria-hidden="true" /></ContactButton>
               <a href={`tel:${phoneE164}`} className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 px-4 text-sm font-semibold hover:bg-white/10"><Phone size={16} aria-hidden="true" /><span dir="ltr">{phoneDisplay}</span></a>
             </aside>

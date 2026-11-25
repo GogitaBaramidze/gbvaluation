@@ -4,7 +4,7 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import ContactButton from "@/components/contact/ContactButton";
 import { valuationCertificateNumber } from "@/lib/credentials";
 
-const statKeys = ["experience", "completed", "satisfaction"] as const;
+const statKeys = ["certificate", "coverage", "languages"] as const;
 
 type ExpertProps = {
   dict: Dictionary["expert"];
@@ -64,21 +64,21 @@ export default function Expert({ dict }: ExpertProps) {
             </p>
 
             {/* Stats row */}
-            <div className="grid grid-cols-3 gap-0 mt-10 rounded-2xl overflow-hidden border border-zinc-200">
+            <div className="grid grid-cols-1 gap-0 mt-10 rounded-2xl overflow-hidden border border-zinc-200 sm:grid-cols-3">
               {stats.map(({ value, label }, i) => (
                 <div
-                  key={value}
-                  className={`flex flex-col items-center justify-center py-6 ${
-                    i < 2 ? "border-r border-zinc-200" : ""
+                  key={statKeys[i]}
+                  className={`flex min-w-0 flex-col items-center justify-center px-3 py-5 text-center ${
+                    i < 2 ? "border-b border-zinc-200 sm:border-b-0 sm:border-e" : ""
                   }`}
                   style={{
                     background: i === 1 ? "var(--gradient-ice)" : "white",
                   }}
                 >
-                  <p className="text-3xl font-extrabold leading-none text-brand-900">
+                  <p className="max-w-full break-words text-base font-extrabold leading-snug text-brand-900 sm:text-lg">
                     {value}
                   </p>
-                  <p className="text-xs text-slate-400 mt-1.5 text-center leading-snug whitespace-pre-line">
+                  <p className="max-w-full break-words text-sm text-slate-600 mt-1.5 leading-snug whitespace-pre-line">
                     {label}
                   </p>
                 </div>

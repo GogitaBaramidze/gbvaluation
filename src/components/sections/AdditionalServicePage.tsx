@@ -4,6 +4,7 @@ import { getArticleUI } from "@/content/articles";
 import { pageMetadata } from "@/lib/seo";
 import { Check, FileText, Phone } from "lucide-react";
 import ContactButton from "@/components/contact/ContactButton";
+import ServiceFee from "@/components/sections/ServiceFee";
 import StructuredData from "@/components/seo/StructuredData";
 import type { AdditionalService } from "@/content/additional-services";
 import { phoneDisplay, phoneE164, whatsAppUrl } from "@/lib/contact";
@@ -77,6 +78,7 @@ export default function AdditionalServicePage({ service, lang }: { service: Addi
             <aside className="rounded-2xl border border-white/20 bg-white/5 p-6 sm:p-7">
               <h2 className="text-xl font-bold">{ui.serviceDiscuss}</h2>
               <p className="mt-4 text-base leading-8 text-slate-200">{ui.serviceQuoteText}</p>
+              <ServiceFee lang={lang} dark />
               <ContactButton source={`service_page_${service.slug}`} className="btn-action mt-6 min-h-12 w-full px-4 py-3 text-base">{ui.contactUs}</ContactButton>
               <a href={`tel:${phoneE164}`} className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/30 px-4 py-3 text-base font-semibold hover:bg-white/10"><Phone size={18} aria-hidden="true" /><span dir="ltr">{phoneDisplay}</span></a>
               <a href={whatsAppUrl} target="_blank" rel="noopener noreferrer" className="mt-3 flex min-h-12 items-center justify-center rounded-xl border border-brand-300/40 px-4 py-3 text-base font-semibold text-brand-300 hover:bg-white/10">{ui.whatsapp}</a>

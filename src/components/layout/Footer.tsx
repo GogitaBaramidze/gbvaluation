@@ -1,4 +1,4 @@
-import { Phone, MapPin, ArrowRight } from "lucide-react";
+import { Phone, MapPin, ArrowRight, Mail } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
 import Logo from "@/components/layout/Logo";
 import ContactButton from "@/components/contact/ContactButton";
@@ -8,10 +8,12 @@ import { serviceKeys, serviceSlugs } from "@/lib/services";
 import { articleNavLabels } from "@/lib/navigation";
 import { getAdditionalServices } from "@/content/additional-services";
 import { valuationCertificateNumber } from "@/lib/credentials";
+import { facebookUrl, googleMapsUrl, googleProfileLabels } from "@/lib/profiles";
 import { TelegramIcon } from "@/components/ui/icons";
 import {
   phoneDisplay,
   phoneE164,
+  contactEmail,
   telegramHandle,
   telegramUrl,
 } from "@/lib/contact";
@@ -73,6 +75,9 @@ export default function Footer({ dict, lang }: FooterProps) {
 
             {/* Contact info */}
             <ul className="mt-6 space-y-3">
+              <li><a href={facebookUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-sm text-white/70 hover:text-white">Facebook</a></li>
+              <li><a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-sm text-white/70 hover:text-white">{googleProfileLabels[lang]}</a></li>
+              <li><a href={`mailto:${contactEmail}`} className="inline-flex min-h-11 items-center gap-2.5 break-all text-sm text-white/70 hover:text-white"><Mail size={13} className="shrink-0 text-brand-300" aria-hidden="true" /><span dir="ltr">{contactEmail}</span></a></li>
               <li>
                 <a
                   href={`tel:${phoneE164}`}

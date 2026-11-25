@@ -36,5 +36,65 @@
     "deliverable": "İş ortağı uzmanın hazırladığı, türü ve biçimi önceden kararlaştırılmış ölçüm materyalini alırsınız. Plan veya diğer materyalin tam içeriği amacınıza ve taşınmaza göre siparişten önce belirlenir.",
     "note": "Hizmetin uygunluğu, ücret ve süre taşınmazın konumuna, kapsamına, erişim koşullarına ve gerekli materyale bağlıdır. Gürcistan genelindeki konumlar için çalışma organizasyonunu ayrı ayrı değerlendiririz.",
     "related": [{"href": "/tr/services/land-valuation", "label": "Arsa değerleme"}, {"href": "/tr/services/residential-property-valuation", "label": "Daire ve ev değerleme"}, {"href": "/tr/services/business-valuation", "label": "İşletme ve şirket payı değerleme"}]
+  },
+  {
+    "slug": "bank-mortgage-valuation",
+    "title": "Banka ve ipotek amaçlı gayrimenkul değerlemesi",
+    "cardTitle": "Banka ve ipotek değerlemesi",
+    "description": "Kredi, ipotek ve yeniden finansman için gayrimenkul değerlemesi. İş vermeden önce bankanın şartlarını doğrulayın; ücret ve teslim tarihi ayrı ayrı kararlaştırılır.",
+    "intro": "Kredi, ipotek veya yeniden finansman başvurusunda gayrimenkul değerleme raporu gerekebilir. GB Valuation, Gürcistan genelindeki konut ve ticari taşınmazlara ilişkin talepleri, raporun muhatabının şartları ve kararlaştırılan kapsam çerçevesinde değerlendirir.",
+    "serviceType": "Banka ve ipotek amaçlı gayrimenkul değerlemesi",
+    "badge": "Banka kredisi · İpotek · Yeniden finansman",
+    "purpose": [
+      "Finansman başvurusu için gayrimenkul değerinin belirlenmesi",
+      "İpotekli taşınmaz veya başka teminatların değerlemesinin görüşülmesi",
+      "Yeniden finansman için rapor şartlarının netleştirilmesi"
+    ],
+    "sections": [
+      {
+        "heading": "İş vermeden önce bankanın kabul şartlarını doğrulayın",
+        "paragraphs": [
+          "Önce bankanıza, başvurunuz için GB Valuation'daki ilgili değerleme uzmanının raporunu kabul edip etmeyeceğini sorun. Uzman, rapor biçimi, değer esası, değerleme tarihi ve sunum süresiyle ilgili şartlarını isteyin. Bankaya ve kredi ürününe göre koşullar değişebilir.",
+          "Çalışmayı sipariş etmeden önce bu şartları paylaşın; görevin uygunluğunu değerlendirelim. Raporun kabulüne ve kredinin verilmesine banka kendi kurallarıyla karar verir. Değerleme yapılması finansmanın onaylandığı anlamına gelmez."
+        ]
+      },
+      {
+        "heading": "Amaç, tarih ve kapsamı birlikte belirleyelim",
+        "paragraphs": [
+          "Taşınmazı ve değerlenecek hakkı, amacı, raporu alacak tarafı, çalışma kapsamını ve değerleme tarihini netleştiririz. Değerleme tarihi, değerin hangi an için belirlendiğini gösterir; raporun hazırlanma ve teslim tarihlerinden farklı olabilir.",
+          "Bankanın kesin bir son tarihi varsa ilk görüşmede bildirin. Ücret ve teslim tarihi; taşınmazın türü, konumu, karmaşıklığı, bilgilerin bulunabilirliği ve inceleme gereksinimi değerlendirildikten sonra kararlaştırılır."
+        ]
+      },
+      {
+        "heading": "Belgeler, piyasa verileri ve inceleme",
+        "paragraphs": [
+          "Başlangıçta adresi veya kadastro kodunu, mevcut Kamu Sicili kaydını, planı ve taşınmazın kısa açıklamasını gönderin. Kiradaki ticari alanlarda kira sözleşmesi, gelir ve gider bilgileri de gerekebilir.",
+          "Mevcut durumla belgeler arasındaki farkları önceden bildirin. İncelemenin kapsamını, erişimi ve fotoğraf ihtiyacını göreve ve bankanın şartlarına göre belirleriz. Analizi ilgili piyasa verileri destekler; ilandaki fiyat tek başına değerlemenin yerini tutmaz."
+        ]
+      }
+    ],
+    "documents": [
+      "Adres veya kadastro kodu ve mevcut sicil kaydı",
+      "Plan, alan bilgileri, taşınmazın açıklaması ve mevcut fotoğraflar",
+      "Bankanın şartları ve raporun muhatabının iletişim bilgileri",
+      "Değerleme amacı, gerekli değerleme tarihi ve sunum süresi",
+      "Erişim koşulları ve gerektiğinde kira bilgileri"
+    ],
+    "deliverable": "Kararlaştırılan çalışma sonunda taşınmazı, amacı ve değerleme tarihini, kullanılan verileri, yaklaşımı, önemli varsayımları ve değer sonucunu açıklayan bir rapor alırsınız. Biçim ve kapsam önceden belirlenir.",
+    "note": "Ücret için teklif isteyin. İş vermeden önce bankanın uzmanı ve raporu kabul şartlarını doğrulayın. Hizmetin sunulabilirliği ve teslim süresi, belirli görev incelendikten sonra teyit edilir.",
+    "related": [
+      {
+        "href": "/tr/services/residential-property-valuation",
+        "label": "Daire ve ev değerlemesi"
+      },
+      {
+        "href": "/tr/services/commercial-property-valuation",
+        "label": "Ticari gayrimenkul değerlemesi"
+      },
+      {
+        "href": "/tr/articles/qonebis-shefasebis-dokumentebi",
+        "label": "Değerleme için hazırlanacak belgeler"
+      }
+    ]
   }
 ]

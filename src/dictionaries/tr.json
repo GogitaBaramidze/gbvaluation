@@ -104,23 +104,23 @@
     "headingLine2": "Hizmetinizde",
     "description": "GB Valuation’ın değerleme uzmanı, akredite bir belgelendirme kuruluşu tarafından verilmiş mesleki sertifikaya sahiptir. Ulusal ve uluslararası standartlara — ECO, RICS ve IVS — uygun olarak, her amaç için her türlü değerlemeyi gerçekleştiriyoruz.",
     "stats": {
-      "experience": {
-        "value": "5+",
-        "label": "Yıllık\nDeneyim"
+      "certificate": {
+        "value": "A-1777",
+        "label": "Mesleki\nsertifika"
       },
-      "completed": {
-        "value": "100+",
-        "label": "Tamamlanan\nDeğerleme"
+      "coverage": {
+        "value": "Gürcistan",
+        "label": "Hizmet\nbölgesi"
       },
-      "satisfaction": {
-        "value": "100%",
-        "label": "Müşteri\nMemnuniyeti"
+      "languages": {
+        "value": "6",
+        "label": "Web sitesi\ndil seçeneği"
       }
     },
     "credentials": [
       "Akredite kuruluş tarafından verilen mesleki sertifika",
       "RICS ve IVS uluslararası standartları",
-      "100'den fazla memnun müşteri"
+      "İş kapsamı, ücret ve teslim süresi önceden kararlaştırılır"
     ],
     "cta": "Bize Ulaşın",
     "name": "Gogita Baramidze",
@@ -131,7 +131,7 @@
   },
   "contactModal": {
     "title": "Bize Ulaşın",
-    "subtitle": "Size en uygun kanalı seçin — hızlıca yanıt veriyoruz.",
+    "subtitle": "Fiyat teklifi almak için taşınmazın veya işletmenin türünü, konumunu ve değerleme amacını yazın. Ücreti ve süreyi göreve özel olarak kararlaştıralım.",
     "email": "E-posta",
     "close": "Kapat",
     "phone": "Bizi arayın"

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import type { Locale } from "@/i18n/config";
 import CardCarousel from "@/components/ui/CardCarousel";
 import ContactButton from "@/components/contact/ContactButton";
 
@@ -32,9 +33,10 @@ const needs: { icon: LucideIcon; key: NeedKey }[] = [
 type ValuationNeedsProps = {
   dict: Dictionary["needs"];
   dir: "ltr" | "rtl";
+  lang: Locale;
 };
 
-export default function ValuationNeeds({ dict, dir }: ValuationNeedsProps) {
+export default function ValuationNeeds({ dict, dir, lang }: ValuationNeedsProps) {
   const cards = needs.map(({ icon: Icon, key }) => {
     const item = dict.items[key];
     return (
@@ -70,7 +72,7 @@ export default function ValuationNeeds({ dict, dir }: ValuationNeedsProps) {
             <Icon size={22} className="text-brand-300" strokeWidth={1.7} />
           </div>
 
-          <h3 className="mb-2.5 text-lg font-bold text-white">{item.title}</h3>
+          <h3 className="mb-2.5 text-lg font-bold text-white">{key === "loan" ? <a href={`/${lang}/services/bank-mortgage-valuation`} className="underline decoration-white/40 underline-offset-4 hover:decoration-white">{item.title}</a> : item.title}</h3>
           <p className="text-sm leading-relaxed text-white/55">{item.desc}</p>
         </div>
       </div>

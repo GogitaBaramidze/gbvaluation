@@ -105,23 +105,23 @@
     "headingLine2": "あなたのために",
     "description": "GB Valuationの評価士は、認定された認証機関が発行した専門資格証明書を保有しています。 国内および国際基準（ECO・RICS・IVS）に準拠し、あらゆる目的のためにすべての種類の評価を実施します。",
     "stats": {
-      "experience": {
-        "value": "5+",
-        "label": "年の\n経験"
+      "certificate": {
+        "value": "A-1777",
+        "label": "専門資格の\n証明書"
       },
-      "completed": {
-        "value": "100+",
-        "label": "件の\n評価実績"
+      "coverage": {
+        "value": "ジョージア",
+        "label": "サービス\n対応地域"
       },
-      "satisfaction": {
-        "value": "100%",
-        "label": "顧客\n満足度"
+      "languages": {
+        "value": "6",
+        "label": "ウェブサイトの\n対応言語"
       }
     },
     "credentials": [
       "認定認証機関が発行した専門資格証明書",
       "RICS・IVS 国際基準",
-      "100名以上の満足された顧客"
+      "業務範囲・料金・納期は着手前に合意します"
     ],
     "cta": "お問い合わせ",
     "name": "ゴギタ・バラミゼ",
@@ -132,7 +132,7 @@
   },
   "contactModal": {
     "title": "お問い合わせ",
-    "subtitle": "ご都合のよい方法をお選びください。迅速に対応いたします。",
+    "subtitle": "お見積もりをご希望の方は、不動産または事業の種類、所在地、評価の目的をお知らせください。料金と納期は個別にご相談のうえ決定します。",
     "email": "メール",
     "close": "閉じる",
     "phone": "電話する"
